@@ -822,3 +822,7 @@ html,body{ background:#000 !important; color:#dddddd; }
 
 /* Footer IQ scaled/aligned to the 26px footer logo (same ratio as header) */
 .footer .brand-iq{font-size:21px;margin-left:-3.5px;transform:translateY(-0.5px)}
+
+/* IQ gap = intra-letter spacing of the wordmark itself */
+.brand-iq{margin-left:-7px}
+.footer .brand-iq{margin-left:-6px}
