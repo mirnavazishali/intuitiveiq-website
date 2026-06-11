@@ -826,3 +826,46 @@ html,body{ background:#000 !important; color:#dddddd; }
 /* IQ gap = intra-letter spacing of the wordmark itself */
 .brand-iq{margin-left:-7px}
 .footer .brand-iq{margin-left:-6px}
+
+/* ═════════════════════════════════════════════════════════════════════
+ * Mobile polish (no effect ≥901px)
+ * ═════════════════════════════════════════════════════════════════════ */
+@media (max-width:760px){
+  /* Mapping-confidence pane: stack rows instead of 4 fixed columns */
+  .conf-row{grid-template-columns:1fr auto;grid-template-areas:"map pct" "bar bar" "sig sig";row-gap:9px}
+  .conf-mapping{grid-area:map}
+  .conf-pct{grid-area:pct}
+  .conf-bar-wrap{grid-area:bar}
+  .conf-signals{grid-area:sig;justify-content:flex-start}
+  .conf-header{flex-direction:column;align-items:flex-start;gap:8px}
+  .anim-confidence,.anim-ask,.anim-console,.anim-dash{min-height:0;padding:14px 14px 16px}
+  .visual-pane{padding:12px 12px 16px;overflow-x:hidden}
+  .ask-sig{grid-template-columns:20px 92px 1fr 42px;gap:6px}
+  .vs-caption{font-size:11.5px}
+  .dk-num{font-size:22px}
+  .hero-meta{gap:22px 30px;padding-top:34px}
+  .hero-meta b{font-size:25px}
+}
+@media (max-width:520px){
+  .nav-inner{padding:10px 16px;gap:10px;flex-wrap:nowrap}
+  .nav .brand-mark .intuitive-logo-img{height:24px !important}
+  .brand-iq{font-size:19px;margin-left:-5px}
+  .nav-cta{gap:8px}
+  .nav-cta .btn{font-size:13px;padding:8px 13px;white-space:nowrap;border-radius:9px}
+  .nav-burger{padding:4px 9px;font-size:14px}
+  .hero-title{font-size:35px}
+  .hero-sub{font-size:15.5px}
+  .hero-actions{gap:10px}
+  .btn.lg{padding:11px 16px;font-size:13.5px}
+  .visual-tabs{gap:4px;padding:4px}
+  .vt-pill{padding:6px 11px;font-size:11.5px}
+  .section-title{font-size:28px}
+  .page-title{font-size:31px}
+  .cta-title{font-size:28px}
+  .shift h4{font-size:17px}
+  .test-q{font-size:14.5px;padding:14px 16px}
+  .footer-certs{height:26px}
+  .footer-cols-grid{grid-template-columns:1fr 1fr;gap:24px 18px}
+  .footer-cols-grid h5{font-size:16px}
+  .footer-cols-grid a{font-size:14px}
+}
