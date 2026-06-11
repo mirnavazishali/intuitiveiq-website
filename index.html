@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260611j" />
+  <link rel="stylesheet" href="styles.css?v=20260611k" />
 </head>
 <body>
 
@@ -140,9 +140,10 @@
     <div class="visual-tabs">
       <button class="vt-pill active" data-vt="kg">⌬ Knowledge Fabric</button>
       <button class="vt-pill" data-vt="lineage">⇆ Traceability</button>
-      <button class="vt-pill" data-vt="confidence">📊 Trust score</button>
+      <button class="vt-pill" data-vt="confidence">📊 Mapping confidence</button>
       <button class="vt-pill" data-vt="ask">💬 Explainability</button>
       <button class="vt-pill" data-vt="action">⚡ Agentic orchestration</button>
+      <button class="vt-pill" data-vt="console">🗂 Actions console</button>
     </div>
 
     <!-- Browser-chrome wrapper — gives the visuals an "in-app" feel -->
@@ -672,6 +673,86 @@
         </div>
       </div>
 
+      <!-- ── PANE 6 · Actions Console — governed writebacks ──────────── -->
+      <div class="visual-pane vp-console">
+        <div class="anim-console">
+          <div class="conf-header">
+            <div class="conf-title-block">
+              <span class="conf-title">Actions Console</span>
+              <span class="conf-sub">decisions become writebacks · in the systems you already run</span>
+            </div>
+            <div class="conf-legend">
+              <span class="cl green">executed</span>
+              <span class="cl amber">awaiting approval</span>
+            </div>
+          </div>
+
+          <div class="console-rows">
+            <div class="console-row">
+              <div class="cr-main">
+                <span class="cr-name">Care-gap outreach — 231 patients routed to care coordinators</span>
+                <span class="cr-meta">triggered by live monitor · 12:04
+                </span>
+              </div>
+              <div class="cr-writebacks">
+                <span class="wb-chip">🟧 Databricks table ✓</span>
+                <span class="wb-chip">💬 Slack #care-gaps ✓</span>
+                <span class="wb-chip">📄 Audit JSON ✓</span>
+              </div>
+              <span class="cr-status st-exec">EXECUTED</span>
+            </div>
+
+            <div class="console-row">
+              <div class="cr-main">
+                <span class="cr-name">Quality hold — 3 at-risk lots quarantined before release</span>
+                <span class="cr-meta">batch genealogy match · 11:47</span>
+              </div>
+              <div class="cr-writebacks">
+                <span class="wb-chip">🟧 Databricks table ✓</span>
+                <span class="wb-chip">💬 Slack #quality ✓</span>
+              </div>
+              <span class="cr-status st-exec">EXECUTED</span>
+            </div>
+
+            <div class="console-row">
+              <div class="cr-main">
+                <span class="cr-name">Contract renewal draft — routed to procurement queue</span>
+                <span class="cr-meta">expiry detected 90 days out · 11:21</span>
+              </div>
+              <div class="cr-writebacks">
+                <span class="wb-chip">🎫 Ticket created ✓</span>
+                <span class="wb-chip">📄 Audit JSON ✓</span>
+              </div>
+              <span class="cr-status st-wait">AWAITING APPROVAL</span>
+            </div>
+
+            <div class="console-row">
+              <div class="cr-main">
+                <span class="cr-name">Supplier risk alert — exposure summary for at-risk region</span>
+                <span class="cr-meta">policy: human sign-off required · 10:58</span>
+              </div>
+              <div class="cr-writebacks">
+                <span class="wb-chip">💬 Slack #procurement ✓</span>
+              </div>
+              <span class="cr-status st-wait">AWAITING APPROVAL</span>
+            </div>
+          </div>
+
+          <div class="conf-footer">
+            <span><b>Every action writes back</b> to your systems</span>
+            <span class="conf-dot">●</span>
+            <span><b>Policy-checked</b> before execution</span>
+            <span class="conf-dot">●</span>
+            <span><b>Human approval</b> where it matters</span>
+            <span class="conf-dot">●</span>
+            <span><b>Logged</b> for audit</span>
+          </div>
+        </div>
+        <div class="vs-caption">
+          <b>From decision to writeback</b> · actions land in the systems you already run — your lakehouse, your chat, your ticketing — every one policy-checked, approved where required, and logged end to end
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -793,6 +874,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=20260611j" defer></script>
+<script src="script.js?v=20260611k" defer></script>
 </body>
 </html>

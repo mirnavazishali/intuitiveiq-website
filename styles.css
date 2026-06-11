@@ -668,3 +668,22 @@ html,body{ background:#000 !important; color:#dddddd; }
 .footer .brand-mark .intuitive-logo-img{height:26px;width:auto;margin:0}
 .brand-iq{font-family:"Satoshi",var(--font);font-weight:500;font-size:27px;line-height:1;color:#fff;letter-spacing:-0.5px;margin-left:-5px;transform:translateY(-1.5px)}
 .footer .brand-iq{font-size:23px}
+
+
+/* ── Actions Console pane — governed writebacks ─────────────────────── */
+.anim-console{font-family:var(--font);background:#0b0c10;border-radius:14px;padding:18px 22px;display:flex;flex-direction:column;gap:14px;min-height:420px;border:1px solid rgba(255,255,255,.12)}
+.console-rows{display:flex;flex-direction:column;gap:10px}
+.console-row{display:grid;grid-template-columns:1.4fr 1fr auto;align-items:center;gap:16px;padding:13px 16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);border-radius:10px;opacity:0;transform:translateY(6px);animation:confRow .45s ease forwards}
+.vp-console.active .console-row:nth-child(1){animation-delay:.1s}
+.vp-console.active .console-row:nth-child(2){animation-delay:.35s}
+.vp-console.active .console-row:nth-child(3){animation-delay:.6s}
+.vp-console.active .console-row:nth-child(4){animation-delay:.85s}
+.cr-main{display:flex;flex-direction:column;gap:3px;min-width:0}
+.cr-name{font-size:13.5px;font-weight:700;color:#fff;line-height:1.4}
+.cr-meta{font-family:var(--font-mono);font-size:10.5px;color:var(--slate-2)}
+.cr-writebacks{display:flex;gap:6px;flex-wrap:wrap}
+.wb-chip{font-family:var(--font-mono);font-size:10.5px;font-weight:600;padding:3px 9px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#c7ccd6;white-space:nowrap}
+.cr-status{font-family:var(--font-mono);font-size:9.5px;font-weight:800;letter-spacing:1px;padding:4px 10px;border-radius:100px;white-space:nowrap}
+.st-exec{background:rgba(47,107,255,.14);color:#5b8cff;border:1px solid rgba(47,107,255,.35)}
+.st-wait{background:rgba(139,147,166,.12);color:#aeb6c7;border:1px solid rgba(139,147,166,.3)}
+@media (max-width:760px){.console-row{grid-template-columns:1fr;gap:8px}}
