@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260611k" />
+  <link rel="stylesheet" href="styles.css?v=20260611l" />
 </head>
 <body>
 
@@ -144,6 +144,7 @@
       <button class="vt-pill" data-vt="ask">💬 Explainability</button>
       <button class="vt-pill" data-vt="action">⚡ Agentic orchestration</button>
       <button class="vt-pill" data-vt="console">🗂 Actions console</button>
+      <button class="vt-pill" data-vt="dash">📈 Insights</button>
     </div>
 
     <!-- Browser-chrome wrapper — gives the visuals an "in-app" feel -->
@@ -753,6 +754,69 @@
         </div>
       </div>
 
+      <!-- ── PANE 7 · Insights dashboard — KPIs that drill to evidence ── -->
+      <div class="visual-pane vp-dash">
+        <div class="anim-dash">
+          <div class="conf-header">
+            <div class="conf-title-block">
+              <span class="conf-title">Decision Insights</span>
+              <span class="conf-sub">live business KPIs · every number drills down to its evidence</span>
+            </div>
+            <div class="conf-legend">
+              <span class="cl green">last 30 days</span>
+              <span class="cl amber">all domains</span>
+            </div>
+          </div>
+
+          <div class="dash-kpis">
+            <div class="dash-kpi"><b class="dk-num">$4.2M</b><span class="dk-label">denial dollars recovered</span><span class="dk-delta">▲ 8%</span></div>
+            <div class="dash-kpi"><b class="dk-num">1,284</b><span class="dk-label">care gaps closed</span><span class="dk-delta">▲ 12%</span></div>
+            <div class="dash-kpi"><b class="dk-num">3,408</b><span class="dk-label">governed actions executed</span><span class="dk-delta">▲ 23%</span></div>
+            <div class="dash-kpi"><b class="dk-num">96%</b><span class="dk-label">decisions with full evidence</span><span class="dk-delta">▲ 2 pts</span></div>
+          </div>
+
+          <div class="dash-charts">
+            <div class="dash-chart">
+              <div class="dc-title">DECISIONS BY DOMAIN</div>
+              <div class="dash-bars">
+                <div class="db-col"><div class="dash-bar" style="--h:86%"></div><span>Quality</span></div>
+                <div class="db-col"><div class="dash-bar" style="--h:72%"></div><span>Care</span></div>
+                <div class="db-col"><div class="dash-bar" style="--h:64%"></div><span>Risk</span></div>
+                <div class="db-col"><div class="dash-bar" style="--h:55%"></div><span>Supply</span></div>
+                <div class="db-col"><div class="dash-bar" style="--h:41%"></div><span>Finance</span></div>
+                <div class="db-col"><div class="dash-bar" style="--h:30%"></div><span>ESG</span></div>
+              </div>
+            </div>
+            <div class="dash-chart">
+              <div class="dc-title">TIME-TO-ANSWER TREND</div>
+              <svg class="dash-line" viewBox="0 0 400 150" preserveAspectRatio="none">
+                <line x1="0" y1="120" x2="400" y2="120" stroke="rgba(255,255,255,.08)"/>
+                <line x1="0" y1="75" x2="400" y2="75" stroke="rgba(255,255,255,.08)"/>
+                <line x1="0" y1="30" x2="400" y2="30" stroke="rgba(255,255,255,.08)"/>
+                <path class="dl-path" d="M 10 30 L 75 48 L 140 42 L 205 78 L 270 95 L 335 108 L 390 118" fill="none" stroke="#5b8cff" stroke-width="2.5"/>
+                <g fill="#5b8cff">
+                  <circle cx="10" cy="30" r="3.5"/><circle cx="75" cy="48" r="3.5"/><circle cx="140" cy="42" r="3.5"/>
+                  <circle cx="205" cy="78" r="3.5"/><circle cx="270" cy="95" r="3.5"/><circle cx="335" cy="108" r="3.5"/>
+                  <circle cx="390" cy="118" r="4.5"/>
+                </g>
+                <text x="388" y="138" text-anchor="end" font-size="11" fill="#8b93a6" font-family="ui-monospace,Menlo,monospace">weeks → seconds</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="conf-footer">
+            <span><b>Click any number</b> → the data trail behind it</span>
+            <span class="conf-dot">●</span>
+            <span><b>One vocabulary</b> across every chart</span>
+            <span class="conf-dot">●</span>
+            <span><b>Boardroom-ready</b> evidence on demand</span>
+          </div>
+        </div>
+        <div class="vs-caption">
+          <b>Interactive dashboards, grounded in the fabric</b> · every KPI, chart, and trend drills straight down to the governed data and decisions behind it — insight you can defend, not just display
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -874,6 +938,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=20260611k" defer></script>
+<script src="script.js?v=20260611l" defer></script>
 </body>
 </html>

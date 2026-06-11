@@ -50,7 +50,7 @@ document.querySelectorAll('.vt-pill').forEach(btn => {
 // audit chips), so we give it a longer dwell of 12s when it's the
 // active tab. Other tabs stay at 9s.
 (() => {
-  const tabs = ['kg', 'lineage', 'confidence', 'ask', 'action', 'console'];
+  const tabs = ['kg', 'lineage', 'confidence', 'ask', 'action', 'console', 'dash'];
   let i = 0;
   const stage = document.querySelector('.visual-stage');
   if (!stage) return;
