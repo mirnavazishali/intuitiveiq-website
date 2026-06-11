@@ -666,5 +666,5 @@ html,body{ background:#000 !important; color:#dddddd; }
 .brand-mark{display:inline-flex;align-items:center}
 .nav .brand-mark .intuitive-logo-img{height:30px !important;width:auto;margin:0 !important}
 .footer .brand-mark .intuitive-logo-img{height:26px;width:auto;margin:0}
-.brand-iq{font-family:var(--font);font-weight:800;font-size:25px;line-height:1;color:#5b8cff;letter-spacing:-0.5px;margin-left:-6px;transform:translateY(1px)}
-.footer .brand-iq{font-size:22px}
+.brand-iq{font-family:"Inter",var(--font);font-weight:600;font-size:27px;line-height:1;color:#fff;letter-spacing:-1px;margin-left:-1px;transform:translateY(1px)}
+.footer .brand-iq{font-size:23px}
