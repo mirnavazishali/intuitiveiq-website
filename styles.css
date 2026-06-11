@@ -745,3 +745,30 @@ html,body{ background:#000 !important; color:#dddddd; }
 .powered-by-intuitive span{font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:#6b7180}
 .powered-by-intuitive img{height:20px;width:auto;filter:invert(1);opacity:.8;transition:opacity .15s}
 .powered-by-intuitive:hover img{opacity:1}
+
+
+/* ═════════════════════════════════════════════════════════════════════
+ * Mega-menu dropdowns (intuitive.ai style): full-width panel,
+ * section title left, divided link list right
+ * ═════════════════════════════════════════════════════════════════════ */
+.nav-drop{display:block;position:fixed;left:0;right:0;top:64px;transform:none;min-width:0;border:none;border-radius:0;background:rgba(7,8,9,.97);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid rgba(255,255,255,.1);box-shadow:0 30px 60px rgba(0,0,0,.55);padding:46px 0 54px;opacity:0;visibility:hidden;transition:opacity .16s ease,visibility .16s ease;z-index:55}
+.nav-drop::before{content:"";position:absolute;top:-28px;left:0;right:0;height:28px}
+.nav-item:hover .nav-drop,.nav-item:focus-within .nav-drop{display:block;opacity:1;visibility:visible}
+.nav-item:hover > a{color:#fff;box-shadow:inset 0 -2px 0 #5b8cff}
+.mega-inner{max-width:1340px;margin:0 auto;padding:0 36px;display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:start}
+.mega-left h3{font-size:38px;font-weight:800;color:#fff;letter-spacing:-0.03em;margin:0 0 12px}
+.mega-left p{font-size:15px;color:var(--slate);line-height:1.6;margin:0;max-width:380px}
+.mega-links{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px;align-content:start}
+.nav-drop .mega-links a{display:block;padding:16px 2px;border-radius:0;border-bottom:1px solid rgba(255,255,255,.14);color:#e6e9ef;font-size:15px;font-weight:500;white-space:normal;transition:color .15s,padding-left .15s}
+.nav-drop .mega-links a:hover{background:transparent;color:#5b8cff;padding-left:8px}
+
+/* mobile: collapse mega panel back into the burger list */
+@media (max-width:900px){
+  .nav-drop{position:static;opacity:1;visibility:visible;background:transparent;border:none;box-shadow:none;padding:2px 0 6px 14px;backdrop-filter:none}
+  .nav-drop::before{display:none}
+  .mega-inner{display:block;padding:0;max-width:none}
+  .mega-left{display:none}
+  .mega-links{display:block}
+  .nav-drop .mega-links a{border:none;padding:7px 0;font-size:13.5px}
+  .nav-item:hover > a{box-shadow:none}
+}
