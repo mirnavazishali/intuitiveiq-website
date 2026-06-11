@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lakehouse Studio | IntuitiveIQ for Databricks</title>
+  <meta name="description" content="Lakehouse Studio by IntuitiveIQ — migrate to Databricks de-risked, governed, live in days. Config-driven ingestion, enforced data quality, Unity Catalog masking, zero data egress. 20+ enterprises live." />
+  <meta property="og:title" content="Lakehouse Studio | IntuitiveIQ for Databricks" />
+  <meta property="og:description" content="Make your Databricks investment pay off — migrate and activate, de-risked and governed, live in days." />
+  <link rel="canonical" href="https://intuitiveiq.ai/lakehouse/" />
+  <link rel="icon" type="image/png" href="/assets/intuitive-favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=20260612a" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand"><a href="/" class="brand-mark" title="IntuitiveIQ — home" style="color:#fff;text-decoration:none"><img src="/assets/intuitive-logo.png?v=2" class="intuitive-logo-img" alt="intuitive" /><span class="brand-iq">IQ</span></a></div>
+    <template id="intuitive-svg-fallback">
+      <svg class="intuitive-logo" viewBox="0 0 480 100" aria-label="intuitive">
+        <path d="M 50 3 L 53 43 L 56 47 L 96 50 L 56 53 L 53 57 L 50 97 L 47 57 L 44 53 L 4 50 L 44 47 L 47 43 Z" fill="currentColor"/>
+        <path d="M 134 12 L 136 22 L 146 24 L 136 26 L 134 36 L 132 26 L 122 24 L 132 22 Z" fill="currentColor"/>
+        <path d="M 252 8 L 253 14 L 259 15 L 253 16 L 252 22 L 251 16 L 245 15 L 251 14 Z" fill="currentColor"/>
+        <text x="118" y="82" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="76" letter-spacing="-3" fill="currentColor">intuitive</text>
+      </svg>
+    </template>
+    <nav class="nav-links">
+      <div class="nav-item"><a href="/platform.html">Platform</a>
+        <div class="nav-drop">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <h3>Platform</h3>
+              <p>The Decision Intelligence Engine — four pillars, one governed lifecycle, live on the stack you already run.</p>
+            </div>
+            <div class="mega-links">
+              <a href="/platform.html#platform">The four pillars</a>
+              <a href="/platform.html#how">How it works</a>
+              <a href="/platform.html#stack">Works with your stack</a>
+              <a href="/platform.html#trust">Trust &amp; governance</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item"><a href="/solutions.html">Solutions</a>
+        <div class="nav-drop">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <h3>Solutions</h3>
+              <p>From trusted assistants to governed digital workers — and the business outcomes they deliver.</p>
+            </div>
+            <div class="mega-links">
+              <a href="/solutions.html#build">What you can build</a>
+              <a href="/solutions.html#agentic-workflows">Agentic business workflows</a>
+              <a href="/solutions.html#governance">AI governance &amp; risk</a>
+              <a href="/solutions.html#outcomes">Business outcomes</a>
+              <a href="/lakehouse/">Lakehouse Studio · for Databricks</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item"><a href="/industries.html">Industries</a>
+        <div class="nav-drop">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <h3>Industries</h3>
+              <p>Pre-built business vocabularies and AI playbooks — delivered through the aiE™ adoption model.</p>
+            </div>
+            <div class="mega-links">
+              <a href="/industries.html#healthcare">Healthcare</a>
+              <a href="/industries.html#financial-services">Financial Services</a>
+              <a href="/industries.html#cpg">Consumer Packaged Goods</a>
+              <a href="/industries.html#manufacturing">Manufacturing</a>
+              <a href="/industries.html#energy">Energy &amp; Utilities</a>
+              <a href="/industries.html#public-sector">Public Sector</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item"><a href="/company.html">Why IntuitiveIQ</a>
+        <div class="nav-drop">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <h3>Why IntuitiveIQ</h3>
+              <p>Owned intelligence — engineered by Intuitive, delivered through the aiE™ Framework.</p>
+            </div>
+            <div class="mega-links">
+              <a href="/company.html#moat">What makes us different</a>
+              <a href="/company.html#company">Engineered by Intuitive</a>
+              <a href="/platform.html#aie">The aiE™ Framework</a>
+              <a href="/index.html#boardroom-test">The 90-second boardroom test</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item"><a href="https://intuitive.ai/about-us/our-story/" target="_blank" rel="noopener">About Us</a>
+        <div class="nav-drop">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <h3>About Us</h3>
+              <p>We are an AI-first innovation and engineering company delivering engineering breakthroughs.</p>
+            </div>
+            <div class="mega-links">
+              <a href="https://intuitive.ai/about-us/our-story/" target="_blank" rel="noopener">Our Story</a>
+              <a href="https://intuitive.ai/about-us/events/" target="_blank" rel="noopener">Events</a>
+              <a href="https://intuitive.ai/about-us/life-at-intuitive/" target="_blank" rel="noopener">Life@Intuitive</a>
+              <a href="https://intuitive.ai/careers/" target="_blank" rel="noopener">Careers</a>
+              <a href="https://intuitive.ai/about-us/news/" target="_blank" rel="noopener">News</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <button class="nav-burger" aria-label="Menu" aria-expanded="false">☰</button>
+    <div class="nav-cta">
+      <a href="mailto:hello@intuitive.ai?subject=IntuitiveIQ" class="btn btn-primary">Talk to us →</a>
+    </div>
+  </div>
+</header>
+
+<!-- ── Page hero ─────────────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">IntuitiveIQ for Databricks · Lakehouse Studio</p>
+    <h1 class="page-title">Make your Databricks investment pay off.</h1>
+    <p class="section-sub" style="margin-bottom:28px">Intuitive moves enterprises onto the lakehouse — de-risked, governed, live in days, in your own cloud. The payoff: faster time-to-value, lower run-cost, and a foundation your auditors sign off on. We don&rsquo;t replace Databricks — we make it deliver.</p>
+    <div class="hero-actions" style="justify-content:flex-start;margin-bottom:48px">
+      <a href="https://lakehouse.semantixiq.ai/app" class="btn btn-primary lg">Launch Lakehouse Studio →</a>
+      <a href="mailto:hello@intuitive.ai?subject=Lakehouse%20Studio%20—%204-week%20proof-of-value" class="btn btn-ghost lg">Book a 4-week proof-of-value</a>
+    </div>
+    <div class="hero-meta" style="justify-content:flex-start;gap:40px">
+      <div><b>20+</b><span>enterprises live on Databricks</span></div>
+      <div><b>3–4×</b><span>faster pilot → production</span></div>
+      <div><b>80%</b><span>faster data availability</span></div>
+      <div><b>$16M+</b><span>legacy cost taken out</span></div>
+      <div><b>0</b><span>data egress · push-down</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── The reality ───────────────────────────────────────────────────── -->
+<section id="reality" class="section section-alt">
+  <div class="container">
+    <p class="eyebrow">The reality</p>
+    <h2 class="section-title">78% are using AI. Only 26% see value.</h2>
+    <p class="section-sub">Pilots stall — and the meter keeps running. Four compounding gaps keep Databricks spend from turning into returns.</p>
+    <div class="trust-grid">
+      <div>
+        <h4>Data isn&rsquo;t ready.</h4>
+        <p>70–80% of engineering effort goes to wrangling fragmented sources and legacy formats. Meanwhile, clusters sit idle and the spend continues.</p>
+      </div>
+      <div>
+        <h4>No governed foundation.</h4>
+        <p>Ungoverned data is a liability — no lineage, no cost attribution, no access control to audit or explain. Spend spirals; renewals stall.</p>
+      </div>
+      <div>
+        <h4>Business context is missing.</h4>
+        <p>Without shared business meaning, AI fails on real questions and trust dies — blocking the expansion that justifies the platform.</p>
+      </div>
+      <div>
+        <h4>AI stays in the platform.</h4>
+        <p>Insights stuck in dashboards never reach where the business runs — Salesforce, SAP, ServiceNow. The ROI is never realized.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Migrate & activate ────────────────────────────────────────────── -->
+<section id="migrate" class="section">
+  <div class="container">
+    <p class="eyebrow">Get to Databricks faster</p>
+    <h2 class="section-title">Migrate and activate — de-risked, governed, live in days.</h2>
+    <p class="section-sub">Lakehouse Studio compresses migration from quarters to days — config-driven ingestion, validation and masking, delivered as native Databricks Asset Bundles, operated from one place, with audit-grade evidence at every gate.</p>
+
+    <div class="flow six" style="grid-template-columns:repeat(5,1fr)">
+      <div class="flow-step"><div class="flow-num">🥉 INGEST</div><h3>Ingesta.</h3><p>Any source — cloud, on-prem, streaming — lands in Bronze, raw and as-is.</p></div>
+      <div class="flow-step"><div class="flow-num">🥈 VALIDATE</div><h3>Validra.</h3><p>Auto-generated quality rules gate the path to Silver. Bad data can&rsquo;t pass.</p></div>
+      <div class="flow-step"><div class="flow-num">🛡 GOVERN</div><h3>MaskIQ.</h3><p>PII/PHI/PCI discovered and masked in Unity Catalog — compliant from day one.</p></div>
+      <div class="flow-step"><div class="flow-num">🥇 OPTIMIZE</div><h3>FinOps.</h3><p>Business-ready Gold with cost attribution and anomaly signals built in.</p></div>
+      <div class="flow-step"><div class="flow-num">✨ ACTIVATE</div><h3>Agents.</h3><p>Trusted data activated through governed agents and analytics your teams act on.</p></div>
+    </div>
+    <p style="font-family:var(--font-mono);font-size:12px;color:#8b93a6;margin:18px 0 0;text-align:center">One Databricks Lakehouse · governed by Unity Catalog · runs inside your cloud — zero data egress</p>
+
+    <div class="cases" style="margin-top:40px">
+      <div class="case-card">
+        <div class="case-tag">Ingesta</div>
+        <h3>Connect any source.</h3>
+        <p>Multi-format, multi-pattern — batch, streaming, CDC — into Bronze. 20 first-class connectors across cloud, databases, Hadoop and legacy; Auto Loader and Spark Streaming out of the box.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Validra</div>
+        <h3>Trust the data, automatically.</h3>
+        <p>Auto-generated quality rules, drift detection and quarantine per pipeline — an enforced gate: a failing defect score <b>blocks promotion</b>, it doesn&rsquo;t just flag it. <b>Defects 15–25% → under 3%.</b></p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">MaskIQ</div>
+        <h3>Compliant from day one.</h3>
+        <p>PII / PHI / PCI discovery with Unity Catalog masking via role-based access — HIPAA, GDPR and PCI compliant from first deployment, with semantic, role-aware de-identification.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Legacy retirement</div>
+        <h3>Retire costly legacy.</h3>
+        <p>Oracle ODS, SAS models, Cloudera, Teradata, mainframe → one unified Delta Lakehouse, with real-time streaming and reconciliation to the cent.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Gated method</div>
+        <h3>Predictable delivery.</h3>
+        <p>Assess → Convert → Promote → Govern → Optimize → Enable — every step leaves live evidence, accelerated by an AI agent workforce.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Zero egress</div>
+        <h3>Your data never leaves.</h3>
+        <p>Ingestion, validation and masking execute inside your Databricks. The control plane sees metadata — never your records.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Connectors ────────────────────────────────────────────────────── -->
+<section id="connectors" class="section section-alt">
+  <div class="container">
+    <p class="eyebrow">Connect anything</p>
+    <h2 class="section-title">One studio. The whole legacy estate.</h2>
+    <p class="section-sub">20 first-class connectors spanning every layer of the enterprise — all config-driven and push-down, so your data never leaves your cloud. No source left behind means no stalled program.</p>
+    <div class="stack-grid">
+      <div class="stack-card"><span class="stack-cat">Cloud &amp; storage</span><h4>Object stores</h4><div class="stack-pills"><span>Amazon S3</span><span>ADLS</span><span>GCS</span></div></div>
+      <div class="stack-card"><span class="stack-cat">Cloud warehouses</span><h4>Modern warehouses</h4><div class="stack-pills"><span>BigQuery</span><span>Snowflake</span></div></div>
+      <div class="stack-card"><span class="stack-cat">Databases</span><h4>Relational estate</h4><div class="stack-pills"><span>PostgreSQL</span><span>MySQL</span><span>SQL Server</span><span>Oracle</span><span>Teradata</span><span>IBM Db2</span><span>SAP HANA</span><span>Vertica</span><span>Greenplum</span></div></div>
+      <div class="stack-card"><span class="stack-cat">Legacy &amp; analytics</span><h4>The systems migrations move off</h4><div class="stack-pills"><span>SAS (.sas7bdat + Viya)</span><span>Mainframe (Db2 z/OS)</span></div></div>
+      <div class="stack-card"><span class="stack-cat">Hadoop / Cloudera</span><h4>Hadoop estate</h4><div class="stack-pills"><span>Hive</span><span>Impala</span><span>HDFS</span></div></div>
+      <div class="stack-card"><span class="stack-cat">NoSQL · streaming · APIs</span><h4>Events &amp; documents</h4><div class="stack-pills"><span>MongoDB</span><span>Kafka / Event Hub</span><span>REST</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Stakeholders ──────────────────────────────────────────────────── -->
+<section id="stakeholders" class="section">
+  <div class="container">
+    <p class="eyebrow">Built for every seat at the table</p>
+    <h2 class="section-title">One studio. Value for every stakeholder.</h2>
+    <div class="cases">
+      <div class="case-card">
+        <div class="case-tag">CFO &amp; Finance</div>
+        <h3>Predictable spend, faster payback.</h3>
+        <p>Take cost out of legacy (SAS, Cloudera, Teradata), run in your own cloud with no egress surprises, and turn Databricks spend into measurable returns — proven in a 4-week proof-of-value before you commit. <b>$16M+ legacy cost taken out · 3–4× faster pilot → production.</b></p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">CDO &amp; Governance</div>
+        <h3>Governed &amp; compliant by design.</h3>
+        <p>Unity Catalog-native grants, masking, lineage and attribute-based access from day one; HIPAA / GDPR / PCI at ingestion; enforced promotion gates with an audit ledger of every decision. <b>Defects 15–25% → under 3% · every decision on the record.</b></p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">VP Data &amp; Engineering</div>
+        <h3>Ship faster, with less toil.</h3>
+        <p>20 first-class connectors and config-driven pipelines delivered as native Databricks Asset Bundles, with a gated method that leaves evidence at every step. <b>80% faster data availability.</b></p>
+      </div>
+    </div>
+    <p class="solution-line" style="margin-top:36px"><b>A strategic Databricks partner.</b> Intuitive delivers alongside your Databricks account team — de-risked migration and governed foundations, all built on Databricks and kept front-and-centre.</p>
+  </div>
+</section>
+
+<!-- ── Outcomes ──────────────────────────────────────────────────────── -->
+<section id="outcomes" class="section section-alt">
+  <div class="container">
+    <p class="eyebrow">Proven in production · 20+ joint Databricks customers</p>
+    <h2 class="section-title">Outcomes, not slideware.</h2>
+    <div class="cases">
+      <div class="case-card">
+        <div class="case-tag">Healthcare — Epic + FinOps</div>
+        <h3>$3M saved in year one.</h3>
+        <p>60–90TB of Epic data ingested daily with full HIPAA masking via role-based access. Patient-readmission analytics live in one week.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Financial Services — SAS/Cloudera</div>
+        <h3>$16M total cost takeout.</h3>
+        <p>40+ SAS models and fragmented silos unified into one Delta Lakehouse; 250+ sources a day, over 2TB consolidated; 80% less ingestion time.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Telecom — Oracle ODS</div>
+        <h3>$10M annual savings.</h3>
+        <p>Oracle ODS to Databricks with Auto Loader and Spark Streaming; 20M+ records at peak; 80% faster availability, 70% faster reporting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Enterprise-grade ──────────────────────────────────────────────── -->
+<section id="grade" class="section">
+  <div class="container">
+    <p class="eyebrow">Enterprise-grade by design</p>
+    <h2 class="section-title">Built to survive your CISO, your auditor, and your board.</h2>
+    <p class="section-sub">Not a pilot dressed up for a demo. Lakehouse Studio enforces the controls a regulated enterprise actually runs on — bad data can&rsquo;t reach production, every decision is on the record, and the platform keeps serving when something fails.</p>
+    <div class="trust-grid">
+      <div><h4>Your data stays in your cloud.</h4><p>Push-down execution inside Databricks; the control plane sees metadata, never your records — zero egress.</p></div>
+      <div><h4>Bad data can&rsquo;t be promoted.</h4><p>Enforced gates block a release unless defects are under threshold and an authorized approver signs off — every HOLD / PROMOTE written to an audit ledger.</p></div>
+      <div><h4>Raw → trusted → business-ready.</h4><p>The full medallion, generated — not hand-built — with dead-letter quarantine, so nothing is dropped silently.</p></div>
+      <div><h4>Unity Catalog-native governance.</h4><p>Grants, column masks, row filters, tags and lineage — we drive Unity Catalog, not replace it.</p></div>
+      <div><h4>Observable, with an SLA.</h4><p>Structured audit logs, health and freshness signals, cost and anomaly alerts — on a highly-available, zero-downtime deployment.</p></div>
+      <div><h4>Trusted, tested supply chain.</h4><p>Native Databricks Asset Bundles; every build test-gated and signed with provenance, credentials age-tracked and rotated.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ───────────────────────────────────────────────────────────── -->
+<section id="contact" class="section cta">
+  <div class="container">
+    <h2 class="cta-title">See your migration de-risked — in a 4-week proof-of-value.</h2>
+    <p class="cta-sub">Bring your hardest source system. We&rsquo;ll connect it, validate it, mask it, and land it governed in your own Databricks — with the evidence trail to show your auditor.</p>
+    <div class="cta-actions">
+      <a href="https://lakehouse.semantixiq.ai/app" class="btn btn-primary lg">Launch Lakehouse Studio →</a>
+      <a href="mailto:hello@intuitive.ai?subject=Lakehouse%20Studio%20—%20proof-of-value" class="btn btn-ghost lg">Book a proof-of-value</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-top">
+    <div class="footer-top-brand">
+      <a href="/" class="brand-mark" style="color:#fff;text-decoration:none"><img src="/assets/intuitive-logo.png?v=2" class="intuitive-logo-img" alt="intuitive" /><span class="brand-iq">IQ</span></a>
+      <a href="https://intuitive.ai" target="_blank" rel="noopener" class="powered-by-intuitive">
+        <span>Powered by</span>
+        <img src="/assets/intuitive-logo.png?v=2" alt="Intuitive — intuitive.ai" />
+      </a>
+    </div>
+    <img class="footer-certs" src="/assets/img/certifications.png" alt="ISO 27001 · AICPA SOC 2 · GDPR · CRN Fast Growth 150 · Inc 5000" loading="lazy" />
+  </div>
+
+  <div class="container footer-cols-grid">
+    <div>
+      <h5>Platform</h5>
+      <a href="/platform.html#platform">The four pillars</a>
+      <a href="/platform.html#how">How it works</a>
+      <a href="/platform.html#aie">The aiE™ Framework</a>
+      <a href="/platform.html#stack">Works with your stack</a>
+      <a href="/platform.html#trust">Trust &amp; governance</a>
+    </div>
+    <div>
+      <h5>Solutions</h5>
+      <a href="/solutions.html#build">What you can build</a>
+      <a href="/solutions.html#agentic-workflows">Agentic workflows</a>
+      <a href="/solutions.html#governance">AI governance &amp; risk</a>
+      <a href="/solutions.html#outcomes">Business outcomes</a>
+              <a href="/lakehouse/">Lakehouse Studio · for Databricks</a>
+      <a href="/lakehouse/">Lakehouse Studio</a>
+        <a href="https://app.semantixiq.ai/app">Open Knowledge Studio</a>
+    </div>
+    <div>
+      <h5>Industries</h5>
+      <a href="/industries.html#healthcare">Healthcare</a>
+      <a href="/industries.html#financial-services">Financial Services</a>
+      <a href="/industries.html#cpg">Consumer Packaged Goods</a>
+      <a href="/industries.html#manufacturing">Manufacturing</a>
+      <a href="/industries.html#energy">Energy &amp; Utilities</a>
+      <a href="/industries.html#public-sector">Public Sector</a>
+    </div>
+    <div>
+      <h5>Services</h5>
+      <a href="https://intuitive.ai/services/data-and-ai/" target="_blank" rel="noopener">Data &amp; AI</a>
+      <a href="https://intuitive.ai/services/app-and-db-modernization/" target="_blank" rel="noopener">App &amp; Database Modernization</a>
+      <a href="https://intuitive.ai/services/cloud-platform-engineering/" target="_blank" rel="noopener">Cloud &amp; Platform Engineering</a>
+      <a href="https://intuitive.ai/services/cybersecurity/" target="_blank" rel="noopener">Cybersecurity</a>
+      <a href="https://intuitive.ai/services/networking-and-sdx/" target="_blank" rel="noopener">Networking &amp; SDx</a>
+    </div>
+    <div>
+      <h5>Insights</h5>
+      <a href="https://intuitive.ai/insights/case-studies/" target="_blank" rel="noopener">Case Studies</a>
+      <a href="https://intuitive.ai/insights/blog/" target="_blank" rel="noopener">Blogs</a>
+      <a href="https://intuitive.ai/insights/whitepapers/" target="_blank" rel="noopener">Whitepapers</a>
+      <a href="https://intuitive.ai/partners/" target="_blank" rel="noopener">Partners</a>
+    </div>
+    <div>
+      <h5>About Us</h5>
+      <a href="https://intuitive.ai/about-us/our-story/" target="_blank" rel="noopener">Our Story</a>
+      <a href="https://intuitive.ai/about-us/life-at-intuitive/" target="_blank" rel="noopener">Life@Intuitive</a>
+      <a href="https://intuitive.ai/about-us/news/" target="_blank" rel="noopener">News</a>
+      <a href="https://intuitive.ai/about-us/events/" target="_blank" rel="noopener">Events</a>
+      <a href="https://intuitive.ai/careers/" target="_blank" rel="noopener">Careers</a>
+      <a href="mailto:hello@intuitive.ai?subject=IntuitiveIQ">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="container footer-hq">
+    <div>
+      <h5>Global Headquarters</h5>
+      <p>Intuitive Technology Partners Inc.<br/>33 Wood Ave. S, Suite #600<br/>Iselin, NJ 08830-2717, USA</p>
+    </div>
+    <div>
+      <h5>Regional Offices</h5>
+      <p>Dallas, USA &nbsp;|&nbsp; Toronto, Canada &nbsp;|&nbsp; Paris, France &nbsp;|&nbsp; London, UK &nbsp;|&nbsp; Zurich, Switzerland &nbsp;|&nbsp; Dublin, Ireland &nbsp;|&nbsp; Budapest, Hungary &nbsp;|&nbsp; Bucharest, Romania &nbsp;|&nbsp; Bengaluru, India &nbsp;|&nbsp; Pune, India &nbsp;|&nbsp; Ahmedabad, India</p>
+    </div>
+  </div>
+
+  <div class="footer-fine">
+    <div class="container">
+      <span>© 2026 Intuitive.ai · All rights reserved. · <a href="https://intuitive.ai/privacy-policy/" target="_blank" rel="noopener" style="color:#6b7180">Privacy Policy</a> · <a href="https://intuitive.ai/cookie-policy/" target="_blank" rel="noopener" style="color:#6b7180">Cookie Policy</a></span>
+      <span>Explainability · Traceability · Auditability · Accountability</span>
+    </div>
+  </div>
+</footer>
+<script src="/script.js?v=20260612a" defer></script>
+</body>
+</html>
