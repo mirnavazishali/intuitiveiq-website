@@ -774,11 +774,11 @@ html,body{ background:#000 !important; color:#dddddd; }
 }
 
 /* Nav scale-up to match intuitive.ai presence */
-.nav-links{gap:34px}
-.nav-links .nav-item > a{font-size:16px;font-weight:500;letter-spacing:-0.01em}
-.nav-links .nav-item > a::after{font-size:10px}
-.nav-cta .btn{font-size:14.5px;padding:10px 19px}
-@media (max-width:1080px){.nav-links{gap:24px}.nav-links .nav-item > a{font-size:14.5px}}
+.nav-links{gap:40px}
+.nav-links .nav-item > a{font-size:18px;font-weight:500;letter-spacing:-0.012em}
+.nav-links .nav-item > a::after{font-size:11px}
+.nav-cta .btn{font-size:15.5px;padding:11px 21px}
+@media (max-width:1180px){.nav-links{gap:26px}.nav-links .nav-item > a{font-size:16px}}
 
 /* Anchor targets land below the sticky nav, not under it */
 [id]{scroll-margin-top:90px}
