@@ -596,3 +596,30 @@ html,body{ background:#000 !important; color:#dddddd; }
 .cert-label{font-family:var(--font-mono);font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#3a4150;flex-shrink:0}
 .cert-strip img{height:46px;width:auto;max-width:calc(100% - 0px);object-fit:contain}
 @media (max-width:680px){.cert-strip img{height:auto;width:100%}}
+
+/* ═════════════════════════════════════════════════════════════════════
+ * Multi-page nav — dropdown menus, page heroes, mobile burger
+ * ═════════════════════════════════════════════════════════════════════ */
+.nav-item{position:relative;display:flex;align-items:center;padding:10px 0}
+.nav-item > a{color:var(--ink-2);font-size:13.5px;font-weight:500;transition:color .15s}
+.nav-item > a::after{content:" ▾";font-size:9px;color:var(--slate-2)}
+.nav-item:hover > a{color:#fff}
+.nav-drop{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#0b0c10;border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:10px;min-width:250px;box-shadow:0 18px 44px rgba(0,0,0,.55);z-index:60}
+.nav-item:hover .nav-drop,.nav-item:focus-within .nav-drop{display:block}
+.nav-drop a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink-2);font-size:13px;white-space:nowrap}
+.nav-drop a:hover{background:rgba(255,255,255,.07);color:#fff}
+
+/* Page hero (inner pages) */
+.page-hero{padding:104px 0 0;background:radial-gradient(ellipse 80% 70% at 50% 0%, rgba(0,58,227,.14) 0%, rgba(0,58,227,0) 60%), #000}
+.page-title{font-size:52px;line-height:1.08;font-weight:800;color:#fff;letter-spacing:-0.035em;margin:0 0 16px;max-width:820px}
+@media (max-width:900px){.page-hero{padding:72px 0 0}.page-title{font-size:36px}}
+
+/* Mobile burger menu */
+.nav-burger{display:none;background:transparent;border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:8px;padding:5px 11px;font-size:16px;cursor:pointer;line-height:1}
+@media (max-width:900px){
+  .nav-burger{display:block}
+  .nav-links{display:none}
+  .nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:100%;left:0;right:0;background:#0b0c10;border-bottom:1px solid rgba(255,255,255,.14);padding:14px 28px 20px;z-index:70;box-shadow:0 24px 50px rgba(0,0,0,.6)}
+  .nav-links.open .nav-item{flex-direction:column;align-items:flex-start;padding:6px 0;width:100%}
+  .nav-links.open .nav-drop{display:block;position:static;transform:none;border:none;background:transparent;box-shadow:none;padding:4px 0 4px 14px;min-width:0}
+}

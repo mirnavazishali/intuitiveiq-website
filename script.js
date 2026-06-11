@@ -98,3 +98,11 @@ document.querySelectorAll('.section, .hero, .logos').forEach(el => {
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   io.observe(el);
 });
+
+// ── Mobile burger menu ────────────────────────────────────────────────
+document.querySelector('.nav-burger')?.addEventListener('click', (e) => {
+  const links = document.querySelector('.nav-links');
+  if (!links) return;
+  const open = links.classList.toggle('open');
+  e.currentTarget.setAttribute('aria-expanded', String(open));
+});
