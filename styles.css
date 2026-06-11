@@ -58,7 +58,7 @@ img,svg{display:block;max-width:100%}
 @keyframes sep-dot{0%{left:0;opacity:0}10%{opacity:1}90%{opacity:1}100%{left:calc(100% - 6px);opacity:0}}
 
 /* Intuitive logo — sits tight under SemantixIQ, nudged left to align flush */
-.intuitive-logo-img{height:22px;width:auto;display:block;margin-top:2px;margin-left:-5px;transition:opacity .15s}
+.intuitive-logo-img{height:27px;width:auto;display:block;margin-top:2px;margin-left:-5px;transition:opacity .15s}
 .brand:hover .intuitive-logo-img{opacity:.85}
 .footer .intuitive-logo-img{filter:invert(1)}
 .intuitive-logo{height:22px;width:auto;color:var(--ink);display:block;margin-top:2px;margin-left:-5px;transition:color .15s}
@@ -510,10 +510,10 @@ html,body{ background:#000 !important; color:#dddddd; }
 
 /* ===== brand horizontal lockup (match dbx: SemantixIQ | intuitive) ===== */
 .brand-text{ flex-direction:row !important; align-items:center !important; gap:11px !important; line-height:1 !important; }
-.brand-name{ font-size:19px !important; }
-.brand-sep{ width:1px !important; height:20px !important; max-width:none !important; margin:0 !important; border-radius:0 !important; background:rgba(255,255,255,.22) !important; animation:none !important; opacity:1 !important; }
+.brand-name{ font-size:23px !important; }
+.brand-sep{ width:1px !important; height:26px !important; max-width:none !important; margin:0 !important; border-radius:0 !important; background:rgba(255,255,255,.22) !important; animation:none !important; opacity:1 !important; }
 .brand-sep::after{ display:none !important; }
-.nav .intuitive-logo-img{ height:20px !important; margin:0 !important; }
+.nav .intuitive-logo-img{ height:30px !important; margin:0 !important; }
 
 /* ===== reduce blue: keep blue only on primary buttons ===== */
 .pillar-icon{ background:rgba(255,255,255,.06) !important; border:1px solid rgba(255,255,255,.16) !important; color:#e6e9ef !important; }
@@ -623,3 +623,25 @@ html,body{ background:#000 !important; color:#dddddd; }
   .nav-links.open .nav-item{flex-direction:column;align-items:flex-start;padding:6px 0;width:100%}
   .nav-links.open .nav-drop{display:block;position:static;transform:none;border:none;background:transparent;box-shadow:none;padding:4px 0 4px 14px;min-width:0}
 }
+
+
+/* ═════════════════════════════════════════════════════════════════════
+ * Boardroom narrative — three shifts, 90-second test, industry photos
+ * ═════════════════════════════════════════════════════════════════════ */
+.shift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:8px 0 10px}
+.shift{background:#0b0c10;border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px 24px}
+.shift.now{border-color:rgba(91,140,255,.45);background:linear-gradient(180deg,rgba(0,58,227,.10),rgba(0,58,227,.02))}
+.shift-year{font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:1.4px;color:var(--slate-2)}
+.shift.now .shift-year{color:#5b8cff}
+.shift h4{font-size:20px;font-weight:800;color:#fff;margin:6px 0 4px;letter-spacing:-0.02em}
+.shift p{font-size:13.5px;color:var(--slate);margin:0;line-height:1.5}
+.shift-punch{font-size:18px;font-weight:700;color:#fff;margin:18px 0 34px;letter-spacing:-0.01em}
+@media (max-width:900px){.shift-grid{grid-template-columns:1fr}}
+
+.test-list{display:flex;flex-direction:column;gap:12px;margin-top:8px;max-width:860px}
+.test-q{display:flex;gap:18px;align-items:baseline;background:#0b0c10;border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px;font-size:16.5px;font-weight:600;color:#fff;line-height:1.45}
+.test-q span{font-family:var(--font-mono);font-size:12px;color:#5b8cff;font-weight:700;flex-shrink:0}
+.test-cta{margin-top:30px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.test-cta p{font-size:16px;color:var(--slate);margin:0}
+
+.case-img{width:calc(100% + 64px);margin:-32px -32px 22px;aspect-ratio:16/9;object-fit:cover;border-radius:16px 16px 0 0;border-bottom:1px solid var(--line);display:block;max-width:none;filter:saturate(.92)}
