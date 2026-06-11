@@ -784,3 +784,19 @@ html,body{ background:#000 !important; color:#dddddd; }
 [id]{scroll-margin-top:90px}
 /* Make the aiE strip unmistakable when navigated to directly */
 .aie-strip:target{border-color:rgba(91,140,255,.55);box-shadow:0 0 0 1px rgba(91,140,255,.35),0 0 44px rgba(47,107,255,.15)}
+
+
+/* ── intuitive.ai-style footer ──────────────────────────────────────── */
+.footer-top{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;padding-top:60px}
+.footer-top-brand{display:flex;flex-direction:column;gap:4px}
+.footer-top .powered-by-intuitive{margin-top:10px}
+.footer-certs{height:46px;width:auto;filter:invert(1);opacity:.85}
+.footer-cols-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:36px 28px;padding-top:48px;padding-bottom:54px}
+.footer-cols-grid h5{font-size:16px;font-weight:700;color:#fff;margin:0 0 14px;letter-spacing:-0.01em}
+.footer-cols-grid a{display:block;color:#9ba6b8;font-size:13.5px;text-decoration:none;padding:6px 0;transition:color .15s;line-height:1.45}
+.footer-cols-grid a:hover{color:#fff}
+.footer-hq{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;border-top:1px solid rgba(255,255,255,.08);padding-top:38px;padding-bottom:46px}
+.footer-hq h5{font-size:17px;font-weight:700;color:#fff;margin:0 0 10px;letter-spacing:-0.01em}
+.footer-hq p{font-size:14.5px;color:#9ba6b8;line-height:1.75;margin:0}
+@media (max-width:1080px){.footer-cols-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:720px){.footer-cols-grid{grid-template-columns:repeat(2,1fr)}.footer-hq{grid-template-columns:1fr;gap:28px}.footer-certs{height:36px}}
