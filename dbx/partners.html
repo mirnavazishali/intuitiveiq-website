@@ -1,264 +1,290 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>IntuitiveIQ × Databricks — Partner & Co-Sell Brief</title>
-<meta name="description" content="A co-sell brief for Databricks account teams: how Intuitive's IntuitiveIQ unblocks stalled migrations and AI pilots, lands net-new workloads, and grows DBU consumption — keeping Databricks front-and-centre." />
-<meta name="robots" content="noindex" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
-<style>
-  :root{
-    --bg:#ffffff; --line:rgba(15,23,42,.10);
-    --txt:#0f172a; --muted:#4b5568; --dim:#6b7280;
-    --purple:#111111; --blue:#3a3a3a; --amber:#3a3a3a; --teal:#000000; --dbx:#111111;
-  }
-  *{box-sizing:border-box} html{scroll-behavior:smooth}
-  body{margin:0;background:radial-gradient(1100px 600px at 80% -10%,rgba(0, 0, 0,.06),transparent 60%),radial-gradient(900px 600px at 0% 6%,rgba(0, 0, 0,.06),transparent 55%),var(--bg);color:var(--txt);font-family:'Satoshi',Inter,system-ui,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55}
-  a{color:inherit;text-decoration:none}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-  .grad{background:linear-gradient(100deg,var(--dbx),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;transition:.15s}
-  .btn-primary{background:linear-gradient(100deg,var(--dbx),var(--purple));color:#fff;box-shadow:0 10px 30px rgba(0, 0, 0,.28)}
-  .btn-primary:hover{transform:translateY(-1px)}
-  .btn-ghost{border:1px solid var(--line);color:var(--txt)} .btn-ghost:hover{background:#f6f8fc}
-  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(255,255,255,.85);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;height:64px}
-  .brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:18px;white-space:nowrap;flex-shrink:0}
-  .pill{font-size:11px;font-weight:700;color:var(--purple);border:1px solid rgba(0, 0, 0,.35);padding:2px 9px;border-radius:999px;background:rgba(0, 0, 0,.08);white-space:nowrap}
-  .brand-sep{width:1px;height:18px;background:var(--line);display:inline-block;margin:0 3px}
-  .navlinks{display:flex;align-items:center;gap:18px;font-size:13.5px;color:var(--muted);font-weight:500}
-  .navlinks a{white-space:nowrap} .navlinks a:hover{color:var(--txt)}
-  @media(max-width:640px){.navlinks a:not(.btn){display:none}}
-  .hero{padding:64px 0 40px}
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--dbx);border:1px solid rgba(0, 0, 0,.3);padding:6px 14px;border-radius:999px;background:rgba(0, 0, 0,.05)}
-  h1{font-size:clamp(30px,4.6vw,50px);line-height:1.05;letter-spacing:-1.2px;font-weight:900;margin:20px 0 0;max-width:20ch}
-  .lede{font-size:clamp(16px,1.7vw,19px);color:var(--muted);max-width:64ch;margin:18px 0 0}
-  .cta{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
-  .stats{display:flex;gap:13px;flex-wrap:wrap;margin-top:34px}
-  .stat{border:1px solid var(--line);border-radius:12px;padding:13px 17px;min-width:140px}
-  .stat b{display:block;font-size:21px;font-weight:900;letter-spacing:-.5px} .stat span{font-size:12px;color:var(--muted)}
-  section{padding:46px 0;border-top:1px solid var(--line)}
-  .kicker{font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--dbx);margin-bottom:11px}
-  h2{font-size:clamp(23px,2.8vw,33px);line-height:1.12;letter-spacing:-.7px;font-weight:800;margin:0;max-width:26ch}
-  .sub{color:var(--muted);font-size:16px;max-width:66ch;margin-top:12px}
-  .grid{display:grid;gap:16px;margin-top:26px}
-  .g3{grid-template-columns:repeat(3,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
-  @media(max-width:860px){.g3,.g2{grid-template-columns:1fr}}
-  .card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:20px;transition:.15s;box-shadow:0 1px 3px rgba(15,23,42,.04)}
-  .card:hover{border-color:rgba(0, 0, 0,.35);transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,23,42,.08)}
-  .card .ic{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-size:19px;margin-bottom:12px;background:rgba(0, 0, 0,.08);border:1px solid rgba(0, 0, 0,.2)}
-  .card h3{margin:0 0 6px;font-size:16px;font-weight:800} .card p{margin:0;color:var(--muted);font-size:13.5px}
-  .impact{font-size:12px;color:var(--amber);margin-top:10px;font-weight:700}
-  .num{font-size:13px;font-weight:900;color:#fff;background:linear-gradient(135deg,var(--dbx),var(--purple));width:30px;height:30px;border-radius:9px;display:grid;place-items:center;margin-bottom:12px}
-  .trigger{display:flex;gap:11px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line)}
-  .trigger:last-child{border-bottom:none}
-  .trigger .t-ic{font-size:18px;line-height:1.3;flex-shrink:0}
-  .trigger b{font-size:14.5px} .trigger span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
-  .proof{display:flex;flex-wrap:wrap;gap:22px;margin-top:24px;padding:18px 22px;border:1px dashed var(--line);border-radius:14px;background:rgba(0, 0, 0,.03)}
-  .proof div b{color:var(--dbx);font-size:19px;font-weight:900;display:block} .proof div span{font-size:12.5px;color:var(--muted)}
-  .fit{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
-  @media(max-width:760px){.fit{grid-template-columns:1fr}}
-  .fitbox{border:1px solid var(--line);border-radius:14px;padding:20px}
-  .fitbox h4{margin:0 0 10px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.4px}
-  .fitbox.them h4{color:var(--dbx)} .fitbox.us h4{color:var(--purple)}
-  .fitbox li{font-size:13.5px;color:var(--muted);margin:7px 0;list-style:none;padding-left:20px;position:relative}
-  .fitbox li::before{content:"▸";position:absolute;left:0;color:var(--purple)}
-  .fitbox.them li::before{color:var(--dbx)}
-  .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
-  .chip{font-size:12.5px;font-weight:600;color:var(--muted);border:1px solid var(--line);padding:6px 13px;border-radius:999px}
-  .chip.dbx{color:var(--dbx);border-color:rgba(0, 0, 0,.4);background:rgba(0, 0, 0,.06)}
-  .band{margin-top:8px;border-top:1px solid var(--line)}
-  .bandinner{text-align:center;padding:60px 0;background:radial-gradient(700px 280px at 50% 0%,rgba(0, 0, 0,.06),transparent 70%)}
-  .quote{font-size:clamp(20px,2.4vw,28px);font-weight:800;letter-spacing:-.5px;line-height:1.3;max-width:26ch;margin:0 auto}
-  footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:13.5px}
-  .frow{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-  /* ===== Intuitive theme — dark nav · cinematic hero · dark footer ===== */
-  nav{ background:rgba(8,10,18,.82); border-bottom-color:rgba(255,255,255,.10); }
-  .brand{ color:#fff; }
-  .brand-sep{ background:rgba(255,255,255,.18); }
-  .navlinks{ color:#c2c9d6; }
-  .navlinks a:hover{ color:#fff; }
-  .pill{ color:#e6e8ec; border-color:rgba(255,255,255,.28); background:rgba(0, 0, 0,.30); }
-  .hero{ background:radial-gradient(1000px 520px at 80% -14%, rgba(0, 0, 0,.20), transparent 60%), radial-gradient(950px 540px at 8% -12%, rgba(0, 0, 0,.30), transparent 60%), linear-gradient(180deg,#070a14,#0b1020); }
-  .hero .eyebrow{ color:#cbd0d8; border-color:rgba(0, 0, 0,.4); background:rgba(0, 0, 0,.10); }
-  .hero h1{ color:#ffffff; }
-  .hero .lede{ color:#aeb6c7; }
-  .hero .stat{ border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.05); }
-  .hero .stat b{ color:#fff; }
-  .hero .stat span{ color:#aeb6c7; }
-  footer{ background:#070a14; border-top-color:rgba(255,255,255,.10); color:#aeb6c7; }
-  footer a:hover{ color:#fff; }
-  /* ===== strict black & white (intuitive.ai is monochrome) ===== */
-  .kicker{ color:#6b7280; }
-  .hero{ background:radial-gradient(1100px 560px at 50% -16%, rgba(255,255,255,.06), transparent 60%), linear-gradient(180deg,#000000,#0a0a0a) !important; }
-  .hero .grad{ background:linear-gradient(100deg,#ffffff,#c2c7d0) !important; -webkit-background-clip:text !important; background-clip:text !important; color:transparent !important; }
-  nav .btn-primary, .hero .btn-primary, .hero .btn-blue{ background:#ffffff !important; color:#0a0a0a !important; box-shadow:none !important; }
-  nav .btn-primary:hover, .hero .btn-primary:hover, .hero .btn-blue:hover{ background:#e6e6e6 !important; }
-  .hero .btn-ghost{ border-color:rgba(255,255,255,.5) !important; color:#ffffff !important; }
-  /* ===================== INTUITIVE DARK THEME — authoritative ===================== */
-  body{ background:#000000 !important; color:#dddddd !important; }
-  section{ border-top-color:rgba(255,255,255,.09) !important; }
-  h1,h2,h3,h4,.quote,.mm-title,.ms-brand,.lstep b,.pdiag-step-eng,.amap-asset b,.amap-cap,.pdiag-cap,.lflow-srclbl{ color:#ffffff !important; }
-  .sub,.lede,.card p,.cap,.sc-note,.sc-from,.sc-to,.step .d,.step .l,.trigger span,.fitbox li,.pdiag-step-cap,.amap-asset span,.lstep small,.mm-card,.cbox{ color:#aeb6c7 !important; }
-  .kicker,.eyebrow,.ms-sec,.ms-item,.mm-flow,.pdiag-assets-h,.pdiag-step-verb,.cl,.mock-url{ color:#9aa3b5 !important; }
-  .card,.mock,.mock-main,.cbox,.lstep,.pdiag,.pdiag-step,.pdiag-sources,.pdiag-assets,.pdiag-assetnote,.amap,.amap-asset,.proof,.source-class,.fitbox,.lchip,.cosell,.genie{ background:#0b0c10 !important; border-color:rgba(255,255,255,.12) !important; box-shadow:none !important; }
-  .mock-bar{ background:#15161c !important; border-color:rgba(255,255,255,.10) !important; }
-  .mock-side{ background:#0f1014 !important; border-color:rgba(255,255,255,.10) !important; }
-  .mm-card,.pdiag-tier,.amap-head{ background:rgba(255,255,255,.05) !important; border-color:rgba(255,255,255,.12) !important; }
-  .ms-item.act{ background:rgba(0,58,227,.22) !important; color:#cdd9ff !important; }
-  .card:hover,.lstep:hover,.amap-asset:hover{ border-color:rgba(0,58,227,.7) !important; }
-  .chip,.bchip,.tag,.pdiag-asset{ color:#cfd4de !important; border-color:rgba(255,255,255,.16) !important; background:rgba(255,255,255,.05) !important; }
-  .impact,.proof div b,.lstep-eng,.role{ color:#9db4ff !important; }
-  /* ACCENT — blue #003ae3 only on CTAs + circular icons + flow marks */
-  .btn-primary,.btn-blue,nav .btn-primary,.hero .btn-primary,.hero .btn-blue{ background:#003ae3 !important; color:#ffffff !important; box-shadow:none !important; }
-  .btn-primary:hover,.btn-blue:hover,.hero .btn-primary:hover,.hero .btn-blue:hover{ background:#1f56ff !important; }
-  .btn-ghost,.hero .btn-ghost{ background:transparent !important; border:1px solid rgba(255,255,255,.45) !important; color:#ffffff !important; }
-  .ic,.ic.b,.ic.r,.pnum,.num,.dot{ background:#003ae3 !important; border-color:#003ae3 !important; color:#ffffff !important; }
-  .larr,.arrow,.sc-arrow,.fitbox li::before{ color:#3a78ff !important; }
-  .pdiag-conn i,.amap-conn i{ background:#003ae3 !important; box-shadow:0 0 7px rgba(0,58,227,.9) !important; }
-  .lstep::before{ background:#003ae3 !important; }
-  .lflow-foot,.kflow-foot,.pdiag-foot{ background:rgba(255,255,255,.05) !important; color:#dfe3ea !important; }
-  .grad{ -webkit-text-fill-color:#ffffff !important; background:none !important; color:#ffffff !important; }
-  .cbox.bad{ border-color:rgba(255,255,255,.14) !important; } .cbox.good{ border-color:rgba(0,58,227,.4) !important; }
-  .cbox.bad .h{ color:#aeb6c7 !important; } .cbox.good .h{ color:#7fa0ff !important; }
-  .amber{color:#9db4ff!important;}
-  /* ===== reduce blue ===== */
-  .num,.card .ic{ background:rgba(255,255,255,.06) !important; border:1px solid rgba(255,255,255,.16) !important; color:#e6e9ef !important; }
-  .kicker,.fitbox.them h4,.fitbox.us h4{ color:#8b93a6 !important; }
-  .proof div b,.impact{ color:#aeb6c7 !important; }
-  .fitbox li::before{ color:#8b93a6 !important; }
-  .chip.dbx{ color:#cfd4de !important; border-color:rgba(255,255,255,.16) !important; background:rgba(255,255,255,.05) !important; }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IntuitiveIQ × Databricks — Partner & Co-Sell Brief</title>
+  <meta name="description" content="For Databricks account teams: IntuitiveIQ turns stalled Genie and Agent Bricks pilots into billable production workloads — trusted AI drives heavier, sustained consumption." />
+  <meta property="og:title" content="IntuitiveIQ × Databricks — Partner & Co-Sell Brief" />
+  <meta property="og:description" content="For Databricks account teams: IntuitiveIQ turns stalled Genie and Agent Bricks pilots into billable production workloads — trusted AI drives heavier, sustained consumption." />
+  <link rel="canonical" href="https://dbx.intuitiveiq.ai/partners" />
+  <link rel="icon" type="image/png" href="https://intuitiveiq.ai/assets/intuitive-favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://intuitiveiq.ai/styles.css?v=20260612a" />
 </head>
 <body>
-<nav><div class="wrap nav">
-  <div class="brand"><a href="/" style="display:inline-flex;align-items:center;gap:9px;color:inherit;text-decoration:none"><span>IntuitiveIQ</span> <span class="pill">× Databricks</span></a> <span class="brand-sep"></span> <a href="https://intuitive.ai" target="_blank" rel="noopener" title="Intuitive — intuitive.ai" style="display:inline-flex;align-items:center"><img src="/intuitive-logo-white.png" alt="Intuitive" style="height:20px;width:auto;vertical-align:middle" /></a></div>
-  <div class="navlinks">
-    <a href="/">← Main site</a>
-    <a href="#levers">Consumption levers</a>
-    <a href="#when">When to call us</a>
-    <a class="btn btn-primary" href="https://intuitiveiq.ai/#contact" style="padding:9px 16px;font-size:14px">Talk to us</a>
-  </div>
-</div></nav>
-
-<header class="hero"><div class="wrap">
-  <span class="eyebrow">◆ Partner &amp; Co-Sell Brief · for Databricks account teams</span>
-  <h1>Bring us in to <span class="grad">unblock the deal</span> — and grow consumption.</h1>
-  <p class="lede">Intuitive's <b>IntuitiveIQ</b> clears what stalls Databricks deals — legacy sources, governance, and untrusted AI — turning trials into billable production workloads and driving sustained DBU growth. We keep <b>Databricks front-and-centre</b>: everything runs in the customer's own Databricks, delivered as native Asset Bundles, driving Unity Catalog and Mosaic AI rather than replacing them.</p>
-  <div class="cta">
-    <a class="btn btn-primary" href="https://intuitiveiq.ai/#contact">Co-sell with us →</a>
-    <a class="btn btn-ghost" href="/">See the platform →</a>
-  </div>
-  <div class="stats">
-    <div class="stat"><b>20+</b><span>joint Databricks customers</span></div>
-    <div class="stat"><b>3–4×</b><span>faster pilot → production</span></div>
-    <div class="stat"><b>$16M+</b><span>legacy cost taken out</span></div>
-    <div class="stat"><b>100+</b><span>Databricks-certified engineers</span></div>
-  </div>
-</div></header>
-
-<!-- WHY -->
-<section><div class="wrap">
-  <div class="kicker">Why this matters to your number</div>
-  <h2>Stalled migrations and untrusted AI are capped consumption.</h2>
-  <p class="sub">78% of enterprises are using AI; only 26% see value. Pilots stall on data that isn't ready, no governed foundation, and AI that can't be trusted on real questions — so consumption flatlines and renewals get harder. We remove those blockers, so workloads land and expand.</p>
-  <div class="grid g3">
-    <div class="card"><div class="ic">🚧</div><h3>The blocker</h3><p>Legacy estates (SAS, Cloudera, Teradata, Oracle, mainframe), missing governance, and Genie/Agent Bricks that fail on multi-hop questions keep workloads off Databricks — or stuck in pilot.</p></div>
-    <div class="card"><div class="ic">🔓</div><h3>What we do</h3><p>Migrate de-risked and governed in weeks, then make Mosaic AI trustworthy with Knowledge Studio — all push-down inside the customer's Databricks, zero egress.</p></div>
-    <div class="card"><div class="ic">📈</div><h3>Your upside</h3><p>Net-new workloads land, pilots reach production faster, and trusted AI drives heavier, sustained queries and agents — DBU growth you can forecast.</p></div>
-  </div>
-</div></section>
-
-<!-- LEVERS -->
-<section id="levers"><div class="wrap">
-  <div class="kicker">How we grow consumption</div>
-  <h2>Four levers that move DBUs — durably.</h2>
-  <div class="grid g2">
-    <div class="card"><div class="num">1</div><h3>Land net-new workloads</h3><p>Retire legacy estates onto a unified Delta Lakehouse — SAS, Cloudera, Teradata, Oracle ODS, mainframe, SAP. Workloads that were never on Databricks become net-new, recurring DBUs.</p><div class="impact">60–90TB/day ingested in production · 20 first-class connectors</div></div>
-    <div class="card"><div class="num">2</div><h3>Pilot → production, faster</h3><p>A data-ready, governed foundation (validation gate, UC masking, evidence at every step) turns stalled trials into billable production workloads.</p><div class="impact">3–4× faster pilot → production · defects 15–25% → &lt;3%</div></div>
-    <div class="card"><div class="num">3</div><h3>Expand with trusted AI</h3><p>Knowledge Studio makes Genie &amp; Agent Bricks reliable on multi-hop business questions — so users run more, heavier, trusted queries and agents. Trust drives usage; usage is consumption.</p><div class="impact">Genie 67% → 100% on multi-hop · 40–60% faster time-to-insight</div></div>
-    <div class="card"><div class="num">4</div><h3>Protect the renewal</h3><p>FinOps cost attribution plus <b>enforced governance</b> — quality &amp; approval gates, an audit ledger, and observability — make spend defensible and the platform audit-ready. No bill-shock, healthier renewals, room to expand.</p><div class="impact">$16M+ cost taken out · 25–35% lower governance cost</div></div>
-  </div>
-</div></section>
-
-<!-- WHEN -->
-<section id="when"><div class="wrap">
-  <div class="kicker">When to bring us in</div>
-  <h2>Qualifying signals in your accounts.</h2>
-  <div class="grid g2" style="margin-top:20px">
-    <div class="card">
-      <div class="trigger"><span class="t-ic">🧬</span><div><b>A legacy estate to retire</b><span>SAS, Cloudera, Teradata, Oracle ODS, Db2/mainframe, SAP HANA on the books.</span></div></div>
-      <div class="trigger"><span class="t-ic">🤖</span><div><b>A stalled Genie / Agent Bricks pilot</b><span>Demos well, fails on real multi-hop questions; trust is blocking go-live.</span></div></div>
-      <div class="trigger"><span class="t-ic">⚖️</span><div><b>Governance or compliance blocking</b><span>HIPAA / GDPR / PCI, masking, lineage and audit standing between pilot and production.</span></div></div>
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand"><a href="https://intuitiveiq.ai/" class="brand-mark" title="IntuitiveIQ — home" style="color:#fff;text-decoration:none"><img src="https://intuitiveiq.ai/assets/intuitive-logo.png?v=2" class="intuitive-logo-img" alt="intuitive" /><span class="brand-iq">IQ</span></a></div>
+    <template id="intuitive-svg-fallback">
+      <svg class="intuitive-logo" viewBox="0 0 480 100" aria-label="intuitive">
+        <path d="M 50 3 L 53 43 L 56 47 L 96 50 L 56 53 L 53 57 L 50 97 L 47 57 L 44 53 L 4 50 L 44 47 L 47 43 Z" fill="currentColor"/>
+        <path d="M 134 12 L 136 22 L 146 24 L 136 26 L 134 36 L 132 26 L 122 24 L 132 22 Z" fill="currentColor"/>
+        <path d="M 252 8 L 253 14 L 259 15 L 253 16 L 252 22 L 251 16 L 245 15 L 251 14 Z" fill="currentColor"/>
+        <text x="118" y="82" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="76" letter-spacing="-3" fill="currentColor">intuitive</text>
+      </svg>
+    </template>
+    <nav class="nav-links">
+      <div class="nav-item"><a href="https://intuitiveiq.ai/platform.html">Platform</a>
+        <div class="nav-drop">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <h3>Platform</h3>
+              <p>The Decision Intelligence Engine — four pillars, one governed lifecycle, live on the stack you already run.</p>
+            </div>
+            <div class="mega-links">
+              <a href="https://intuitiveiq.ai/platform.html#platform">The four pillars</a>
+              <a href="https://intuitiveiq.ai/platform.html#how">How it works</a>
+              <a href="https://intuitiveiq.ai/platform.html#stack">Works with your stack</a>
+              <a href="https://intuitiveiq.ai/platform.html#trust">Trust &amp; governance</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item"><a href="https://intuitiveiq.ai/solutions.html">Solutions</a>
+        <div class="nav-drop">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <h3>Solutions</h3>
+              <p>From trusted assistants to governed digital workers — and the business outcomes they deliver.</p>
+            </div>
+            <div class="mega-links">
+              <a href="https://intuitiveiq.ai/solutions.html#build">What you can build</a>
+              <a href="https://intuitiveiq.ai/solutions.html#agentic-workflows">Agentic business workflows</a>
+              <a href="https://intuitiveiq.ai/solutions.html#governance">AI governance &amp; risk</a>
+              <a href="https://intuitiveiq.ai/solutions.html#outcomes">Business outcomes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item"><a href="https://intuitiveiq.ai/industries.html">Industries</a>
+        <div class="nav-drop">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <h3>Industries</h3>
+              <p>Pre-built business vocabularies and AI playbooks — delivered through the aiE™ adoption model.</p>
+            </div>
+            <div class="mega-links">
+              <a href="https://intuitiveiq.ai/industries.html#healthcare">Healthcare</a>
+              <a href="https://intuitiveiq.ai/industries.html#financial-services">Financial Services</a>
+              <a href="https://intuitiveiq.ai/industries.html#cpg">Consumer Packaged Goods</a>
+              <a href="https://intuitiveiq.ai/industries.html#manufacturing">Manufacturing</a>
+              <a href="https://intuitiveiq.ai/industries.html#energy">Energy &amp; Utilities</a>
+              <a href="https://intuitiveiq.ai/industries.html#public-sector">Public Sector</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item"><a href="https://intuitiveiq.ai/company.html">Why IntuitiveIQ</a>
+        <div class="nav-drop">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <h3>Why IntuitiveIQ</h3>
+              <p>Owned intelligence — engineered by Intuitive, delivered through the aiE™ Framework.</p>
+            </div>
+            <div class="mega-links">
+              <a href="https://intuitiveiq.ai/company.html#moat">What makes us different</a>
+              <a href="https://intuitiveiq.ai/company.html#company">Engineered by Intuitive</a>
+              <a href="https://intuitiveiq.ai/platform.html#aie">The aiE™ Framework</a>
+              <a href="https://intuitiveiq.ai/index.html#boardroom-test">The 90-second boardroom test</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item"><a href="https://intuitive.ai/about-us/our-story/" target="_blank" rel="noopener">About Us</a>
+        <div class="nav-drop">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <h3>About Us</h3>
+              <p>We are an AI-first innovation and engineering company delivering engineering breakthroughs.</p>
+            </div>
+            <div class="mega-links">
+              <a href="https://intuitive.ai/about-us/our-story/" target="_blank" rel="noopener">Our Story</a>
+              <a href="https://intuitive.ai/about-us/events/" target="_blank" rel="noopener">Events</a>
+              <a href="https://intuitive.ai/about-us/life-at-intuitive/" target="_blank" rel="noopener">Life@Intuitive</a>
+              <a href="https://intuitive.ai/careers/" target="_blank" rel="noopener">Careers</a>
+              <a href="https://intuitive.ai/about-us/news/" target="_blank" rel="noopener">News</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <button class="nav-burger" aria-label="Menu" aria-expanded="false">☰</button>
+    <div class="nav-cta">
+      <a href="mailto:hello@intuitive.ai?subject=IntuitiveIQ" class="btn btn-primary">Talk to us →</a>
     </div>
-    <div class="card">
-      <div class="trigger"><span class="t-ic">🧹</span><div><b>"The data isn't ready"</b><span>Fragmented sources, legacy formats (FHIR, HL7, CDA); teams stuck wrangling instead of building.</span></div></div>
-      <div class="trigger"><span class="t-ic">📉</span><div><b>Consumption flat after the land</b><span>Initial workload live, but expansion has stalled and you need a motion.</span></div></div>
-      <div class="trigger"><span class="t-ic">🏁</span><div><b>A competitive or time-boxed POC</b><span>You need a credible partner to stand up a governed, defensible PoV in weeks.</span></div></div>
+  </div>
+</header>
+<!-- ── Page hero ─────────────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Partner &amp; co-sell brief · for Databricks account teams</p>
+    <h1 class="page-title">Bring us in to unblock AI — and grow consumption.</h1>
+    <p class="section-sub" style="margin-bottom:28px">Intuitive&rsquo;s IntuitiveIQ clears what stalls Databricks AI deals — missing business meaning, ungoverned agents, and answers nobody can defend — turning Genie and Agent Bricks pilots into billable production workloads. <b style="color:#fff">We keep Databricks front-and-centre</b>: everything runs in the customer&rsquo;s own Databricks, driving Unity Catalog and Mosaic AI rather than replacing them.</p>
+    <div class="hero-actions" style="justify-content:flex-start;margin-bottom:48px">
+      <a href="mailto:hello@intuitive.ai?subject=Databricks%20co-sell%20—%20IntuitiveIQ" class="btn btn-primary lg">Co-sell with us →</a>
+      <a href="/" class="btn btn-ghost lg">See the customer pager</a>
+    </div>
+    <div class="hero-meta" style="justify-content:flex-start;gap:40px">
+      <div><b>20+</b><span>joint Databricks customers</span></div>
+      <div><b>3–4×</b><span>faster pilot → production</span></div>
+      <div><b>67% → 100%</b><span>Genie multi-hop accuracy</span></div>
+      <div><b>100+</b><span>Databricks-certified engineers</span></div>
     </div>
   </div>
-</div></section>
+</section>
 
-<!-- HOW WE FIT -->
-<section><div class="wrap">
-  <div class="kicker">How we fit the co-sell</div>
-  <h2>We amplify Databricks — we never replace it.</h2>
-  <div class="fit">
-    <div class="fitbox them">
-      <h4>Databricks stays the platform</h4>
-      <ul style="margin:0;padding:0">
-        <li>Everything runs in the customer's own Databricks (push-down, zero egress)</li>
-        <li>We drive Unity Catalog — grants, masks, lineage, audit</li>
-        <li>We enrich Mosaic AI, Genie &amp; Agent Bricks (never a competing assistant)</li>
-        <li>Delivered as native Databricks Asset Bundles — no custom wrappers</li>
-      </ul>
-    </div>
-    <div class="fitbox us">
-      <h4>What Intuitive brings</h4>
-      <ul style="margin:0;padding:0">
-        <li>Lakehouse Studio: 20-connector migration, validation &amp; masking, gated method</li>
-        <li>Enterprise-grade: enforced quality/approval gates, full Bronze→Gold medallion (CDC/SCD-2), ABAC, audit ledger, observability + zero-downtime HA</li>
-        <li>Knowledge Studio: the semantic layer that makes AI trustworthy</li>
-        <li>100+ Databricks-certified engineers; 14 yrs, 400+ enterprise programs</li>
-        <li>Compatible with OntoBricks, Stardog, Graphwise — Databricks front-and-centre</li>
-      </ul>
+<!-- ── Why it matters ────────────────────────────────────────────────── -->
+<section class="section section-alt">
+  <div class="container">
+    <p class="eyebrow">Why this matters to your number</p>
+    <h2 class="section-title">Untrusted AI is capped consumption.</h2>
+    <div class="cases">
+      <div class="case-card"><div class="case-tag">🚧 The blocker</div><h3>Trust is blocking go-live.</h3><p>Genie and Agent Bricks demo well, then fail on real multi-hop questions. Governance teams can&rsquo;t sign off on answers nobody can explain — so consumption flatlines in pilot.</p></div>
+      <div class="case-card"><div class="case-tag">🔓 What we do</div><h3>Make Mosaic AI trustworthy.</h3><p>IntuitiveIQ&rsquo;s Knowledge Fabric gives Genie and Agent Bricks business meaning, and its trust layer makes every answer explainable, traceable, auditable and accountable — inside the customer&rsquo;s own Databricks.</p></div>
+      <div class="case-card"><div class="case-tag">📈 Your upside</div><h3>Trust drives usage. Usage is consumption.</h3><p>Users run more, heavier, sustained queries and agents once they can act on the answers — DBU growth you can forecast, and renewals you can defend.</p></div>
     </div>
   </div>
-  <div class="chips">
-    <span class="chip dbx">Databricks</span><span class="chip dbx">Unity Catalog</span><span class="chip dbx">Mosaic AI</span><span class="chip dbx">Genie</span><span class="chip dbx">Agent Bricks</span><span class="chip dbx">Lakeflow</span><span class="chip dbx">Auto Loader</span><span class="chip dbx">Asset Bundles</span>
-  </div>
-</div></section>
+</section>
 
-<!-- PROOF -->
-<section><div class="wrap">
-  <div class="kicker">Proven in production · 20+ joint Databricks customers</div>
-  <h2>Outcomes you can take to the account.</h2>
-  <div class="grid g3">
-    <div class="card"><div class="ic">🏥</div><h3>Healthcare — Epic + FinOps</h3><p>60–90TB Epic data daily, full HIPAA via RBAC masking; patient-readmission analytics live in <b>1 week</b> on Genie.</p><div class="impact">$3M saved in year one</div></div>
-    <div class="card"><div class="ic">🏦</div><h3>Financial Services — SAS/Cloudera</h3><p>40+ SAS models + silos → unified Delta Lakehouse; 250+ sources/day, &gt;2TB; 80% less ingestion time.</p><div class="impact">$16M total cost takeout</div></div>
-    <div class="card"><div class="ic">📡</div><h3>Telecom — Oracle ODS</h3><p>Oracle ODS → Databricks with Auto Loader + Spark Streaming; 20M+ records at peak; 80% faster availability.</p><div class="impact">$10M annual savings</div></div>
+<!-- ── Levers ────────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">How we grow consumption</p>
+    <h2 class="section-title">Three levers that move DBUs — durably.</h2>
+    <div class="cases">
+      <div class="case-card"><div class="case-tag">1 · Expand with trusted AI</div><h3>Genie 67% → 100% on multi-hop.</h3><p>Business meaning injected at query time makes Mosaic AI reliable on the questions the business actually asks — and reliable AI gets used. 40–60% faster time-to-insight.</p></div>
+      <div class="case-card"><div class="case-tag">2 · Pilot → production, faster</div><h3>Evidence unblocks go-live.</h3><p>Every answer ships with its evidence chain, every agent action is policy-checked and logged — the audit story that gets governance to yes. 3–4× faster pilot → production.</p></div>
+      <div class="case-card"><div class="case-tag">3 · Protect the renewal</div><h3>Spend that can be defended.</h3><p>Model usage visibility, cost attribution, and an audit ledger of every AI decision — no bill-shock, healthier renewals, room to expand. 25–35% lower governance cost.</p></div>
+    </div>
   </div>
-  <div class="proof">
-    <div><b>4-week</b><span>proof-of-value to offer the customer</span></div>
-    <div><b>Net-new</b><span>workloads from legacy retirement</span></div>
-    <div><b>67% → 100%</b><span>trusted AI drives heavier usage</span></div>
-    <div><b>0</b><span>data egress · push-down in their cloud</span></div>
+</section>
+
+<!-- ── Signals ───────────────────────────────────────────────────────── -->
+<section class="section section-alt">
+  <div class="container">
+    <p class="eyebrow">When to bring us in</p>
+    <h2 class="section-title">Qualifying signals in your accounts.</h2>
+    <div class="challenge-grid">
+      <div class="challenge"><span>🤖</span>A stalled Genie / Agent Bricks pilot — demos well, fails real multi-hop questions; trust is blocking go-live.</div>
+      <div class="challenge"><span>⚖️</span>Governance or compliance blocking — explainability, audit and accountability standing between pilot and production.</div>
+      <div class="challenge"><span>📉</span>Consumption flat after the land — initial workload live, but expansion has stalled and you need a motion.</div>
+      <div class="challenge"><span>🧩</span>Multi-model sprawl — several models and agents in play with no single operating model or usage visibility.</div>
+      <div class="challenge"><span>🏛</span>A board asking &ldquo;who is accountable when AI is wrong?&rdquo; — and no defensible answer yet.</div>
+      <div class="challenge"><span>🏁</span>A competitive or time-boxed POC — you need a credible partner to stand up a governed, defensible PoV in weeks.</div>
+    </div>
   </div>
-</div></section>
+</section>
 
-<div class="band"><div class="bandinner"><div class="wrap">
-  <div class="quote grad">Have a stalled migration or AI pilot? Let's co-sell it.</div>
-  <p class="sub" style="margin:14px auto 0;text-align:center">We'll scope a governed 4-week proof-of-value with you — net-new workloads landed, trusted AI shown on the customer's own questions.</p>
-  <div class="cta" style="justify-content:center"><a class="btn btn-primary" href="https://intuitiveiq.ai/#contact">Co-sell with us →</a><a class="btn btn-ghost" href="/">Back to platform</a></div>
-</div></div></div>
+<!-- ── Fit ───────────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">How we fit the co-sell</p>
+    <h2 class="section-title">We amplify Databricks — we never replace it.</h2>
+    <div class="trust-grid">
+      <div><h4>Databricks stays the platform.</h4><p>Everything runs in the customer&rsquo;s own Databricks — we drive Unity Catalog (grants, masks, lineage, audit) and enrich Mosaic AI, Genie and Agent Bricks. Never a competing assistant. Compatible with OntoBricks, Stardog and Graphwise.</p></div>
+      <div><h4>What Intuitive brings.</h4><p>IntuitiveIQ — the Decision Intelligence Engine (Knowledge Fabric + Agentic Orchestration + enterprise trust layer) — delivered by 100+ Databricks-certified engineers; 14 years, 400+ enterprise programs; ISO 27001, SOC 2 Type 2, GDPR.</p></div>
+    </div>
+  </div>
+</section>
 
-<footer><div class="wrap frow">
-  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span style="font-weight:800;font-size:16px">IntuitiveIQ</span> <span class="brand-sep"></span> <a href="https://intuitive.ai" target="_blank" rel="noopener" title="Intuitive — intuitive.ai"><img src="/intuitive-logo-white.png" alt="Intuitive" style="height:16px;width:auto;vertical-align:middle" /></a> <span>— a product of Intuitive · Built on Databricks</span></div>
-  <div class="navlinks"><a href="/">Main site</a><a href="https://intuitiveiq.ai">IntuitiveIQ.ai</a><a href="https://lakehouse.semantixiq.ai/app">Launch</a><span style="color:var(--dim)">© 2026 Intuitive</span></div>
-</div></footer>
+<!-- ── CTA ───────────────────────────────────────────────────────────── -->
+<section id="contact" class="section cta">
+  <div class="container">
+    <h2 class="cta-title">A dedicated brief for your account team.</h2>
+    <p class="cta-sub">Tell us the account and the blocker — we&rsquo;ll bring the side-by-side demo, the governance story, and the consumption math.</p>
+    <div class="cta-actions">
+      <a href="mailto:hello@intuitive.ai?subject=Databricks%20co-sell%20—%20account%20brief" class="btn btn-primary lg">Co-sell with us →</a>
+      <a href="/" class="btn btn-ghost lg">See the customer pager</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-top">
+    <div class="footer-top-brand">
+      <a href="https://intuitiveiq.ai/" class="brand-mark" style="color:#fff;text-decoration:none"><img src="https://intuitiveiq.ai/assets/intuitive-logo.png?v=2" class="intuitive-logo-img" alt="intuitive" /><span class="brand-iq">IQ</span></a>
+      <a href="https://intuitive.ai" target="_blank" rel="noopener" class="powered-by-intuitive">
+        <span>Powered by</span>
+        <img src="https://intuitiveiq.ai/assets/intuitive-logo.png?v=2" alt="Intuitive — intuitive.ai" />
+      </a>
+    </div>
+    <img class="footer-certs" src="https://intuitiveiq.ai/assets/img/certifications.png" alt="ISO 27001 · AICPA SOC 2 · GDPR · CRN Fast Growth 150 · Inc 5000" loading="lazy" />
+  </div>
+
+  <div class="container footer-cols-grid">
+    <div>
+      <h5>Platform</h5>
+      <a href="https://intuitiveiq.ai/platform.html#platform">The four pillars</a>
+      <a href="https://intuitiveiq.ai/platform.html#how">How it works</a>
+      <a href="https://intuitiveiq.ai/platform.html#aie">The aiE™ Framework</a>
+      <a href="https://intuitiveiq.ai/platform.html#stack">Works with your stack</a>
+      <a href="https://intuitiveiq.ai/platform.html#trust">Trust &amp; governance</a>
+    </div>
+    <div>
+      <h5>Solutions</h5>
+      <a href="https://intuitiveiq.ai/solutions.html#build">What you can build</a>
+      <a href="https://intuitiveiq.ai/solutions.html#agentic-workflows">Agentic workflows</a>
+      <a href="https://intuitiveiq.ai/solutions.html#governance">AI governance &amp; risk</a>
+      <a href="https://intuitiveiq.ai/solutions.html#outcomes">Business outcomes</a>
+        <a href="https://app.semantixiq.ai/app">Open Knowledge Studio</a>
+    </div>
+    <div>
+      <h5>Industries</h5>
+      <a href="https://intuitiveiq.ai/industries.html#healthcare">Healthcare</a>
+      <a href="https://intuitiveiq.ai/industries.html#financial-services">Financial Services</a>
+      <a href="https://intuitiveiq.ai/industries.html#cpg">Consumer Packaged Goods</a>
+      <a href="https://intuitiveiq.ai/industries.html#manufacturing">Manufacturing</a>
+      <a href="https://intuitiveiq.ai/industries.html#energy">Energy &amp; Utilities</a>
+      <a href="https://intuitiveiq.ai/industries.html#public-sector">Public Sector</a>
+    </div>
+    <div>
+      <h5>Services</h5>
+      <a href="https://intuitive.ai/services/data-and-ai/" target="_blank" rel="noopener">Data &amp; AI</a>
+      <a href="https://intuitive.ai/services/app-and-db-modernization/" target="_blank" rel="noopener">App &amp; Database Modernization</a>
+      <a href="https://intuitive.ai/services/cloud-platform-engineering/" target="_blank" rel="noopener">Cloud &amp; Platform Engineering</a>
+      <a href="https://intuitive.ai/services/cybersecurity/" target="_blank" rel="noopener">Cybersecurity</a>
+      <a href="https://intuitive.ai/services/networking-and-sdx/" target="_blank" rel="noopener">Networking &amp; SDx</a>
+    </div>
+    <div>
+      <h5>Insights</h5>
+      <a href="https://intuitive.ai/insights/case-studies/" target="_blank" rel="noopener">Case Studies</a>
+      <a href="https://intuitive.ai/insights/blog/" target="_blank" rel="noopener">Blogs</a>
+      <a href="https://intuitive.ai/insights/whitepapers/" target="_blank" rel="noopener">Whitepapers</a>
+      <a href="https://intuitive.ai/partners/" target="_blank" rel="noopener">Partners</a>
+    </div>
+    <div>
+      <h5>About Us</h5>
+      <a href="https://intuitive.ai/about-us/our-story/" target="_blank" rel="noopener">Our Story</a>
+      <a href="https://intuitive.ai/about-us/life-at-intuitive/" target="_blank" rel="noopener">Life@Intuitive</a>
+      <a href="https://intuitive.ai/about-us/news/" target="_blank" rel="noopener">News</a>
+      <a href="https://intuitive.ai/about-us/events/" target="_blank" rel="noopener">Events</a>
+      <a href="https://intuitive.ai/careers/" target="_blank" rel="noopener">Careers</a>
+      <a href="mailto:hello@intuitive.ai?subject=IntuitiveIQ">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="container footer-hq">
+    <div>
+      <h5>Global Headquarters</h5>
+      <p>Intuitive Technology Partners Inc.<br/>33 Wood Ave. S, Suite #600<br/>Iselin, NJ 08830-2717, USA</p>
+    </div>
+    <div>
+      <h5>Regional Offices</h5>
+      <p>Dallas, USA &nbsp;|&nbsp; Toronto, Canada &nbsp;|&nbsp; Paris, France &nbsp;|&nbsp; London, UK &nbsp;|&nbsp; Zurich, Switzerland &nbsp;|&nbsp; Dublin, Ireland &nbsp;|&nbsp; Budapest, Hungary &nbsp;|&nbsp; Bucharest, Romania &nbsp;|&nbsp; Bengaluru, India &nbsp;|&nbsp; Pune, India &nbsp;|&nbsp; Ahmedabad, India</p>
+    </div>
+  </div>
+
+  <div class="footer-fine">
+    <div class="container">
+      <span>© 2026 Intuitive.ai · All rights reserved. · <a href="https://intuitive.ai/privacy-policy/" target="_blank" rel="noopener" style="color:#6b7180">Privacy Policy</a> · <a href="https://intuitive.ai/cookie-policy/" target="_blank" rel="noopener" style="color:#6b7180">Cookie Policy</a></span>
+      <span>Explainability · Traceability · Auditability · Accountability</span>
+    </div>
+  </div>
+</footer>
+<script src="https://intuitiveiq.ai/script.js?v=20260612a" defer></script>
 </body>
 </html>
