@@ -645,3 +645,10 @@ html,body{ background:#000 !important; color:#dddddd; }
 .test-cta p{font-size:16px;color:var(--slate);margin:0}
 
 .case-img{width:calc(100% + 64px);margin:-32px -32px 22px;aspect-ratio:16/9;object-fit:cover;border-radius:16px 16px 0 0;border-bottom:1px solid var(--line);display:block;max-width:none;filter:saturate(.92)}
+
+
+/* ── IntuitiveIQ brand mark — Intuitive AI star + wordmark ─────────── */
+.brand-mark{display:inline-flex;align-items:center;gap:8px}
+.brand-star{width:21px;height:21px;color:#fff;flex-shrink:0;display:block}
+.footer .brand-star{color:#fff}
+.brand-mark:hover .brand-star{color:#5b8cff;transition:color .15s}
