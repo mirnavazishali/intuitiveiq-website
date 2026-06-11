@@ -106,3 +106,25 @@ document.querySelector('.nav-burger')?.addEventListener('click', (e) => {
   const open = links.classList.toggle('open');
   e.currentTarget.setAttribute('aria-expanded', String(open));
 });
+
+
+// ── Mega-menu: switch panels as the pointer moves across items ───────
+(() => {
+  if (!window.matchMedia('(min-width: 901px)').matches) return;
+  const items = [...document.querySelectorAll('.nav-links .nav-item')];
+  const header = document.querySelector('header.nav');
+  if (!items.length || !header) return;
+  let closeTimer;
+  items.forEach(it => {
+    it.addEventListener('mouseenter', () => {
+      clearTimeout(closeTimer);
+      items.forEach(o => o.classList.toggle('open', o === it));
+    });
+  });
+  header.addEventListener('mouseleave', () => {
+    closeTimer = setTimeout(() => items.forEach(o => o.classList.remove('open')), 140);
+  });
+  // close after clicking a panel link (same-page anchors don't reload)
+  document.querySelectorAll('.nav-drop a').forEach(a =>
+    a.addEventListener('click', () => items.forEach(o => o.classList.remove('open'))));
+})();
