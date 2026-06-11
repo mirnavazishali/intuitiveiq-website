@@ -779,3 +779,8 @@ html,body{ background:#000 !important; color:#dddddd; }
 .nav-links .nav-item > a::after{font-size:10px}
 .nav-cta .btn{font-size:14.5px;padding:10px 19px}
 @media (max-width:1080px){.nav-links{gap:24px}.nav-links .nav-item > a{font-size:14.5px}}
+
+/* Anchor targets land below the sticky nav, not under it */
+[id]{scroll-margin-top:90px}
+/* Make the aiE strip unmistakable when navigated to directly */
+.aie-strip:target{border-color:rgba(91,140,255,.55);box-shadow:0 0 0 1px rgba(91,140,255,.35),0 0 44px rgba(47,107,255,.15)}
