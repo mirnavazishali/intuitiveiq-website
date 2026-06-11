@@ -37,6 +37,8 @@ rsync -av --delete -e "ssh -i ~/.ssh/semantixiq-prod" \
 ```
 
 Files are picked up immediately (the container bind-mounts the directory).
+**When styles.css or script.js change, bump the `?v=` query string in every
+HTML file first** — Cloudflare caches the versioned asset URLs.
 
 ## Brand architecture
 
