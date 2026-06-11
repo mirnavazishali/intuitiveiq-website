@@ -652,3 +652,6 @@ html,body{ background:#000 !important; color:#dddddd; }
 .brand-star{width:21px;height:21px;color:#fff;flex-shrink:0;display:block}
 .footer .brand-star{color:#fff}
 .brand-mark:hover .brand-star{color:#5b8cff;transition:color .15s}
+
+/* Boardroom headline — muted old question, bold new question */
+.q-old{display:block;font-size:16px;font-weight:600;color:var(--slate-2);letter-spacing:0;margin-bottom:12px;text-transform:none}
