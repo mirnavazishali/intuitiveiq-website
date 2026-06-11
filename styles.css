@@ -811,3 +811,11 @@ html,body{ background:#000 !important; color:#dddddd; }
 
 /* Showcase header back to left; only the tab pills stay centered */
 .visual-section .eyebrow,.visual-section .section-title,.visual-section .section-sub{text-align:left;margin-left:0;margin-right:0}
+
+/* Footer typography scaled to match intuitive.ai */
+.footer-cols-grid h5{font-size:19px;margin-bottom:16px}
+.footer-cols-grid a{font-size:15.5px;padding:7px 0}
+.footer-hq h5{font-size:20px;margin-bottom:12px}
+.footer-hq p{font-size:16px;line-height:1.8}
+.footer-fine .container{font-size:13.5px}
+.powered-by-intuitive span{font-size:11px}
