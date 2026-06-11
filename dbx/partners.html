@@ -14,113 +14,40 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://intuitiveiq.ai/styles.css?v=20260612a" />
+  <style>
+.dbxnav a{font-size:17px;font-weight:500;color:var(--ink-2);transition:color .15s}
+.dbxnav a:hover{color:#fff}
+@media (max-width:900px){.dbxnav{display:none}.dbxnav.open{display:flex}}
+</style>
 </head>
 <body>
 <header class="nav">
   <div class="nav-inner">
-    <div class="brand"><a href="https://intuitiveiq.ai/" class="brand-mark" title="IntuitiveIQ — home" style="color:#fff;text-decoration:none"><img src="https://intuitiveiq.ai/assets/intuitive-logo.png?v=2" class="intuitive-logo-img" alt="intuitive" /><span class="brand-iq">IQ</span></a></div>
-    <template id="intuitive-svg-fallback">
-      <svg class="intuitive-logo" viewBox="0 0 480 100" aria-label="intuitive">
-        <path d="M 50 3 L 53 43 L 56 47 L 96 50 L 56 53 L 53 57 L 50 97 L 47 57 L 44 53 L 4 50 L 44 47 L 47 43 Z" fill="currentColor"/>
-        <path d="M 134 12 L 136 22 L 146 24 L 136 26 L 134 36 L 132 26 L 122 24 L 132 22 Z" fill="currentColor"/>
-        <path d="M 252 8 L 253 14 L 259 15 L 253 16 L 252 22 L 251 16 L 245 15 L 251 14 Z" fill="currentColor"/>
-        <text x="118" y="82" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="76" letter-spacing="-3" fill="currentColor">intuitive</text>
-      </svg>
-    </template>
-    <nav class="nav-links">
-      <div class="nav-item"><a href="https://intuitiveiq.ai/platform.html">Platform</a>
-        <div class="nav-drop">
-          <div class="mega-inner">
-            <div class="mega-left">
-              <h3>Platform</h3>
-              <p>The Decision Intelligence Engine — four pillars, one governed lifecycle, live on the stack you already run.</p>
-            </div>
-            <div class="mega-links">
-              <a href="https://intuitiveiq.ai/platform.html#platform">The four pillars</a>
-              <a href="https://intuitiveiq.ai/platform.html#how">How it works</a>
-              <a href="https://intuitiveiq.ai/platform.html#stack">Works with your stack</a>
-              <a href="https://intuitiveiq.ai/platform.html#trust">Trust &amp; governance</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="nav-item"><a href="https://intuitiveiq.ai/solutions.html">Solutions</a>
-        <div class="nav-drop">
-          <div class="mega-inner">
-            <div class="mega-left">
-              <h3>Solutions</h3>
-              <p>From trusted assistants to governed digital workers — and the business outcomes they deliver.</p>
-            </div>
-            <div class="mega-links">
-              <a href="https://intuitiveiq.ai/solutions.html#build">What you can build</a>
-              <a href="https://intuitiveiq.ai/solutions.html#agentic-workflows">Agentic business workflows</a>
-              <a href="https://intuitiveiq.ai/solutions.html#governance">AI governance &amp; risk</a>
-              <a href="https://intuitiveiq.ai/solutions.html#outcomes">Business outcomes</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="nav-item"><a href="https://intuitiveiq.ai/industries.html">Industries</a>
-        <div class="nav-drop">
-          <div class="mega-inner">
-            <div class="mega-left">
-              <h3>Industries</h3>
-              <p>Pre-built business vocabularies and AI playbooks — delivered through the aiE™ adoption model.</p>
-            </div>
-            <div class="mega-links">
-              <a href="https://intuitiveiq.ai/industries.html#healthcare">Healthcare</a>
-              <a href="https://intuitiveiq.ai/industries.html#financial-services">Financial Services</a>
-              <a href="https://intuitiveiq.ai/industries.html#cpg">Consumer Packaged Goods</a>
-              <a href="https://intuitiveiq.ai/industries.html#manufacturing">Manufacturing</a>
-              <a href="https://intuitiveiq.ai/industries.html#energy">Energy &amp; Utilities</a>
-              <a href="https://intuitiveiq.ai/industries.html#public-sector">Public Sector</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="nav-item"><a href="https://intuitiveiq.ai/company.html">Why IntuitiveIQ</a>
-        <div class="nav-drop">
-          <div class="mega-inner">
-            <div class="mega-left">
-              <h3>Why IntuitiveIQ</h3>
-              <p>Owned intelligence — engineered by Intuitive, delivered through the aiE™ Framework.</p>
-            </div>
-            <div class="mega-links">
-              <a href="https://intuitiveiq.ai/company.html#moat">What makes us different</a>
-              <a href="https://intuitiveiq.ai/company.html#company">Engineered by Intuitive</a>
-              <a href="https://intuitiveiq.ai/platform.html#aie">The aiE™ Framework</a>
-              <a href="https://intuitiveiq.ai/index.html#boardroom-test">The 90-second boardroom test</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="nav-item"><a href="https://intuitive.ai/about-us/our-story/" target="_blank" rel="noopener">About Us</a>
-        <div class="nav-drop">
-          <div class="mega-inner">
-            <div class="mega-left">
-              <h3>About Us</h3>
-              <p>We are an AI-first innovation and engineering company delivering engineering breakthroughs.</p>
-            </div>
-            <div class="mega-links">
-              <a href="https://intuitive.ai/about-us/our-story/" target="_blank" rel="noopener">Our Story</a>
-              <a href="https://intuitive.ai/about-us/events/" target="_blank" rel="noopener">Events</a>
-              <a href="https://intuitive.ai/about-us/life-at-intuitive/" target="_blank" rel="noopener">Life@Intuitive</a>
-              <a href="https://intuitive.ai/careers/" target="_blank" rel="noopener">Careers</a>
-              <a href="https://intuitive.ai/about-us/news/" target="_blank" rel="noopener">News</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="brand" style="display:flex;align-items:center;gap:14px">
+      <a href="/" class="brand-mark" title="IntuitiveIQ for Databricks" style="color:#fff;text-decoration:none"><img src="https://intuitiveiq.ai/assets/intuitive-logo.png?v=2" class="intuitive-logo-img" alt="intuitive" /><span class="brand-iq">IQ</span></a>
+      <span style="font-family:var(--font-mono);font-size:10.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:#8b93a6;border:1px solid rgba(255,255,255,.18);border-radius:100px;padding:4px 11px;white-space:nowrap">for Databricks</span>
+    </div>
+    <nav class="nav-links dbxnav">
+      <a href="/#reality">Why AI stalls</a>
+      <a href="/#meaning">Knowledge Fabric</a>
+      <a href="/#how">How it fits</a>
+      <a href="/#proof">Proof</a>
+      <a href="/partners">For Databricks teams</a>
     </nav>
     <button class="nav-burger" aria-label="Menu" aria-expanded="false">☰</button>
     <div class="nav-cta">
-      <a href="mailto:hello@intuitive.ai?subject=IntuitiveIQ" class="btn btn-primary">Talk to us →</a>
+      <a href="mailto:hello@intuitive.ai?subject=IntuitiveIQ%20for%20Databricks" class="btn btn-primary">Talk to us →</a>
     </div>
   </div>
 </header>
+
 <!-- ── Page hero ─────────────────────────────────────────────────────── -->
-<section class="page-hero">
-  <div class="container">
+<section class="page-hero" style="position:relative;overflow:hidden">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true" style="opacity:.35">
+    <source src="https://intuitiveiq.ai/assets/media/home-vid.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:2">
     <p class="eyebrow">Partner &amp; co-sell brief · for Databricks account teams</p>
     <h1 class="page-title">Bring us in to unblock AI — and grow consumption.</h1>
     <p class="section-sub" style="margin-bottom:28px">Intuitive&rsquo;s IntuitiveIQ clears what stalls Databricks AI deals — missing business meaning, ungoverned agents, and answers nobody can defend — turning Genie and Agent Bricks pilots into billable production workloads. <b style="color:#fff">We keep Databricks front-and-centre</b>: everything runs in the customer&rsquo;s own Databricks, driving Unity Catalog and Mosaic AI rather than replacing them.</p>
@@ -131,7 +58,7 @@
     <div class="hero-meta" style="justify-content:flex-start;gap:40px">
       <div><b>20+</b><span>joint Databricks customers</span></div>
       <div><b>3–4×</b><span>faster pilot → production</span></div>
-      <div><b>67% → 90%+</b><span>Genie multi-hop accuracy</span></div>
+      <div><b>Trusted</b><span>multi-hop Genie answers, with evidence</span></div>
       <div><b>100+</b><span>Databricks-certified engineers</span></div>
     </div>
   </div>
@@ -151,20 +78,20 @@
 </section>
 
 <!-- ── Levers ────────────────────────────────────────────────────────── -->
-<section class="section">
+<section id="levers" class="section">
   <div class="container">
     <p class="eyebrow">How we grow consumption</p>
     <h2 class="section-title">Three levers that move DBUs — durably.</h2>
     <div class="cases">
-      <div class="case-card"><div class="case-tag">1 · Expand with trusted AI</div><h3>Genie 67% → 90%+ on multi-hop.</h3><p>Business meaning injected at query time makes Mosaic AI reliable on the questions the business actually asks — and reliable AI gets used. 40–60% faster time-to-insight.</p></div>
+      <div class="case-card"><div class="case-tag">1 · Expand with trusted AI</div><h3>Genie that earns trust on multi-hop.</h3><p>Business meaning injected at query time makes Mosaic AI reliable on the questions the business actually asks — and reliable AI gets used, heavily and repeatedly.</p></div>
       <div class="case-card"><div class="case-tag">2 · Pilot → production, faster</div><h3>Evidence unblocks go-live.</h3><p>Every answer ships with its evidence chain, every agent action is policy-checked and logged — the audit story that gets governance to yes. 3–4× faster pilot → production.</p></div>
-      <div class="case-card"><div class="case-tag">3 · Protect the renewal</div><h3>Spend that can be defended.</h3><p>Model usage visibility, cost attribution, and an audit ledger of every AI decision — no bill-shock, healthier renewals, room to expand. 25–35% lower governance cost.</p></div>
+      <div class="case-card"><div class="case-tag">3 · Protect the renewal</div><h3>Spend that can be defended.</h3><p>Model usage visibility, cost attribution, and an audit ledger of every AI decision — no bill-shock, healthier renewals, room to expand.</p></div>
     </div>
   </div>
 </section>
 
 <!-- ── Signals ───────────────────────────────────────────────────────── -->
-<section class="section section-alt">
+<section id="signals" class="section section-alt">
   <div class="container">
     <p class="eyebrow">When to bring us in</p>
     <h2 class="section-title">Qualifying signals in your accounts.</h2>
@@ -188,6 +115,10 @@
       <div><h4>Databricks stays the platform.</h4><p>Everything runs in the customer&rsquo;s own Databricks — we drive Unity Catalog (grants, masks, lineage, audit) and enrich Mosaic AI, Genie and Agent Bricks. Never a competing assistant. Compatible with OntoBricks, Stardog and Graphwise.</p></div>
       <div><h4>What Intuitive brings.</h4><p>IntuitiveIQ — the Decision Intelligence Engine (Knowledge Fabric + Agentic Orchestration + enterprise trust layer) — delivered by 100+ Databricks-certified engineers; 14 years, 400+ enterprise programs; ISO 27001, SOC 2 Type 2, GDPR.</p></div>
     </div>
+    <div class="cert-strip">
+      <span class="cert-label">Certified &amp; Recognized</span>
+      <img src="https://intuitiveiq.ai/assets/img/certifications.png" alt="ISO 27001 · AICPA SOC 2 · GDPR · CRN Fast Growth 150 · Inc 5000" loading="lazy" />
+    </div>
   </div>
 </section>
 
@@ -203,84 +134,36 @@
   </div>
 </section>
 
+<!-- ── Footer ────────────────────────────────────────────────────────── -->
 <footer class="footer">
-  <div class="container footer-top">
-    <div class="footer-top-brand">
-      <a href="https://intuitiveiq.ai/" class="brand-mark" style="color:#fff;text-decoration:none"><img src="https://intuitiveiq.ai/assets/intuitive-logo.png?v=2" class="intuitive-logo-img" alt="intuitive" /><span class="brand-iq">IQ</span></a>
+  <div class="container" style="padding-top:56px;padding-bottom:44px;display:flex;flex-wrap:wrap;gap:44px;align-items:flex-start;justify-content:space-between">
+    <div>
+      <a href="/" class="brand-mark" style="color:#fff;text-decoration:none"><img src="https://intuitiveiq.ai/assets/intuitive-logo.png?v=2" class="intuitive-logo-img" alt="intuitive" /><span class="brand-iq">IQ</span></a>
+      <p style="font-size:13.5px;color:#9ba6b8;max-width:340px;line-height:1.65;margin:18px 0 0">IntuitiveIQ for Databricks — the Decision Intelligence Engine that makes Mosaic AI trustworthy enough to act on. Runs in your Databricks; drives Unity Catalog.</p>
       <a href="https://intuitive.ai" target="_blank" rel="noopener" class="powered-by-intuitive">
         <span>Powered by</span>
         <img src="https://intuitiveiq.ai/assets/intuitive-logo.png?v=2" alt="Intuitive — intuitive.ai" />
       </a>
     </div>
-    <img class="footer-certs" src="https://intuitiveiq.ai/assets/img/certifications.png" alt="ISO 27001 · AICPA SOC 2 · GDPR · CRN Fast Growth 150 · Inc 5000" loading="lazy" />
-  </div>
-
-  <div class="container footer-cols-grid">
-    <div>
-      <h5>Platform</h5>
-      <a href="https://intuitiveiq.ai/platform.html#platform">The four pillars</a>
-      <a href="https://intuitiveiq.ai/platform.html#how">How it works</a>
-      <a href="https://intuitiveiq.ai/platform.html#aie">The aiE™ Framework</a>
-      <a href="https://intuitiveiq.ai/platform.html#stack">Works with your stack</a>
-      <a href="https://intuitiveiq.ai/platform.html#trust">Trust &amp; governance</a>
-    </div>
-    <div>
-      <h5>Solutions</h5>
-      <a href="https://intuitiveiq.ai/solutions.html#build">What you can build</a>
-      <a href="https://intuitiveiq.ai/solutions.html#agentic-workflows">Agentic workflows</a>
-      <a href="https://intuitiveiq.ai/solutions.html#governance">AI governance &amp; risk</a>
-      <a href="https://intuitiveiq.ai/solutions.html#outcomes">Business outcomes</a>
-        <a href="https://app.semantixiq.ai/app">Open Knowledge Studio</a>
-    </div>
-    <div>
-      <h5>Industries</h5>
-      <a href="https://intuitiveiq.ai/industries.html#healthcare">Healthcare</a>
-      <a href="https://intuitiveiq.ai/industries.html#financial-services">Financial Services</a>
-      <a href="https://intuitiveiq.ai/industries.html#cpg">Consumer Packaged Goods</a>
-      <a href="https://intuitiveiq.ai/industries.html#manufacturing">Manufacturing</a>
-      <a href="https://intuitiveiq.ai/industries.html#energy">Energy &amp; Utilities</a>
-      <a href="https://intuitiveiq.ai/industries.html#public-sector">Public Sector</a>
-    </div>
-    <div>
-      <h5>Services</h5>
-      <a href="https://intuitive.ai/services/data-and-ai/" target="_blank" rel="noopener">Data &amp; AI</a>
-      <a href="https://intuitive.ai/services/app-and-db-modernization/" target="_blank" rel="noopener">App &amp; Database Modernization</a>
-      <a href="https://intuitive.ai/services/cloud-platform-engineering/" target="_blank" rel="noopener">Cloud &amp; Platform Engineering</a>
-      <a href="https://intuitive.ai/services/cybersecurity/" target="_blank" rel="noopener">Cybersecurity</a>
-      <a href="https://intuitive.ai/services/networking-and-sdx/" target="_blank" rel="noopener">Networking &amp; SDx</a>
-    </div>
-    <div>
-      <h5>Insights</h5>
-      <a href="https://intuitive.ai/insights/case-studies/" target="_blank" rel="noopener">Case Studies</a>
-      <a href="https://intuitive.ai/insights/blog/" target="_blank" rel="noopener">Blogs</a>
-      <a href="https://intuitive.ai/insights/whitepapers/" target="_blank" rel="noopener">Whitepapers</a>
-      <a href="https://intuitive.ai/partners/" target="_blank" rel="noopener">Partners</a>
-    </div>
-    <div>
-      <h5>About Us</h5>
-      <a href="https://intuitive.ai/about-us/our-story/" target="_blank" rel="noopener">Our Story</a>
-      <a href="https://intuitive.ai/about-us/life-at-intuitive/" target="_blank" rel="noopener">Life@Intuitive</a>
-      <a href="https://intuitive.ai/about-us/news/" target="_blank" rel="noopener">News</a>
-      <a href="https://intuitive.ai/about-us/events/" target="_blank" rel="noopener">Events</a>
-      <a href="https://intuitive.ai/careers/" target="_blank" rel="noopener">Careers</a>
-      <a href="mailto:hello@intuitive.ai?subject=IntuitiveIQ">Contact Us</a>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(140px,1fr));gap:40px">
+      <div><h5 style="font-size:15px;color:#fff;margin:0 0 12px">On this site</h5>
+        <a href="/#reality" style="display:block;color:#9ba6b8;font-size:14px;padding:5px 0">Why AI stalls</a>
+        <a href="/#meaning" style="display:block;color:#9ba6b8;font-size:14px;padding:5px 0">Knowledge Fabric</a>
+        <a href="/#how" style="display:block;color:#9ba6b8;font-size:14px;padding:5px 0">How it fits</a>
+        <a href="/#proof" style="display:block;color:#9ba6b8;font-size:14px;padding:5px 0">Proof</a>
+      </div>
+      <div><h5 style="font-size:15px;color:#fff;margin:0 0 12px">Databricks teams</h5>
+        <a href="/partners" style="display:block;color:#9ba6b8;font-size:14px;padding:5px 0">Partner &amp; co-sell brief</a>
+        <a href="mailto:hello@intuitive.ai?subject=Databricks%20co-sell" style="display:block;color:#9ba6b8;font-size:14px;padding:5px 0">Co-sell with us</a>
+      </div>
+      <div><h5 style="font-size:15px;color:#fff;margin:0 0 12px">Contact</h5>
+        <a href="mailto:hello@intuitive.ai" style="display:block;color:#9ba6b8;font-size:14px;padding:5px 0">hello@intuitive.ai</a>
+      </div>
     </div>
   </div>
-
-  <div class="container footer-hq">
-    <div>
-      <h5>Global Headquarters</h5>
-      <p>Intuitive Technology Partners Inc.<br/>33 Wood Ave. S, Suite #600<br/>Iselin, NJ 08830-2717, USA</p>
-    </div>
-    <div>
-      <h5>Regional Offices</h5>
-      <p>Dallas, USA &nbsp;|&nbsp; Toronto, Canada &nbsp;|&nbsp; Paris, France &nbsp;|&nbsp; London, UK &nbsp;|&nbsp; Zurich, Switzerland &nbsp;|&nbsp; Dublin, Ireland &nbsp;|&nbsp; Budapest, Hungary &nbsp;|&nbsp; Bucharest, Romania &nbsp;|&nbsp; Bengaluru, India &nbsp;|&nbsp; Pune, India &nbsp;|&nbsp; Ahmedabad, India</p>
-    </div>
-  </div>
-
   <div class="footer-fine">
     <div class="container">
-      <span>© 2026 Intuitive.ai · All rights reserved. · <a href="https://intuitive.ai/privacy-policy/" target="_blank" rel="noopener" style="color:#6b7180">Privacy Policy</a> · <a href="https://intuitive.ai/cookie-policy/" target="_blank" rel="noopener" style="color:#6b7180">Cookie Policy</a></span>
+      <span>© 2026 Intuitive.ai · All rights reserved.</span>
       <span>Explainability · Traceability · Auditability · Accountability</span>
     </div>
   </div>

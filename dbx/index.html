@@ -14,132 +14,773 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://intuitiveiq.ai/styles.css?v=20260612a" />
+  <style>
+.dbxnav a{font-size:17px;font-weight:500;color:var(--ink-2);transition:color .15s}
+.dbxnav a:hover{color:#fff}
+@media (max-width:900px){.dbxnav{display:none}.dbxnav.open{display:flex}}
+</style>
 </head>
 <body>
 <header class="nav">
   <div class="nav-inner">
-    <div class="brand"><a href="https://intuitiveiq.ai/" class="brand-mark" title="IntuitiveIQ — home" style="color:#fff;text-decoration:none"><img src="https://intuitiveiq.ai/assets/intuitive-logo.png?v=2" class="intuitive-logo-img" alt="intuitive" /><span class="brand-iq">IQ</span></a></div>
-    <template id="intuitive-svg-fallback">
-      <svg class="intuitive-logo" viewBox="0 0 480 100" aria-label="intuitive">
-        <path d="M 50 3 L 53 43 L 56 47 L 96 50 L 56 53 L 53 57 L 50 97 L 47 57 L 44 53 L 4 50 L 44 47 L 47 43 Z" fill="currentColor"/>
-        <path d="M 134 12 L 136 22 L 146 24 L 136 26 L 134 36 L 132 26 L 122 24 L 132 22 Z" fill="currentColor"/>
-        <path d="M 252 8 L 253 14 L 259 15 L 253 16 L 252 22 L 251 16 L 245 15 L 251 14 Z" fill="currentColor"/>
-        <text x="118" y="82" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="76" letter-spacing="-3" fill="currentColor">intuitive</text>
-      </svg>
-    </template>
-    <nav class="nav-links">
-      <div class="nav-item"><a href="https://intuitiveiq.ai/platform.html">Platform</a>
-        <div class="nav-drop">
-          <div class="mega-inner">
-            <div class="mega-left">
-              <h3>Platform</h3>
-              <p>The Decision Intelligence Engine — four pillars, one governed lifecycle, live on the stack you already run.</p>
-            </div>
-            <div class="mega-links">
-              <a href="https://intuitiveiq.ai/platform.html#platform">The four pillars</a>
-              <a href="https://intuitiveiq.ai/platform.html#how">How it works</a>
-              <a href="https://intuitiveiq.ai/platform.html#stack">Works with your stack</a>
-              <a href="https://intuitiveiq.ai/platform.html#trust">Trust &amp; governance</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="nav-item"><a href="https://intuitiveiq.ai/solutions.html">Solutions</a>
-        <div class="nav-drop">
-          <div class="mega-inner">
-            <div class="mega-left">
-              <h3>Solutions</h3>
-              <p>From trusted assistants to governed digital workers — and the business outcomes they deliver.</p>
-            </div>
-            <div class="mega-links">
-              <a href="https://intuitiveiq.ai/solutions.html#build">What you can build</a>
-              <a href="https://intuitiveiq.ai/solutions.html#agentic-workflows">Agentic business workflows</a>
-              <a href="https://intuitiveiq.ai/solutions.html#governance">AI governance &amp; risk</a>
-              <a href="https://intuitiveiq.ai/solutions.html#outcomes">Business outcomes</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="nav-item"><a href="https://intuitiveiq.ai/industries.html">Industries</a>
-        <div class="nav-drop">
-          <div class="mega-inner">
-            <div class="mega-left">
-              <h3>Industries</h3>
-              <p>Pre-built business vocabularies and AI playbooks — delivered through the aiE™ adoption model.</p>
-            </div>
-            <div class="mega-links">
-              <a href="https://intuitiveiq.ai/industries.html#healthcare">Healthcare</a>
-              <a href="https://intuitiveiq.ai/industries.html#financial-services">Financial Services</a>
-              <a href="https://intuitiveiq.ai/industries.html#cpg">Consumer Packaged Goods</a>
-              <a href="https://intuitiveiq.ai/industries.html#manufacturing">Manufacturing</a>
-              <a href="https://intuitiveiq.ai/industries.html#energy">Energy &amp; Utilities</a>
-              <a href="https://intuitiveiq.ai/industries.html#public-sector">Public Sector</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="nav-item"><a href="https://intuitiveiq.ai/company.html">Why IntuitiveIQ</a>
-        <div class="nav-drop">
-          <div class="mega-inner">
-            <div class="mega-left">
-              <h3>Why IntuitiveIQ</h3>
-              <p>Owned intelligence — engineered by Intuitive, delivered through the aiE™ Framework.</p>
-            </div>
-            <div class="mega-links">
-              <a href="https://intuitiveiq.ai/company.html#moat">What makes us different</a>
-              <a href="https://intuitiveiq.ai/company.html#company">Engineered by Intuitive</a>
-              <a href="https://intuitiveiq.ai/platform.html#aie">The aiE™ Framework</a>
-              <a href="https://intuitiveiq.ai/index.html#boardroom-test">The 90-second boardroom test</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="nav-item"><a href="https://intuitive.ai/about-us/our-story/" target="_blank" rel="noopener">About Us</a>
-        <div class="nav-drop">
-          <div class="mega-inner">
-            <div class="mega-left">
-              <h3>About Us</h3>
-              <p>We are an AI-first innovation and engineering company delivering engineering breakthroughs.</p>
-            </div>
-            <div class="mega-links">
-              <a href="https://intuitive.ai/about-us/our-story/" target="_blank" rel="noopener">Our Story</a>
-              <a href="https://intuitive.ai/about-us/events/" target="_blank" rel="noopener">Events</a>
-              <a href="https://intuitive.ai/about-us/life-at-intuitive/" target="_blank" rel="noopener">Life@Intuitive</a>
-              <a href="https://intuitive.ai/careers/" target="_blank" rel="noopener">Careers</a>
-              <a href="https://intuitive.ai/about-us/news/" target="_blank" rel="noopener">News</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="brand" style="display:flex;align-items:center;gap:14px">
+      <a href="/" class="brand-mark" title="IntuitiveIQ for Databricks" style="color:#fff;text-decoration:none"><img src="https://intuitiveiq.ai/assets/intuitive-logo.png?v=2" class="intuitive-logo-img" alt="intuitive" /><span class="brand-iq">IQ</span></a>
+      <span style="font-family:var(--font-mono);font-size:10.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:#8b93a6;border:1px solid rgba(255,255,255,.18);border-radius:100px;padding:4px 11px;white-space:nowrap">for Databricks</span>
+    </div>
+    <nav class="nav-links dbxnav">
+      <a href="#reality">Why AI stalls</a>
+      <a href="#meaning">Knowledge Fabric</a>
+      <a href="#how">How it fits</a>
+      <a href="#proof">Proof</a>
+      <a href="/partners">For Databricks teams</a>
     </nav>
     <button class="nav-burger" aria-label="Menu" aria-expanded="false">☰</button>
     <div class="nav-cta">
-      <a href="mailto:hello@intuitive.ai?subject=IntuitiveIQ" class="btn btn-primary">Talk to us →</a>
+      <a href="mailto:hello@intuitive.ai?subject=IntuitiveIQ%20for%20Databricks" class="btn btn-primary">Talk to us →</a>
     </div>
   </div>
 </header>
-<!-- ── Page hero ─────────────────────────────────────────────────────── -->
-<section class="page-hero">
-  <div class="container">
-    <p class="eyebrow">IntuitiveIQ for Databricks · a strategic Databricks partner</p>
-    <h1 class="page-title">Make Mosaic AI trustworthy enough to act on.</h1>
-    <p class="section-sub" style="margin-bottom:28px">IntuitiveIQ is the Decision Intelligence Engine for your Databricks lakehouse. <b style="color:#fff">Unity Catalog governs access; IntuitiveIQ governs meaning</b> — so Genie and Agent Bricks answer real business questions correctly, agents act under your policies, and every answer carries its evidence. We don&rsquo;t replace Databricks — we make it deliver.</p>
-    <div class="hero-actions" style="justify-content:flex-start;margin-bottom:48px">
-      <a href="mailto:hello@intuitive.ai?subject=IntuitiveIQ%20for%20Databricks%20—%20AI%20Strategy%20Session" class="btn btn-primary lg">Request an AI Strategy Session →</a>
-      <a href="https://intuitiveiq.ai/" class="btn btn-ghost lg">Explore IntuitiveIQ</a>
+
+<!-- ── Hero ─────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="https://intuitiveiq.ai/assets/media/home-vid.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      <span><b>IntuitiveIQ for Databricks</b> · a strategic Databricks partner</span>
     </div>
-    <div class="hero-meta" style="justify-content:flex-start;gap:40px">
-      <div><b>67% → 90%+</b><span>Genie accuracy on multi-hop questions</span></div>
+    <h1 class="hero-title">
+      Make Mosaic AI <span class="grad">trustworthy</span><br/>
+      enough to <span class="grad">act on.</span>
+    </h1>
+    <p class="hero-sub">
+      IntuitiveIQ is the Decision Intelligence Engine for your Databricks lakehouse.
+      <b>Unity Catalog governs access; IntuitiveIQ governs meaning</b> — so Genie and
+      Agent Bricks answer real business questions correctly, agents act under your
+      policies, and every answer carries its evidence. We don&rsquo;t replace Databricks —
+      we make it deliver.
+    </p>
+    <div class="hero-actions">
+      <a href="mailto:hello@intuitive.ai?subject=IntuitiveIQ%20for%20Databricks%20—%20AI%20Strategy%20Session" class="btn btn-primary lg">Request an AI Strategy Session →</a>
+      <a href="#how" class="btn btn-ghost lg">See how it fits</a>
+    </div>
+    <div class="hero-meta">
+      <div><b>Trusted</b><span>Genie answers on the questions that used to fail</span></div>
       <div><b>3–4×</b><span>faster pilot → production</span></div>
-      <div><b>40–60%</b><span>faster time-to-insight</span></div>
-      <div><b>25–35%</b><span>lower governance cost</span></div>
       <div><b>20+</b><span>enterprises live on Databricks</span></div>
+      <div><b>Zero</b><span>data movement · no ETL</span></div>
+      <div><b>Evidence</b><span>attached to every answer</span></div>
+    </div>
+  </div>
+  <div class="hero-decor" aria-hidden="true"></div>
+</section>
+
+<!-- ── Trust promise strip ──────────────────────────────────────────── -->
+<section class="promise" aria-label="Trust promise">
+  <div class="container promise-grid">
+    <div class="promise-item"><h4>Explainability</h4><p>Understand why every answer and action was produced.</p></div>
+    <div class="promise-item"><h4>Traceability</h4><p>Every answer traced to the Unity Catalog source behind it.</p></div>
+    <div class="promise-item"><h4>Auditability</h4><p>Evidence captured for compliance — exportable in one click.</p></div>
+    <div class="promise-item"><h4>Accountability</h4><p>Ownership across human approvals and automated actions.</p></div>
+  </div>
+</section>
+
+<!-- ── Live visualization showcase ─────────────────────────────────── -->
+<section class="visual-section">
+  <div class="container">
+    <p class="eyebrow">See it in motion</p>
+    <h2 class="section-title">Decision intelligence you can watch working.</h2>
+    <p class="section-sub">The Knowledge Fabric that grounds every term · the data trail that traces every number · live trust scores on every match · explainable answers with their evidence · agents that act under governance. Click any tab.</p>
+
+    <div class="visual-tabs">
+      <button class="vt-pill active" data-vt="kg">⌬ Knowledge Fabric</button>
+      <button class="vt-pill" data-vt="lineage">⇆ Traceability</button>
+      <button class="vt-pill" data-vt="confidence">📊 Mapping confidence</button>
+      <button class="vt-pill" data-vt="ask">💬 Explainability</button>
+      <button class="vt-pill" data-vt="action">⚡ Agentic orchestration</button>
+      <button class="vt-pill" data-vt="console">🗂 Actions console</button>
+      <button class="vt-pill" data-vt="dash">📈 Insights</button>
+    </div>
+
+    <!-- Browser-chrome wrapper — gives the visuals an "in-app" feel -->
+    <div class="visual-stage">
+      <div class="vs-chrome">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <div class="vs-url">dbx.intuitiveiq.ai</div>
+      </div>
+
+      <!-- ── PANE 1 · Animated Knowledge Graph ──────────────────────── -->
+      <div class="visual-pane vp-kg active">
+        <svg class="anim-kg" viewBox="0 0 900 460" preserveAspectRatio="xMidYMid meet">
+          <!-- Background grid -->
+          <defs>
+            <pattern id="grid-kg" width="36" height="36" patternUnits="userSpaceOnUse">
+              <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#15161c" stroke-width="1"/>
+            </pattern>
+            <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#5a6478" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#5a6478" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="900" height="460" fill="url(#grid-kg)"/>
+
+          <!-- Edges (dashed flow) — drawn under nodes -->
+          <g class="kg-edges" stroke-width="1.2" fill="none" stroke-dasharray="4 5">
+            <!-- center → phase rings -->
+            <line x1="450" y1="230" x2="450" y2="100"  stroke="#5a6478"/>
+            <line x1="450" y1="230" x2="585" y2="155" stroke="#6b7180"/>
+            <line x1="450" y1="230" x2="600" y2="300" stroke="#7f8696"/>
+            <line x1="450" y1="230" x2="450" y2="380" stroke="#8b93a6"/>
+            <line x1="450" y1="230" x2="300" y2="335" stroke="#8a92a3"/>
+            <line x1="450" y1="230" x2="270" y2="170" stroke="#7f8696"/>
+            <!-- phase → leaves (subset) -->
+            <line x1="450" y1="100"  x2="380" y2="50"  stroke="#5a6478" opacity=".6"/>
+            <line x1="450" y1="100"  x2="450" y2="40"  stroke="#5a6478" opacity=".6"/>
+            <line x1="450" y1="100"  x2="520" y2="50"  stroke="#5a6478" opacity=".6"/>
+            <line x1="585" y1="155" x2="660" y2="105" stroke="#6b7180" opacity=".6"/>
+            <line x1="585" y1="155" x2="700" y2="160" stroke="#6b7180" opacity=".6"/>
+            <line x1="585" y1="155" x2="680" y2="220" stroke="#6b7180" opacity=".6"/>
+            <line x1="600" y1="300" x2="700" y2="285" stroke="#7f8696" opacity=".6"/>
+            <line x1="600" y1="300" x2="710" y2="345" stroke="#7f8696" opacity=".6"/>
+            <line x1="450" y1="380" x2="370" y2="430" stroke="#8b93a6" opacity=".6"/>
+            <line x1="450" y1="380" x2="450" y2="440" stroke="#8b93a6" opacity=".6"/>
+            <line x1="450" y1="380" x2="530" y2="430" stroke="#8b93a6" opacity=".6"/>
+            <line x1="300" y1="335" x2="200" y2="345" stroke="#8a92a3" opacity=".6"/>
+            <line x1="300" y1="335" x2="190" y2="290" stroke="#8a92a3" opacity=".6"/>
+            <line x1="270" y1="170" x2="180" y2="155" stroke="#7f8696" opacity=".6"/>
+            <line x1="270" y1="170" x2="200" y2="100" stroke="#7f8696" opacity=".6"/>
+            <line x1="270" y1="170" x2="220" y2="220" stroke="#7f8696" opacity=".6"/>
+          </g>
+
+          <!-- Center "Fabric" hub -->
+          <circle cx="450" cy="230" r="60" fill="url(#centerGlow)"/>
+          <circle cx="450" cy="230" r="34" fill="#0a0e1a" class="kg-pulse"/>
+          <text x="450" y="234" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" letter-spacing="0.5">FABRIC</text>
+
+          <!-- 6 phase nodes -->
+          <g class="kg-phase">
+            <circle cx="450" cy="100"  r="18" fill="#5a6478"/><text x="450" y="103" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">Core</text>
+            <circle cx="585" cy="155" r="18" fill="#6b7180"/><text x="585" y="158" text-anchor="middle" font-size="8.5" fill="#fff" font-weight="700">Trace</text>
+            <circle cx="600" cy="300" r="18" fill="#7f8696"/><text x="600" y="303" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">ESG</text>
+            <circle cx="450" cy="380" r="18" fill="#8b93a6"/><text x="450" y="383" text-anchor="middle" font-size="8.5" fill="#fff" font-weight="700">Comm</text>
+            <circle cx="300" cy="335" r="18" fill="#8a92a3"/><text x="300" y="338" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">Proc</text>
+            <circle cx="270" cy="170" r="18" fill="#7f8696"/><text x="270" y="173" text-anchor="middle" font-size="8.5" fill="#fff" font-weight="700">P360</text>
+          </g>
+
+          <!-- Leaf class nodes -->
+          <g class="kg-leaves" fill-opacity="0.95">
+            <!-- Core leaves -->
+            <circle cx="380" cy="50"  r="6" fill="#5a6478"/>
+            <circle cx="450" cy="40"  r="6" fill="#5a6478"/>
+            <circle cx="520" cy="50"  r="6" fill="#5a6478"/>
+            <!-- Trace -->
+            <circle cx="660" cy="105" r="6" fill="#6b7180"/>
+            <circle cx="700" cy="160" r="6" fill="#6b7180"/>
+            <circle cx="680" cy="220" r="6" fill="#6b7180"/>
+            <!-- ESG -->
+            <circle cx="700" cy="285" r="6" fill="#7f8696"/>
+            <circle cx="710" cy="345" r="6" fill="#7f8696"/>
+            <!-- Comm -->
+            <circle cx="370" cy="430" r="6" fill="#8b93a6"/>
+            <circle cx="450" cy="440" r="6" fill="#8b93a6"/>
+            <circle cx="530" cy="430" r="6" fill="#8b93a6"/>
+            <!-- Proc -->
+            <circle cx="200" cy="345" r="6" fill="#8a92a3"/>
+            <circle cx="190" cy="290" r="6" fill="#8a92a3"/>
+            <!-- P360 -->
+            <circle cx="180" cy="155" r="6" fill="#7f8696"/>
+            <circle cx="200" cy="100" r="6" fill="#7f8696"/>
+            <circle cx="220" cy="220" r="6" fill="#7f8696"/>
+          </g>
+
+          <!-- Sweeping highlight ring -->
+          <circle cx="450" cy="230" r="0" fill="none" stroke="#5a6478" stroke-width="1.5" class="kg-sweep"/>
+
+          <!-- Sample labels (only a few) -->
+          <text x="380" y="35" text-anchor="middle" font-size="9" fill="#1d2230" font-family="ui-monospace,Menlo,monospace">Product</text>
+          <text x="700" y="98" text-anchor="middle" font-size="9" fill="#1d2230" font-family="ui-monospace,Menlo,monospace">Batch</text>
+          <text x="730" y="280" text-anchor="middle" font-size="9" fill="#1d2230" font-family="ui-monospace,Menlo,monospace">Scope-3</text>
+          <text x="260" y="335" text-anchor="end" font-size="9" fill="#1d2230" font-family="ui-monospace,Menlo,monospace">Supplier</text>
+          <text x="155" y="155" text-anchor="end" font-size="9" fill="#1d2230" font-family="ui-monospace,Menlo,monospace">BOM</text>
+        </svg>
+        <div class="vs-caption">
+          <b>One Knowledge Fabric, every domain</b> · every business term anchored to a single shared definition · click any node to see what depends on it
+        </div>
+      </div>
+
+      <!-- ── PANE 2 · Animated Lineage Flow ─────────────────────────── -->
+      <div class="visual-pane vp-lineage">
+        <svg class="anim-lineage" viewBox="0 0 900 460" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="flowGradient" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0%" stop-color="#5a6478"/>
+              <stop offset="33%" stop-color="#1d2230"/>
+              <stop offset="66%" stop-color="#8b93a6"/>
+              <stop offset="100%" stop-color="#6b7180"/>
+            </linearGradient>
+          </defs>
+          <!-- Layer headers -->
+          <g class="lineage-headers" font-size="10" font-weight="700" font-family="ui-monospace,Menlo,monospace" letter-spacing="1.5" text-anchor="middle">
+            <text x="100" y="30" fill="#5a6478">YOUR SYSTEMS</text>
+            <text x="290" y="30" fill="#5a6478">RAW</text>
+            <text x="480" y="30" fill="#1d2230">CLEANED</text>
+            <text x="670" y="30" fill="#8b93a6">GOVERNED</text>
+            <text x="840" y="30" fill="#5a6478">BUSINESS TERM</text>
+          </g>
+
+          <!-- Layer 1: Sources (5 cards) -->
+          <g class="lineage-sources">
+            <g transform="translate(40,60)" class="ln-card src">
+              <rect width="120" height="38" rx="6" fill="#fff" stroke="#2a2f3c"/>
+              <text x="14" y="17" font-size="11" font-weight="600" fill="#0a0e1a">🏢 SAP ECC</text>
+              <text x="14" y="30" font-size="9.5" fill="#8a92a3">1,500 tables</text>
+            </g>
+            <g transform="translate(40,120)" class="ln-card src">
+              <rect width="120" height="38" rx="6" fill="#fff" stroke="#2a2f3c"/>
+              <text x="14" y="17" font-size="11" font-weight="600" fill="#0a0e1a">☁ Salesforce</text>
+              <text x="14" y="30" font-size="9.5" fill="#8a92a3">700 tables</text>
+            </g>
+            <g transform="translate(40,180)" class="ln-card src">
+              <rect width="120" height="38" rx="6" fill="#fff" stroke="#2a2f3c"/>
+              <text x="14" y="17" font-size="11" font-weight="600" fill="#0a0e1a">🏭 MES Plant</text>
+              <text x="14" y="30" font-size="9.5" fill="#8a92a3">1,400 tables</text>
+            </g>
+            <g transform="translate(40,240)" class="ln-card src">
+              <rect width="120" height="38" rx="6" fill="#fff" stroke="#2a2f3c"/>
+              <text x="14" y="17" font-size="11" font-weight="600" fill="#0a0e1a">🌱 ESG Source</text>
+              <text x="14" y="30" font-size="9.5" fill="#8a92a3">300 tables</text>
+            </g>
+            <g transform="translate(40,300)" class="ln-card src">
+              <rect width="120" height="38" rx="6" fill="#fff" stroke="#2a2f3c"/>
+              <text x="14" y="17" font-size="11" font-weight="600" fill="#0a0e1a">📦 WMS/TMS</text>
+              <text x="14" y="30" font-size="9.5" fill="#8a92a3">700 tables</text>
+            </g>
+          </g>
+
+          <!-- Layer 2: Raw (grid of tiny dots representing 10K tables) -->
+          <g class="lineage-raw" fill="#5a6478" opacity="0.55">
+            <g transform="translate(230,45)" id="raw-cluster"></g>
+          </g>
+
+          <!-- Layer 3: Silver -->
+          <g class="lineage-silver">
+            <g transform="translate(420,90)" class="ln-card silver"><rect width="120" height="38" rx="6" fill="#1d2230"/><text x="14" y="17" font-size="11" font-weight="600" fill="#fff">products</text><text x="14" y="30" font-size="9.5" fill="#8a92a3">cleaned · conformed</text></g>
+            <g transform="translate(420,150)" class="ln-card silver"><rect width="120" height="38" rx="6" fill="#1d2230"/><text x="14" y="17" font-size="11" font-weight="600" fill="#fff">suppliers</text><text x="14" y="30" font-size="9.5" fill="#8a92a3">cleaned · conformed</text></g>
+            <g transform="translate(420,210)" class="ln-card silver"><rect width="120" height="38" rx="6" fill="#1d2230"/><text x="14" y="17" font-size="11" font-weight="600" fill="#fff">batches</text><text x="14" y="30" font-size="9.5" fill="#8a92a3">cleaned · conformed</text></g>
+            <g transform="translate(420,270)" class="ln-card silver"><rect width="120" height="38" rx="6" fill="#1d2230"/><text x="14" y="17" font-size="11" font-weight="600" fill="#fff">emissions</text><text x="14" y="30" font-size="9.5" fill="#8a92a3">cleaned · conformed</text></g>
+          </g>
+
+          <!-- Layer 4: Gold -->
+          <g class="lineage-gold">
+            <g transform="translate(610,90)" class="ln-card gold"><rect width="120" height="38" rx="6" fill="#fff" stroke="#8b93a6" stroke-width="1.5"/><text x="14" y="17" font-size="11" font-weight="600" fill="#0a0e1a">products</text><text x="14" y="30" font-size="9.5" fill="#8b93a6">quality-checked</text></g>
+            <g transform="translate(610,150)" class="ln-card gold"><rect width="120" height="38" rx="6" fill="#fff" stroke="#8b93a6" stroke-width="1.5"/><text x="14" y="17" font-size="11" font-weight="600" fill="#0a0e1a">suppliers</text><text x="14" y="30" font-size="9.5" fill="#8b93a6">quality-checked</text></g>
+            <g transform="translate(610,210)" class="ln-card gold"><rect width="120" height="38" rx="6" fill="#fff" stroke="#8b93a6" stroke-width="1.5"/><text x="14" y="17" font-size="11" font-weight="600" fill="#0a0e1a">batches</text><text x="14" y="30" font-size="9.5" fill="#8b93a6">quality-checked</text></g>
+            <g transform="translate(610,270)" class="ln-card gold"><rect width="120" height="38" rx="6" fill="#fff" stroke="#8b93a6" stroke-width="1.5"/><text x="14" y="17" font-size="11" font-weight="600" fill="#0a0e1a">emissions</text><text x="14" y="30" font-size="9.5" fill="#8b93a6">quality-checked</text></g>
+          </g>
+
+          <!-- Layer 5: Business Terms -->
+          <g class="lineage-sem">
+            <g transform="translate(790,90)" class="ln-card sem"><rect width="100" height="38" rx="6" fill="#fff" stroke="#6b7180" stroke-width="1.5"/><text x="10" y="17" font-size="10.5" font-weight="600" fill="#5a6478">Product</text><text x="10" y="30" font-size="9" fill="#6b7180">business term</text></g>
+            <g transform="translate(790,150)" class="ln-card sem"><rect width="100" height="38" rx="6" fill="#fff" stroke="#6b7180" stroke-width="1.5"/><text x="10" y="17" font-size="10.5" font-weight="600" fill="#5a6478">Supplier</text><text x="10" y="30" font-size="9" fill="#6b7180">business term</text></g>
+            <g transform="translate(790,210)" class="ln-card sem"><rect width="100" height="38" rx="6" fill="#fff" stroke="#6b7180" stroke-width="1.5"/><text x="10" y="17" font-size="10.5" font-weight="600" fill="#5a6478">Batch</text><text x="10" y="30" font-size="9" fill="#6b7180">business term</text></g>
+            <g transform="translate(790,270)" class="ln-card sem"><rect width="100" height="38" rx="6" fill="#fff" stroke="#6b7180" stroke-width="1.5"/><text x="10" y="17" font-size="10.5" font-weight="600" fill="#5a6478">Emission</text><text x="10" y="30" font-size="9" fill="#6b7180">business term</text></g>
+          </g>
+
+          <!-- Animated flow arrows (SVG dasharray animation) -->
+          <g class="ln-flow" stroke-width="2" stroke-dasharray="6 6" fill="none">
+            <path d="M 165 79 L 220 60" stroke="#5a6478"/>
+            <path d="M 165 139 L 220 90" stroke="#5a6478"/>
+            <path d="M 165 199 L 220 130" stroke="#5a6478"/>
+            <path d="M 380 60 L 415 109" stroke="#1d2230"/>
+            <path d="M 380 100 L 415 169" stroke="#1d2230"/>
+            <path d="M 380 140 L 415 229" stroke="#1d2230"/>
+            <path d="M 540 109 L 605 109" stroke="#8b93a6"/>
+            <path d="M 540 169 L 605 169" stroke="#8b93a6"/>
+            <path d="M 540 229 L 605 229" stroke="#8b93a6"/>
+            <path d="M 540 289 L 605 289" stroke="#8b93a6"/>
+            <path d="M 730 109 L 785 109" stroke="#6b7180"/>
+            <path d="M 730 169 L 785 169" stroke="#6b7180"/>
+            <path d="M 730 229 L 785 229" stroke="#6b7180"/>
+            <path d="M 730 289 L 785 289" stroke="#6b7180"/>
+          </g>
+
+          <!-- Travelling particle -->
+          <circle r="4" fill="#8b93a6" class="ln-particle">
+            <animateMotion dur="6s" repeatCount="indefinite" rotate="auto"
+                           path="M 165 139 C 280 100, 380 130, 480 169 C 580 200, 680 169, 850 169"/>
+            <animate attributeName="opacity" values="0;1;1;0" dur="6s" repeatCount="indefinite"/>
+          </circle>
+          <circle r="3" fill="#6b7180" class="ln-particle">
+            <animateMotion dur="7s" begin="2s" repeatCount="indefinite" rotate="auto"
+                           path="M 165 199 C 290 200, 380 220, 480 229 C 580 240, 680 229, 850 229"/>
+            <animate attributeName="opacity" values="0;1;1;0" dur="7s" begin="2s" repeatCount="indefinite"/>
+          </circle>
+          <circle r="3.5" fill="#7f8696" class="ln-particle">
+            <animateMotion dur="6.5s" begin="3.5s" repeatCount="indefinite" rotate="auto"
+                           path="M 165 259 C 280 260, 380 285, 480 289 C 580 290, 680 289, 850 289"/>
+            <animate attributeName="opacity" values="0;1;1;0" dur="6.5s" begin="3.5s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+        <div class="vs-caption">
+          <b>Every number, traceable to its source</b> · watch data flow from your business systems through quality checks into a governed business term — defendable end-to-end
+        </div>
+      </div>
+
+      <!-- ── PANE 3 · Trust Score ─────────────────────────────────────── -->
+      <div class="visual-pane vp-confidence">
+        <div class="anim-confidence">
+          <div class="conf-header">
+            <div class="conf-title-block">
+              <span class="conf-title">Live Trust Score</span>
+              <span class="conf-sub">how confident the platform is in each match · 13 independent checks</span>
+            </div>
+            <div class="conf-legend">
+              <span class="cl green">≥85% auto-promote</span>
+              <span class="cl amber">50–85% review</span>
+              <span class="cl red">&lt;50% steward attention</span>
+            </div>
+          </div>
+
+          <div class="conf-rows">
+            <div class="conf-row" style="--w:96%">
+              <div class="conf-mapping">
+                <code class="src">Sales · GTIN</code>
+                <span class="arr">→</span>
+                <code class="cls">Product</code>
+              </div>
+              <div class="conf-bar-wrap"><div class="conf-bar green"></div></div>
+              <div class="conf-pct green">96%</div>
+              <div class="conf-signals">
+                <span class="sig on">Catalog</span><span class="sig on">Key</span><span class="sig on">Name</span><span class="sig on">Link</span><span class="sig on">Type</span><span class="sig on">AI</span>
+              </div>
+            </div>
+
+            <div class="conf-row" style="--w:92%">
+              <div class="conf-mapping">
+                <code class="src">Suppliers · GLN</code>
+                <span class="arr">→</span>
+                <code class="cls">Supplier</code>
+              </div>
+              <div class="conf-bar-wrap"><div class="conf-bar green"></div></div>
+              <div class="conf-pct green">92%</div>
+              <div class="conf-signals">
+                <span class="sig on">Catalog</span><span class="sig on">Key</span><span class="sig on">Name</span><span class="sig on">Pattern</span><span class="sig on">Type</span><span class="sig on">AI</span>
+              </div>
+            </div>
+
+            <div class="conf-row" style="--w:88%">
+              <div class="conf-mapping">
+                <code class="src">Emissions · scope</code>
+                <span class="arr">→</span>
+                <code class="cls">Scope-3 Emission</code>
+              </div>
+              <div class="conf-bar-wrap"><div class="conf-bar green"></div></div>
+              <div class="conf-pct green">88%</div>
+              <div class="conf-signals">
+                <span class="sig on">Catalog</span><span class="sig on">Fuzzy</span><span class="sig on">Name</span><span class="sig on">Values</span><span class="sig on">AI</span>
+              </div>
+            </div>
+
+            <div class="conf-row" style="--w:84%">
+              <div class="conf-mapping">
+                <code class="src">Batches · batch_no</code>
+                <span class="arr">→</span>
+                <code class="cls">Finished Goods Batch</code>
+              </div>
+              <div class="conf-bar-wrap"><div class="conf-bar amber"></div></div>
+              <div class="conf-pct amber">84%</div>
+              <div class="conf-signals">
+                <span class="sig on">Key</span><span class="sig on">Fuzzy</span><span class="sig on">Pattern</span><span class="sig on">Type</span><span class="sig">Catalog</span>
+              </div>
+            </div>
+
+            <div class="conf-row" style="--w:67%">
+              <div class="conf-mapping">
+                <code class="src">Specs · material_type</code>
+                <span class="arr">→</span>
+                <code class="cls">Active Substance</code>
+              </div>
+              <div class="conf-bar-wrap"><div class="conf-bar amber"></div></div>
+              <div class="conf-pct amber">67%</div>
+              <div class="conf-signals">
+                <span class="sig on">Fuzzy</span><span class="sig on">Values</span><span class="sig on">Text</span><span class="sig on">AI</span><span class="sig">Catalog</span><span class="sig">Key</span>
+              </div>
+            </div>
+
+            <div class="conf-row" style="--w:41%">
+              <div class="conf-mapping">
+                <code class="src">Deviations · severity</code>
+                <span class="arr">→</span>
+                <code class="cls">Quality Deviation</code>
+              </div>
+              <div class="conf-bar-wrap"><div class="conf-bar red"></div></div>
+              <div class="conf-pct red">41%</div>
+              <div class="conf-signals">
+                <span class="sig on">Fuzzy</span><span class="sig on">AI</span><span class="sig">Catalog</span><span class="sig">Key</span><span class="sig">Name</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="conf-footer">
+            <span><b>13 independent checks</b></span>
+            <span class="conf-dot">●</span>
+            <span><b>Auto-promote</b> ≥ 85%</span>
+            <span class="conf-dot">●</span>
+            <span><b>Steward review</b> 50–85%</span>
+            <span class="conf-dot">●</span>
+            <span><b>Flag</b> &lt; 50%</span>
+          </div>
+        </div>
+        <div class="vs-caption">
+          <b>Live trust score on every match</b> · the platform shows you exactly how confident it is in each mapping — and which checks agreed
+        </div>
+      </div>
+
+      <!-- ── PANE 4 · Ask & Reason — chat with visual reasoning ──────── -->
+      <div class="visual-pane vp-ask">
+        <div class="anim-ask">
+
+          <!-- Suggestion chips at top -->
+          <div class="ask-suggest">
+            <span class="ask-eyebrow">Ask anything in plain English. Get the why and what alongside the answer:</span>
+            <div class="ask-chips">
+              <span class="ask-chip">Why does the system match Sales.GTIN to Product?</span>
+              <span class="ask-chip">Show the data trail for Finished Goods Batch</span>
+              <span class="ask-chip">Which products have low-confidence matches?</span>
+            </div>
+          </div>
+
+          <!-- Conversation -->
+          <div class="ask-thread">
+
+            <!-- User question -->
+            <div class="ask-msg user">
+              <div class="ask-avatar user">YOU</div>
+              <div class="ask-bubble">
+                <span class="ask-typed">Why does the system match <code>Sales.GTIN</code> to the <code class="cls">Product</code> business term with 96% confidence?</span>
+              </div>
+            </div>
+
+            <!-- Assistant — reasoning header -->
+            <div class="ask-msg ai delay-1">
+              <div class="ask-avatar ai">IQ</div>
+              <div class="ask-bubble">
+                <span class="ask-bubble-text">
+                  Six independent checks agreed strongly. The match is auto-approved because every trusted metadata source confirms it — the catalog rule, the primary-key declaration, and the name match against the GS1 industry standard for Product identifiers (GTIN — every retail barcode in the world).
+                </span>
+
+                <!-- Embedded mini reasoning path -->
+                <div class="ask-img">
+                  <div class="ask-img-title">📈 How we got there</div>
+                  <svg class="ask-mini-path" viewBox="0 0 460 100">
+                    <!-- Source column -->
+                    <g transform="translate(0,30)">
+                      <rect width="120" height="42" rx="6" fill="#0b0c10" stroke="#2a2f3c"/>
+                      <text x="60" y="17" text-anchor="middle" font-size="9.5" fill="#8a92a3" font-family="ui-monospace,Menlo,monospace">YOUR DATA</text>
+                      <text x="60" y="32" text-anchor="middle" font-size="11" fill="#0a0e1a" font-family="ui-monospace,Menlo,monospace" font-weight="600">Sales · GTIN</text>
+                    </g>
+                    <!-- Mapping arrow -->
+                    <g transform="translate(120,50)">
+                      <path d="M 0 0 L 80 0" stroke="#5a6478" stroke-width="2" stroke-dasharray="4 4">
+                        <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1s" repeatCount="indefinite"/>
+                      </path>
+                      <polygon points="80,-5 90,0 80,5" fill="#5a6478"/>
+                      <text x="40" y="-8" text-anchor="middle" font-size="9" fill="#5a6478" font-weight="700">match</text>
+                    </g>
+                    <!-- Business term -->
+                    <g transform="translate(220,30)">
+                      <rect width="120" height="42" rx="6" fill="rgba(107,113,128,0.10)" stroke="#6b7180"/>
+                      <text x="60" y="17" text-anchor="middle" font-size="9.5" fill="#6b7180" font-family="ui-monospace,Menlo,monospace">BUSINESS TERM</text>
+                      <text x="60" y="32" text-anchor="middle" font-size="11" fill="#5a6478" font-family="ui-monospace,Menlo,monospace" font-weight="700">Product</text>
+                    </g>
+                    <!-- Industry standard -->
+                    <g transform="translate(340,50)">
+                      <path d="M 0 0 L 60 0" stroke="#5a6478" stroke-width="2" stroke-dasharray="4 4">
+                        <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.2s" repeatCount="indefinite"/>
+                      </path>
+                      <polygon points="60,-5 70,0 60,5" fill="#5a6478"/>
+                      <text x="30" y="-8" text-anchor="middle" font-size="9" fill="#5a6478" font-weight="700">aligns to</text>
+                    </g>
+                    <g transform="translate(410,30)">
+                      <rect width="50" height="42" rx="6" fill="#12161f" stroke="#5a6478"/>
+                      <text x="25" y="22" text-anchor="middle" font-size="9.5" fill="#5a6478" font-family="ui-monospace,Menlo,monospace">GS1</text>
+                      <text x="25" y="34" text-anchor="middle" font-size="9" fill="#5a6478" font-family="ui-monospace,Menlo,monospace">global</text>
+                    </g>
+                  </svg>
+                </div>
+
+                <!-- Signal breakdown -->
+                <div class="ask-img">
+                  <div class="ask-img-title">⚖ The checks that agreed</div>
+                  <div class="ask-signals">
+                    <div class="ask-sig"><span class="asn green">✓</span><b>Catalog rule</b><span class="asd">declared in your data catalog</span><span class="asw green">0.95</span></div>
+                    <div class="ask-sig"><span class="asn green">✓</span><b>Primary key</b><span class="asd">unique-identifier flag set</span><span class="asw green">0.92</span></div>
+                    <div class="ask-sig"><span class="asn green">✓</span><b>Name match</b><span class="asd">"GTIN" is the GS1 industry term</span><span class="asw green">0.88</span></div>
+                    <div class="ask-sig"><span class="asn green">✓</span><b>Linked column</b><span class="asd">joins to Product master</span><span class="asw green">0.82</span></div>
+                    <div class="ask-sig"><span class="asn green">✓</span><b>Data type</b><span class="asd">14-character barcode format</span><span class="asw amber">0.71</span></div>
+                    <div class="ask-sig"><span class="asn green">✓</span><b>AI vote</b><span class="asd">frontier model — agrees</span><span class="asw green">0.86</span></div>
+                  </div>
+                </div>
+
+                <!-- Provenance footer -->
+                <div class="ask-prov">
+                  <span><b>Sources:</b></span>
+                  <span class="prov-chip">Your data catalog</span>
+                  <span class="prov-chip">Database schema</span>
+                  <span class="prov-chip">GS1 industry standard</span>
+                  <span class="prov-chip">Audit log</span>
+                  <span class="prov-time">347 ms</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="vs-caption">
+          <b>Ask anything · get the why and what</b> · the assistant reasons over the Knowledge Fabric, the mapping engine, and lineage — every answer ships with its sources, signal weights, and a visual trace
+        </div>
+      </div>
+
+      <!-- ── PANE 5 · Natural Language → Governed Agentic Action ─────── -->
+      <div class="visual-pane vp-action">
+        <div class="anim-action">
+
+          <!-- Top: persona + NL textarea -->
+          <div class="act-top">
+            <div class="act-persona">
+              <span class="act-eyebrow">PERSONA</span>
+              <span class="act-persona-chip">🩺 Chief Medical Officer</span>
+            </div>
+            <div class="act-nl-card">
+              <div class="act-nl-label">Describe the workflow opportunity</div>
+              <div class="act-nl-text">
+                <span class="act-typed">Find diabetic patients with HbA1c above 9% who have not had a nephrology referral in the last 12 months. Stars rating gap, equity-of-care risk for high-risk cohort.</span>
+                <span class="act-cursor">▌</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flow: NL → LLM → SPARQL → Action -->
+          <div class="act-flow">
+            <svg viewBox="0 0 880 50" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="actArrowGrad" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#5a6478" stop-opacity="0.2"/>
+                  <stop offset="50%" stop-color="#6b7180" stop-opacity="1"/>
+                  <stop offset="100%" stop-color="#5a6478" stop-opacity="0.2"/>
+                </linearGradient>
+              </defs>
+              <line x1="40" y1="25" x2="840" y2="25" stroke="url(#actArrowGrad)" stroke-width="2" stroke-dasharray="6 6" class="act-flow-line"/>
+              <polygon points="840,18 854,25 840,32" fill="#5a6478"/>
+            </svg>
+            <div class="act-flow-stages">
+              <div class="act-stage stage-1"><span class="act-stage-dot"></span>Read</div>
+              <div class="act-stage stage-2"><span class="act-stage-dot"></span>Understand</div>
+              <div class="act-stage stage-3"><span class="act-stage-dot"></span>Build the check</div>
+              <div class="act-stage stage-4"><span class="act-stage-dot"></span>Live monitor</div>
+            </div>
+          </div>
+
+          <!-- Bottom: SPARQL + Action card side-by-side -->
+          <div class="act-bottom">
+            <!-- Generated SPARQL -->
+            <div class="act-sparql-card">
+              <div class="act-sparql-header">
+                <span class="act-sparql-title">⌬ The check we built for you</span>
+                <span class="act-sparql-badge">uses your Knowledge Fabric</span>
+              </div>
+              <pre class="act-sparql-code"><span class="act-line line-1">PREFIX bhsf: &lt;https://data.bhsf.org/ont/&gt;</span><span class="act-line line-2">SELECT ?patient ?hba1c ?dx_date WHERE {</span><span class="act-line line-3">  ?patient a bhsf:Patient ;</span><span class="act-line line-4">           bhsf:hasCondition [</span><span class="act-line line-5">             bhsf:hasICDCode icd10cm:E11* ] .</span><span class="act-line line-6">  ?obs a bhsf:LabResult ;</span><span class="act-line line-7">       bhsf:forPatient ?patient ;</span><span class="act-line line-8">       bhsf:hasLOINCCode loinc:4548-4 ;</span><span class="act-line line-9">       bhsf:value ?hba1c .</span><span class="act-line line-10">  FILTER (?hba1c &gt; 9.0)</span><span class="act-line line-11">  FILTER NOT EXISTS {</span><span class="act-line line-12">    ?ref a bhsf:Referral ;</span><span class="act-line line-13">         bhsf:forPatient ?patient ;</span><span class="act-line line-14">         bhsf:specialty "Nephrology" }</span><span class="act-line line-15">} LIMIT 500</span></pre>
+            </div>
+
+            <!-- Action card materializing -->
+            <div class="act-card">
+              <div class="act-card-header">
+                <span class="act-card-icon">👁️</span>
+                <span class="act-card-severity">CRITICAL</span>
+              </div>
+              <div class="act-card-title">Diabetic Patients: HbA1c &gt; 9, No Nephrology Referral</div>
+              <div class="act-card-meta">
+                <span><b>231</b> patients</span>
+                <span class="act-card-dot">·</span>
+                <span><b>$1.5M</b> Star value</span>
+              </div>
+              <div class="act-card-domain">QUALITY · POPULATION HEALTH</div>
+
+              <!-- 3-way live audit chips -->
+              <div class="act-card-audit">
+                <span class="act-eyebrow act-audit-eyebrow">LIVE AUDIT</span>
+                <div class="act-audit-chips">
+                  <span class="act-audit-chip chip-json">📄 Local JSON</span>
+                  <span class="act-audit-chip chip-dbx">🟧 Databricks</span>
+                  <span class="act-audit-chip chip-slack">💬 Slack</span>
+                </div>
+              </div>
+
+              <!-- Detector "monitoring" pulse -->
+              <div class="act-card-footer">
+                <span class="act-pulse-dot"></span>
+                <span class="act-monitor-text">Watching your live data · checked just now, refreshes every 10 min</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vs-caption">
+          <b>From a sentence to a governed digital worker</b> · describe the outcome you want — agents interpret it through your Knowledge Fabric, check every system in a single query, and route the alert to the right team with every step policy-checked and logged for audit. No engineering ticket. No spreadsheet.
+        </div>
+      </div>
+
+      <!-- ── PANE 6 · Actions Console — governed writebacks ──────────── -->
+      <div class="visual-pane vp-console">
+        <div class="anim-console">
+          <div class="conf-header">
+            <div class="conf-title-block">
+              <span class="conf-title">Actions Console</span>
+              <span class="conf-sub">decisions become writebacks · in the systems you already run</span>
+            </div>
+            <div class="conf-legend">
+              <span class="cl green">executed</span>
+              <span class="cl amber">awaiting approval</span>
+            </div>
+          </div>
+
+          <div class="console-rows">
+            <div class="console-row">
+              <div class="cr-main">
+                <span class="cr-name">Care-gap outreach — 231 patients routed to care coordinators</span>
+                <span class="cr-meta">triggered by live monitor · 12:04
+                </span>
+              </div>
+              <div class="cr-writebacks">
+                <span class="wb-chip">🟧 Databricks table ✓</span>
+                <span class="wb-chip">💬 Slack #care-gaps ✓</span>
+                <span class="wb-chip">📄 Audit JSON ✓</span>
+              </div>
+              <span class="cr-status st-exec">EXECUTED</span>
+            </div>
+
+            <div class="console-row">
+              <div class="cr-main">
+                <span class="cr-name">Quality hold — 3 at-risk lots quarantined before release</span>
+                <span class="cr-meta">batch genealogy match · 11:47</span>
+              </div>
+              <div class="cr-writebacks">
+                <span class="wb-chip">🟧 Databricks table ✓</span>
+                <span class="wb-chip">💬 Slack #quality ✓</span>
+              </div>
+              <span class="cr-status st-exec">EXECUTED</span>
+            </div>
+
+            <div class="console-row">
+              <div class="cr-main">
+                <span class="cr-name">Contract renewal draft — routed to procurement queue</span>
+                <span class="cr-meta">expiry detected 90 days out · 11:21</span>
+              </div>
+              <div class="cr-writebacks">
+                <span class="wb-chip">🎫 Ticket created ✓</span>
+                <span class="wb-chip">📄 Audit JSON ✓</span>
+              </div>
+              <span class="cr-status st-wait">AWAITING APPROVAL</span>
+            </div>
+
+            <div class="console-row">
+              <div class="cr-main">
+                <span class="cr-name">Supplier risk alert — exposure summary for at-risk region</span>
+                <span class="cr-meta">policy: human sign-off required · 10:58</span>
+              </div>
+              <div class="cr-writebacks">
+                <span class="wb-chip">💬 Slack #procurement ✓</span>
+              </div>
+              <span class="cr-status st-wait">AWAITING APPROVAL</span>
+            </div>
+          </div>
+
+          <div class="conf-footer">
+            <span><b>Every action writes back</b> to your systems</span>
+            <span class="conf-dot">●</span>
+            <span><b>Policy-checked</b> before execution</span>
+            <span class="conf-dot">●</span>
+            <span><b>Human approval</b> where it matters</span>
+            <span class="conf-dot">●</span>
+            <span><b>Logged</b> for audit</span>
+          </div>
+        </div>
+        <div class="vs-caption">
+          <b>From decision to writeback</b> · actions land in the systems you already run — your lakehouse, your chat, your ticketing — every one policy-checked, approved where required, and logged end to end
+        </div>
+      </div>
+
+      <!-- ── PANE 7 · Insights dashboard — KPIs that drill to evidence ── -->
+      <div class="visual-pane vp-dash">
+        <div class="anim-dash">
+          <div class="conf-header">
+            <div class="conf-title-block">
+              <span class="conf-title">Decision Insights</span>
+              <span class="conf-sub">live business KPIs · every number drills down to its evidence</span>
+            </div>
+            <div class="conf-legend">
+              <span class="cl green">last 30 days</span>
+              <span class="cl amber">all domains</span>
+            </div>
+          </div>
+
+          <div class="dash-kpis">
+            <div class="dash-kpi"><b class="dk-num">$4.2M</b><span class="dk-label">denial dollars recovered</span><span class="dk-delta">▲ 8%</span></div>
+            <div class="dash-kpi"><b class="dk-num">1,284</b><span class="dk-label">care gaps closed</span><span class="dk-delta">▲ 12%</span></div>
+            <div class="dash-kpi"><b class="dk-num">3,408</b><span class="dk-label">governed actions executed</span><span class="dk-delta">▲ 23%</span></div>
+            <div class="dash-kpi"><b class="dk-num">96%</b><span class="dk-label">decisions with full evidence</span><span class="dk-delta">▲ 2 pts</span></div>
+          </div>
+
+          <div class="dash-charts">
+            <div class="dash-chart">
+              <div class="dc-title">DECISIONS BY DOMAIN</div>
+              <div class="dash-bars">
+                <div class="db-col"><div class="dash-bar" style="--h:86%"></div><span>Quality</span></div>
+                <div class="db-col"><div class="dash-bar" style="--h:72%"></div><span>Care</span></div>
+                <div class="db-col"><div class="dash-bar" style="--h:64%"></div><span>Risk</span></div>
+                <div class="db-col"><div class="dash-bar" style="--h:55%"></div><span>Supply</span></div>
+                <div class="db-col"><div class="dash-bar" style="--h:41%"></div><span>Finance</span></div>
+                <div class="db-col"><div class="dash-bar" style="--h:30%"></div><span>ESG</span></div>
+              </div>
+            </div>
+            <div class="dash-chart">
+              <div class="dc-title">TIME-TO-ANSWER TREND</div>
+              <svg class="dash-line" viewBox="0 0 400 150" preserveAspectRatio="none">
+                <line x1="0" y1="120" x2="400" y2="120" stroke="rgba(255,255,255,.08)"/>
+                <line x1="0" y1="75" x2="400" y2="75" stroke="rgba(255,255,255,.08)"/>
+                <line x1="0" y1="30" x2="400" y2="30" stroke="rgba(255,255,255,.08)"/>
+                <path class="dl-path" d="M 10 30 L 75 48 L 140 42 L 205 78 L 270 95 L 335 108 L 390 118" fill="none" stroke="#5b8cff" stroke-width="2.5"/>
+                <g fill="#5b8cff">
+                  <circle cx="10" cy="30" r="3.5"/><circle cx="75" cy="48" r="3.5"/><circle cx="140" cy="42" r="3.5"/>
+                  <circle cx="205" cy="78" r="3.5"/><circle cx="270" cy="95" r="3.5"/><circle cx="335" cy="108" r="3.5"/>
+                  <circle cx="390" cy="118" r="4.5"/>
+                </g>
+                <text x="388" y="138" text-anchor="end" font-size="11" fill="#8b93a6" font-family="ui-monospace,Menlo,monospace">weeks → seconds</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="conf-footer">
+            <span><b>Click any number</b> → the data trail behind it</span>
+            <span class="conf-dot">●</span>
+            <span><b>One vocabulary</b> across every chart</span>
+            <span class="conf-dot">●</span>
+            <span><b>Boardroom-ready</b> evidence on demand</span>
+          </div>
+        </div>
+        <div class="vs-caption">
+          <b>Interactive dashboards, grounded in the fabric</b> · every KPI, chart, and trend drills straight down to the governed data and decisions behind it — insight you can defend, not just display
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- ── The reality ───────────────────────────────────────────────────── -->
-<section id="reality" class="section section-alt">
+<section id="reality" class="section">
   <div class="container">
     <p class="eyebrow">The reality</p>
     <h2 class="section-title">78% are using AI. Only 26% see value.</h2>
@@ -154,7 +795,7 @@
 </section>
 
 <!-- ── Meaning ───────────────────────────────────────────────────────── -->
-<section id="meaning" class="section">
+<section id="meaning" class="section section-alt">
   <div class="container">
     <p class="eyebrow">The Knowledge Fabric</p>
     <h2 class="section-title">From cryptic columns to business meaning.</h2>
@@ -175,7 +816,7 @@
 </section>
 
 <!-- ── How it fits ───────────────────────────────────────────────────── -->
-<section id="how" class="section section-alt">
+<section id="how" class="section">
   <div class="container">
     <p class="eyebrow">How it fits your Databricks</p>
     <h2 class="section-title">Four steps. Zero data movement.</h2>
@@ -189,7 +830,7 @@
 </section>
 
 <!-- ── Protects the bet ──────────────────────────────────────────────── -->
-<section id="bet" class="section">
+<section id="bet" class="section section-alt">
   <div class="container">
     <p class="eyebrow">Protects your Databricks bet</p>
     <h2 class="section-title">We amplify Databricks — we never replace it.</h2>
@@ -202,25 +843,51 @@
 </section>
 
 <!-- ── Proof ─────────────────────────────────────────────────────────── -->
-<section id="proof" class="section section-alt">
+<section id="proof" class="section">
   <div class="container">
     <p class="eyebrow">Proven in production</p>
     <h2 class="section-title">Outcomes, not slideware.</h2>
     <div class="cases">
-      <div class="case-card"><div class="case-tag">Mosaic AI accuracy</div><h3>67% → 90%+ on hard questions.</h3><p>On complex multi-hop business questions, Genie grounded by IntuitiveIQ went from two-in-three correct to better than nine in ten — with the reasoning and sources attached.</p></div>
-      <div class="case-card"><div class="case-tag">Cross-cloud, zero ETL</div><h3>One question, two clouds.</h3><p>In production today: a single business question answered across Databricks Unity Catalog and Google BigQuery at once — no copying, no pipelines, no waiting.</p></div>
-      <div class="case-card"><div class="case-tag">Healthcare, live</div><h3>Care gaps and denials, in seconds.</h3><p>Live with Epic, Cerner and major claims data on Databricks — which patients are overdue, which denials are winnable, with clinical evidence attached.</p></div>
+      <div class="case-card"><img class="case-img" src="https://intuitiveiq.ai/assets/img/ind-manufacturing.jpg" alt="Grounded AI" loading="lazy" /><div class="case-tag">Mosaic AI accuracy</div><h3>From guessing to grounded.</h3><p>On the complex multi-hop questions where ungrounded assistants lose the room, Genie grounded in the Knowledge Fabric answers consistently and correctly — with reasoning and sources attached.</p></div>
+      <div class="case-card"><img class="case-img" src="https://intuitiveiq.ai/assets/img/ind-financial.jpg" alt="Cross-cloud" loading="lazy" /><div class="case-tag">Cross-cloud, zero ETL</div><h3>One question, two clouds.</h3><p>In production today: a single business question answered across Databricks Unity Catalog and Google BigQuery at once — no copying, no pipelines, no waiting.</p></div>
+      <div class="case-card"><img class="case-img" src="https://intuitiveiq.ai/assets/img/ind-healthcare.jpg" alt="Healthcare" loading="lazy" /><div class="case-tag">Healthcare, live</div><h3>Care gaps and denials, in seconds.</h3><p>Live with Epic, Cerner and major claims data on Databricks — which patients are overdue, which denials are winnable, with clinical evidence attached.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ── Trust strip ───────────────────────────────────────────────────── -->
-<section class="promise" aria-label="Trust promise">
-  <div class="container promise-grid">
-    <div class="promise-item"><h4>Explainability</h4><p>Understand why every answer and action was produced.</p></div>
-    <div class="promise-item"><h4>Traceability</h4><p>Every answer traced to the Unity Catalog source behind it.</p></div>
-    <div class="promise-item"><h4>Auditability</h4><p>Evidence captured for compliance — exportable in one click.</p></div>
-    <div class="promise-item"><h4>Accountability</h4><p>Ownership across human approvals and automated actions.</p></div>
+<!-- ── Engineered by Intuitive ───────────────────────────────────────── -->
+<section id="company" class="section section-alt">
+  <div class="container">
+    <p class="eyebrow">The company behind the engine</p>
+    <h2 class="section-title">Engineered by Intuitive. Delivered with Databricks.</h2>
+    <div class="band-grid">
+      <div class="band-copy">
+        <p>
+          IntuitiveIQ is built by <a href="https://intuitive.ai" target="_blank" rel="noopener"><b>Intuitive</b></a> —
+          the AI-first engineering company behind data &amp; AI platforms for global enterprises.
+          We deliver alongside your Databricks account team: governed foundations and trustworthy
+          Mosaic AI, all built on Databricks and kept front-and-centre.
+        </p>
+        <ul class="pillar-list">
+          <li>100+ Databricks-certified engineers</li>
+          <li>14 years · 400+ enterprise programs</li>
+          <li>20+ joint Databricks customers in production</li>
+          <li>ISO 27001 certified · AICPA SOC 2 attested · GDPR-ready</li>
+        </ul>
+      </div>
+      <div class="band-visual">
+        <img src="https://intuitiveiq.ai/assets/img/datacenter.jpg" alt="Enterprise infrastructure" class="band-img-main" loading="lazy" />
+        <div class="band-photos">
+          <img src="https://intuitiveiq.ai/assets/img/boardroom.jpg" alt="Built for the boardroom" loading="lazy" />
+          <img src="https://intuitiveiq.ai/assets/img/team.jpg" alt="Co-building with your team" loading="lazy" />
+          <img src="https://intuitiveiq.ai/assets/img/chip.jpg" alt="AI-first engineering" loading="lazy" />
+        </div>
+      </div>
+    </div>
+    <div class="cert-strip">
+      <span class="cert-label">Certified &amp; Recognized</span>
+      <img src="https://intuitiveiq.ai/assets/img/certifications.png" alt="ISO 27001 · AICPA SOC 2 · GDPR · CRN Fast Growth 150 · Inc 5000" loading="lazy" />
+    </div>
   </div>
 </section>
 
@@ -236,84 +903,36 @@
   </div>
 </section>
 
+<!-- ── Footer ────────────────────────────────────────────────────────── -->
 <footer class="footer">
-  <div class="container footer-top">
-    <div class="footer-top-brand">
-      <a href="https://intuitiveiq.ai/" class="brand-mark" style="color:#fff;text-decoration:none"><img src="https://intuitiveiq.ai/assets/intuitive-logo.png?v=2" class="intuitive-logo-img" alt="intuitive" /><span class="brand-iq">IQ</span></a>
+  <div class="container" style="padding-top:56px;padding-bottom:44px;display:flex;flex-wrap:wrap;gap:44px;align-items:flex-start;justify-content:space-between">
+    <div>
+      <a href="/" class="brand-mark" style="color:#fff;text-decoration:none"><img src="https://intuitiveiq.ai/assets/intuitive-logo.png?v=2" class="intuitive-logo-img" alt="intuitive" /><span class="brand-iq">IQ</span></a>
+      <p style="font-size:13.5px;color:#9ba6b8;max-width:340px;line-height:1.65;margin:18px 0 0">IntuitiveIQ for Databricks — the Decision Intelligence Engine that makes Mosaic AI trustworthy enough to act on. Runs in your Databricks; drives Unity Catalog.</p>
       <a href="https://intuitive.ai" target="_blank" rel="noopener" class="powered-by-intuitive">
         <span>Powered by</span>
         <img src="https://intuitiveiq.ai/assets/intuitive-logo.png?v=2" alt="Intuitive — intuitive.ai" />
       </a>
     </div>
-    <img class="footer-certs" src="https://intuitiveiq.ai/assets/img/certifications.png" alt="ISO 27001 · AICPA SOC 2 · GDPR · CRN Fast Growth 150 · Inc 5000" loading="lazy" />
-  </div>
-
-  <div class="container footer-cols-grid">
-    <div>
-      <h5>Platform</h5>
-      <a href="https://intuitiveiq.ai/platform.html#platform">The four pillars</a>
-      <a href="https://intuitiveiq.ai/platform.html#how">How it works</a>
-      <a href="https://intuitiveiq.ai/platform.html#aie">The aiE™ Framework</a>
-      <a href="https://intuitiveiq.ai/platform.html#stack">Works with your stack</a>
-      <a href="https://intuitiveiq.ai/platform.html#trust">Trust &amp; governance</a>
-    </div>
-    <div>
-      <h5>Solutions</h5>
-      <a href="https://intuitiveiq.ai/solutions.html#build">What you can build</a>
-      <a href="https://intuitiveiq.ai/solutions.html#agentic-workflows">Agentic workflows</a>
-      <a href="https://intuitiveiq.ai/solutions.html#governance">AI governance &amp; risk</a>
-      <a href="https://intuitiveiq.ai/solutions.html#outcomes">Business outcomes</a>
-        <a href="https://app.semantixiq.ai/app">Open Knowledge Studio</a>
-    </div>
-    <div>
-      <h5>Industries</h5>
-      <a href="https://intuitiveiq.ai/industries.html#healthcare">Healthcare</a>
-      <a href="https://intuitiveiq.ai/industries.html#financial-services">Financial Services</a>
-      <a href="https://intuitiveiq.ai/industries.html#cpg">Consumer Packaged Goods</a>
-      <a href="https://intuitiveiq.ai/industries.html#manufacturing">Manufacturing</a>
-      <a href="https://intuitiveiq.ai/industries.html#energy">Energy &amp; Utilities</a>
-      <a href="https://intuitiveiq.ai/industries.html#public-sector">Public Sector</a>
-    </div>
-    <div>
-      <h5>Services</h5>
-      <a href="https://intuitive.ai/services/data-and-ai/" target="_blank" rel="noopener">Data &amp; AI</a>
-      <a href="https://intuitive.ai/services/app-and-db-modernization/" target="_blank" rel="noopener">App &amp; Database Modernization</a>
-      <a href="https://intuitive.ai/services/cloud-platform-engineering/" target="_blank" rel="noopener">Cloud &amp; Platform Engineering</a>
-      <a href="https://intuitive.ai/services/cybersecurity/" target="_blank" rel="noopener">Cybersecurity</a>
-      <a href="https://intuitive.ai/services/networking-and-sdx/" target="_blank" rel="noopener">Networking &amp; SDx</a>
-    </div>
-    <div>
-      <h5>Insights</h5>
-      <a href="https://intuitive.ai/insights/case-studies/" target="_blank" rel="noopener">Case Studies</a>
-      <a href="https://intuitive.ai/insights/blog/" target="_blank" rel="noopener">Blogs</a>
-      <a href="https://intuitive.ai/insights/whitepapers/" target="_blank" rel="noopener">Whitepapers</a>
-      <a href="https://intuitive.ai/partners/" target="_blank" rel="noopener">Partners</a>
-    </div>
-    <div>
-      <h5>About Us</h5>
-      <a href="https://intuitive.ai/about-us/our-story/" target="_blank" rel="noopener">Our Story</a>
-      <a href="https://intuitive.ai/about-us/life-at-intuitive/" target="_blank" rel="noopener">Life@Intuitive</a>
-      <a href="https://intuitive.ai/about-us/news/" target="_blank" rel="noopener">News</a>
-      <a href="https://intuitive.ai/about-us/events/" target="_blank" rel="noopener">Events</a>
-      <a href="https://intuitive.ai/careers/" target="_blank" rel="noopener">Careers</a>
-      <a href="mailto:hello@intuitive.ai?subject=IntuitiveIQ">Contact Us</a>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(140px,1fr));gap:40px">
+      <div><h5 style="font-size:15px;color:#fff;margin:0 0 12px">On this site</h5>
+        <a href="/#reality" style="display:block;color:#9ba6b8;font-size:14px;padding:5px 0">Why AI stalls</a>
+        <a href="/#meaning" style="display:block;color:#9ba6b8;font-size:14px;padding:5px 0">Knowledge Fabric</a>
+        <a href="/#how" style="display:block;color:#9ba6b8;font-size:14px;padding:5px 0">How it fits</a>
+        <a href="/#proof" style="display:block;color:#9ba6b8;font-size:14px;padding:5px 0">Proof</a>
+      </div>
+      <div><h5 style="font-size:15px;color:#fff;margin:0 0 12px">Databricks teams</h5>
+        <a href="/partners" style="display:block;color:#9ba6b8;font-size:14px;padding:5px 0">Partner &amp; co-sell brief</a>
+        <a href="mailto:hello@intuitive.ai?subject=Databricks%20co-sell" style="display:block;color:#9ba6b8;font-size:14px;padding:5px 0">Co-sell with us</a>
+      </div>
+      <div><h5 style="font-size:15px;color:#fff;margin:0 0 12px">Contact</h5>
+        <a href="mailto:hello@intuitive.ai" style="display:block;color:#9ba6b8;font-size:14px;padding:5px 0">hello@intuitive.ai</a>
+      </div>
     </div>
   </div>
-
-  <div class="container footer-hq">
-    <div>
-      <h5>Global Headquarters</h5>
-      <p>Intuitive Technology Partners Inc.<br/>33 Wood Ave. S, Suite #600<br/>Iselin, NJ 08830-2717, USA</p>
-    </div>
-    <div>
-      <h5>Regional Offices</h5>
-      <p>Dallas, USA &nbsp;|&nbsp; Toronto, Canada &nbsp;|&nbsp; Paris, France &nbsp;|&nbsp; London, UK &nbsp;|&nbsp; Zurich, Switzerland &nbsp;|&nbsp; Dublin, Ireland &nbsp;|&nbsp; Budapest, Hungary &nbsp;|&nbsp; Bucharest, Romania &nbsp;|&nbsp; Bengaluru, India &nbsp;|&nbsp; Pune, India &nbsp;|&nbsp; Ahmedabad, India</p>
-    </div>
-  </div>
-
   <div class="footer-fine">
     <div class="container">
-      <span>© 2026 Intuitive.ai · All rights reserved. · <a href="https://intuitive.ai/privacy-policy/" target="_blank" rel="noopener" style="color:#6b7180">Privacy Policy</a> · <a href="https://intuitive.ai/cookie-policy/" target="_blank" rel="noopener" style="color:#6b7180">Cookie Policy</a></span>
+      <span>© 2026 Intuitive.ai · All rights reserved.</span>
       <span>Explainability · Traceability · Auditability · Accountability</span>
     </div>
   </div>
