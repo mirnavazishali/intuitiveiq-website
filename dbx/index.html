@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>IntuitiveIQ for Databricks — Faster ROI from your lakehouse and Mosaic AI</title>
+<meta name="description" content="Intuitive turns your Databricks investment into measurable business value — migration de-risked and governed in weeks, then Mosaic AI made trustworthy enough to act on. Faster time-to-value, lower run-cost, AI your business can trust. A product of Intuitive." />
+<meta property="og:title" content="IntuitiveIQ for Databricks — by Intuitive" />
+<meta property="og:description" content="Make your Databricks investment pay off: de-risked migration in weeks, then trustworthy Mosaic AI. Faster time-to-value, lower run-cost, governed AI your business can act on." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#ffffff; --bg2:#f6f8fc; --panel:#ffffff; --panel2:#f4f6fa; --line:rgba(15,23,42,.10);
+    --txt:#0f172a; --muted:#4b5568; --dim:#6b7280;
+    --purple:#111111; --purple2:#000000; --blue:#3a3a3a; --amber:#3a3a3a; --cyan:#111111; --teal:#000000; --pink:#64748b; --red:#64748b; --dbx:#111111;
+  }
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{margin:0;background:radial-gradient(1200px 700px at 78% -10%,rgba(0, 0, 0,.07),transparent 60%),radial-gradient(900px 600px at 0% 8%,rgba(0, 0, 0,.05),transparent 55%),var(--bg);color:var(--txt);font-family:'Satoshi',Inter,system-ui,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+  .grad{background:linear-gradient(100deg,var(--purple),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .amber{color:var(--amber)}
+  .btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;transition:.15s}
+  .btn-primary{background:linear-gradient(100deg,var(--purple),var(--blue));color:#fff;box-shadow:0 10px 30px rgba(0, 0, 0,.35)}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 14px 38px rgba(0, 0, 0,.5)}
+  .btn-ghost{border:1px solid var(--line);color:var(--txt)} .btn-ghost:hover{background:rgba(255,255,255,.05)}
+  .btn-blue{background:linear-gradient(100deg,#3a3a3a,#000000);color:#fff;box-shadow:0 10px 30px rgba(0, 0, 0,.28)} .btn-blue:hover{transform:translateY(-1px);box-shadow:0 14px 38px rgba(0, 0, 0,.42)}
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(255,255,255,.82);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;height:64px}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:18px;letter-spacing:-.2px;white-space:nowrap;flex-shrink:0}
+  .pill{white-space:nowrap}
+  .brand-name{font-weight:800;font-size:18px;letter-spacing:-.3px;color:var(--txt)}
+  .brand-sep{width:1px;height:18px;background:var(--line);display:inline-block;margin:0 3px}
+  .ilogo{height:17px;width:auto;color:var(--txt);display:inline-block}
+  .dot{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--purple),var(--blue));display:grid;place-items:center;font-size:14px;font-weight:900;color:#fff;box-shadow:0 6px 18px rgba(0, 0, 0,.5)}
+  .navlinks{display:flex;align-items:center;gap:20px;font-size:13.5px;color:var(--muted);font-weight:500}
+  .navlinks a{white-space:nowrap}
+  .navlinks a:hover{color:var(--txt)}
+  @media(max-width:1080px){.navlinks{gap:15px;font-size:13px}}
+  .pill{font-size:11px;font-weight:700;color:var(--purple);border:1px solid rgba(0, 0, 0,.35);padding:2px 9px;border-radius:999px;background:rgba(0, 0, 0,.08)}
+  @media(max-width:760px){.navlinks a:not(.btn){display:none}}
+  .hero{padding:80px 0 52px;text-align:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.03)}
+  h1{font-size:clamp(34px,5.4vw,60px);line-height:1.04;letter-spacing:-1.6px;font-weight:900;margin:22px auto 0;max-width:16ch}
+  .lede{font-size:clamp(16px,2vw,20px);color:var(--muted);max-width:66ch;margin:20px auto 0}
+  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+  .stats{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+  .stat{border:1px solid var(--line);background:rgba(255,255,255,.02);border-radius:12px;padding:14px 18px;min-width:150px}
+  .stat b{display:block;font-size:22px;font-weight:900;letter-spacing:-.5px} .stat span{font-size:12.5px;color:var(--muted)}
+  section{padding:62px 0;border-top:1px solid var(--line)}
+  .kicker{font-size:12.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--purple);margin-bottom:12px}
+  h2{font-size:clamp(26px,3.4vw,40px);line-height:1.1;letter-spacing:-.9px;font-weight:800;margin:0;max-width:24ch}
+  .sub{color:var(--muted);font-size:17px;max-width:64ch;margin-top:14px}
+  .grid{display:grid;gap:18px;margin-top:32px}
+  .g4{grid-template-columns:repeat(4,1fr)} .g3{grid-template-columns:repeat(3,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:980px){.g4{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:860px){.g3,.g2{grid-template-columns:1fr}.g4{grid-template-columns:1fr}}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;transition:.15s;box-shadow:0 1px 3px rgba(15,23,42,.04)}
+  .card:hover{border-color:rgba(0, 0, 0,.4);transform:translateY(-2px);box-shadow:0 10px 26px rgba(15,23,42,.08)}
+  .ic{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-size:20px;margin-bottom:13px;background:rgba(0, 0, 0,.12);border:1px solid rgba(0, 0, 0,.25)}
+  .ic.b{background:rgba(0, 0, 0,.12);border-color:rgba(0, 0, 0,.28)} .ic.r{background:rgba(100, 116, 139,.1);border-color:rgba(100, 116, 139,.25)}
+  .card h3{margin:0 0 6px;font-size:17px;font-weight:700} .card p{margin:0;color:var(--muted);font-size:14px}
+  .impact{font-size:12px;color:var(--amber);margin-top:10px;font-weight:600}
+  .tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--cyan);background:rgba(0, 0, 0,.08);border:1px solid rgba(0, 0, 0,.22);padding:2px 7px;border-radius:6px;margin:9px 5px 0 0}
+  .pillar{display:flex;align-items:center;gap:16px;margin-bottom:6px}
+  .pnum{font-size:13px;font-weight:900;color:#fff;background:linear-gradient(135deg,var(--purple),var(--blue));width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex-shrink:0}
+  .proof{display:flex;flex-wrap:wrap;gap:24px;margin-top:26px;padding:18px 22px;border:1px dashed var(--line);border-radius:14px;background:rgba(0, 0, 0,.03)}
+  .proof div b{color:var(--amber);font-size:19px;font-weight:900;display:block} .proof div span{font-size:12.5px;color:var(--muted)}
+  .contrast{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;margin-top:30px}
+  @media(max-width:860px){.contrast{grid-template-columns:1fr}}
+  .cbox{border:1px solid var(--line);border-radius:14px;padding:20px;font-family:'JetBrains Mono',monospace;font-size:12.5px;line-height:1.7;color:#334155}
+  .cbox.bad{background:rgba(100, 116, 139,.05);border-color:rgba(100, 116, 139,.22);color:#475569}
+  .cbox.good{background:rgba(0, 0, 0,.06);border-color:rgba(0, 0, 0,.25);color:#000000}
+  .cbox .h{font-family:Inter;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.4px;margin-bottom:10px} .cbox.bad .h{color:var(--red)} .cbox.good .h{color:var(--teal)}
+  .arrow{font-size:26px;color:var(--purple);text-align:center}
+  .flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:0;margin-top:30px;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .step{flex:1;min-width:160px;padding:18px 16px;border-right:1px solid var(--line)} .step:last-child{border-right:none}
+  .step .l{font-size:10.5px;color:var(--dim);font-weight:700;text-transform:uppercase;letter-spacing:.3px} .step .t{font-weight:800;font-size:15px;margin-top:4px} .step .d{font-size:12px;color:var(--muted);margin-top:6px}
+  .quote{font-size:clamp(20px,2.6vw,28px);font-weight:800;letter-spacing:-.5px;line-height:1.3;max-width:24ch}
+  .band{margin-top:62px;border-top:1px solid var(--line)}
+  .bandinner{text-align:center;padding:72px 0;background:radial-gradient(700px 300px at 50% 0%,rgba(0, 0, 0,.07),transparent 70%)}
+  footer{border-top:1px solid var(--line);padding:38px 0;color:var(--muted);font-size:13.5px}
+  .frow{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .chip{font-size:13px;font-weight:600;color:var(--muted);border:1px solid var(--line);background:rgba(255,255,255,.03);padding:7px 14px;border-radius:999px}
+  .chip.dbx{color:var(--dbx);border-color:rgba(0, 0, 0,.4);background:rgba(0, 0, 0,.06)}
+  .chip.new{color:var(--purple);border-color:rgba(0, 0, 0,.38);background:rgba(0, 0, 0,.06)}
+  .cl{font-weight:800;font-size:12.5px;letter-spacing:.2px;color:var(--txt);margin-bottom:11px;display:flex;align-items:center;gap:7px}
+  .conn-grid .chips{margin-top:0}
+  .conn-grid .card{padding:18px}
+  .builton{margin-top:30px;display:flex;gap:11px;justify-content:center;align-items:center;flex-wrap:wrap;font-size:12px}
+  .builton .lbl{text-transform:uppercase;letter-spacing:.6px;color:var(--dim);font-weight:700}
+  .bchip{font-weight:700;font-size:13px;color:var(--muted);border:1px solid var(--line);padding:6px 13px;border-radius:8px;background:rgba(255,255,255,.03);display:inline-flex;align-items:center;gap:7px}
+  .bchip.dbx{color:var(--dbx);border-color:rgba(0, 0, 0,.45);background:rgba(0, 0, 0,.07)}
+  .bchip.int{color:var(--purple);border-color:rgba(0, 0, 0,.4);background:rgba(0, 0, 0,.07)}
+  .lava{width:13px;height:13px;border-radius:3px;background:linear-gradient(135deg,#111111,#3a3a3a);display:inline-block}
+  .about{display:flex;flex-wrap:wrap;gap:30px;justify-content:center;margin-top:30px;text-align:center}
+  .about div b{display:block;font-size:24px;font-weight:900} .about div span{font-size:12.5px;color:var(--muted)}
+  .preview{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:32px}
+  @media(max-width:900px){.preview{grid-template-columns:1fr}}
+  .mock{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 14px 38px rgba(15,23,42,.12)}
+  .mock-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#f3f5f9;border-bottom:1px solid var(--line)}
+  .md{width:9px;height:9px;border-radius:50%;background:#cfd6e2}
+  .mock-url{margin-left:10px;font-size:11px;color:var(--dim);font-family:'JetBrains Mono',monospace}
+  .mock-body{display:flex;min-height:236px}
+  .mock-side{width:152px;border-right:1px solid var(--line);padding:12px 10px;background:#fafbfd}
+  .ms-brand{font-weight:800;font-size:11px;color:#000000;margin-bottom:10px;line-height:1.3}
+  .ms-sec{font-size:9px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#9aa3b2;margin:10px 0 4px}
+  .ms-item{padding:5px 7px;border-radius:6px;color:var(--muted);font-size:11.5px}
+  .ms-item.act{background:rgba(0, 0, 0,.1);color:#000000;font-weight:700}
+  .mock-main{flex:1;padding:14px 16px}
+  .mm-title{font-weight:800;color:#000000;font-size:14px}
+  .mm-flow{display:block;font-size:11px;color:var(--muted);margin:8px 0 12px;font-family:'JetBrains Mono',monospace}
+  .mm-card{border:1px solid var(--line);border-radius:9px;padding:9px 11px;font-size:12px;margin-bottom:8px;color:var(--muted)}
+  .mm-card.good{border-color:rgba(0, 0, 0,.3);background:rgba(0, 0, 0,.06);color:#000000;font-weight:600}
+  .mm-card.warn{border-color:rgba(0, 0, 0,.35);background:rgba(0, 0, 0,.06);color:#000000;font-weight:600}
+  .genie{margin-top:12px;border:1px solid rgba(0, 0, 0,.25);background:rgba(0, 0, 0,.05);border-radius:9px;padding:10px 12px;font-size:12px;color:#000000}
+  .cap{font-size:12.5px;color:var(--muted);margin-top:11px;text-align:center}
+  @keyframes scr {0%{opacity:0;transform:translateY(8px)}3%{opacity:1;transform:translateY(0)}22%{opacity:1;transform:translateY(0)}25%,100%{opacity:0;transform:translateY(-8px)}}
+  @keyframes navhi {0%{background:transparent;color:var(--muted)}4%,22%{background:rgba(0, 0, 0,.12);color:#000000}25%,100%{background:transparent;color:var(--muted)}}
+  @keyframes kgdraw {0%{stroke-dashoffset:240}55%,100%{stroke-dashoffset:0}}
+  @keyframes gflip {0%,42%{opacity:1}50%,92%{opacity:0}100%{opacity:1}}
+  .mock-main.cycle{position:relative;min-height:208px;padding:0}
+  .scr{position:absolute;inset:14px 16px;opacity:0;animation:scr 16s infinite}
+  .ms-item.cyc{animation:navhi 16s infinite}
+  .kgline{stroke-dasharray:240;animation:kgdraw 4.5s linear infinite}
+  .gwrap{position:relative;min-height:42px}
+  .gq,.gq2{position:absolute;left:12px;right:12px;top:10px}
+  .gq{animation:gflip 10s infinite} .gq2{animation:gflip 10s infinite;animation-delay:-5s}
+  @media (prefers-reduced-motion: reduce){.scr,.ms-item.cyc,.kgline,.gq,.gq2{animation:none}.scr:first-child{opacity:1}.gq2{display:none}}
+  /* animated pipeline (Get-to-Databricks) — fits width, no sideways scroll */
+  .lflow{ margin:20px 0 8px; }
+  .lflow-src{ display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-bottom:12px; }
+  .lflow-srclbl{ font-size:10.5px; font-weight:800; text-transform:uppercase; letter-spacing:.4px; color:var(--purple); }
+  .lchip{ font-size:11.5px; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:5px 11px; background:#fff; }
+  .lflow-steps{ display:flex; align-items:stretch; gap:4px; }
+  .lstep{ flex:1 1 0; min-width:0; border:1px solid var(--line); border-radius:14px; padding:14px 12px; background:linear-gradient(180deg,#ffffff,#f7f9fd); box-shadow:0 1px 4px rgba(15,23,42,.05); position:relative; overflow:hidden; transition:transform .15s, box-shadow .15s; }
+  .lstep::before{ content:""; position:absolute; top:0; left:0; right:0; height:4px; background:var(--purple); }
+  .lstep:hover{ transform:translateY(-4px); box-shadow:0 12px 26px rgba(15,23,42,.13); }
+  .lstep-top{ display:flex; align-items:center; justify-content:space-between; }
+  .lstep-ic{ font-size:25px; line-height:1; }
+  .lstep-coin{ font-size:19px; opacity:.92; }
+  .lstep b{ display:block; font-size:15px; color:var(--txt); margin-top:8px; }
+  .lstep-eng{ display:inline-block; font-size:9.5px; font-weight:800; color:var(--purple); background:rgba(0, 0, 0,.08); border:1px solid rgba(0, 0, 0,.22); border-radius:6px; padding:2px 7px; margin-top:5px; text-transform:uppercase; letter-spacing:.3px; }
+  .lstep small{ display:block; font-size:11.5px; color:var(--muted); margin-top:6px; line-height:1.35; }
+  .lstep.tb::before{ background:linear-gradient(90deg,#3a3a3a,#555555); } .lstep.ts::before{ background:linear-gradient(90deg,#8A93A6,#aeb6c4); } .lstep.tg::before{ background:linear-gradient(90deg,#111111,#3a3a3a); } .lstep.ta::before{ background:linear-gradient(90deg,#000000,#3a3a3a); }
+  .larr{ flex:0 0 auto; align-self:center; font-size:17px; font-weight:800; color:var(--purple); animation:larrpulse 1.4s ease-in-out infinite; }
+  @keyframes larrpulse{ 0%,100%{ opacity:.35; transform:translateX(0); } 50%{ opacity:1; transform:translateX(3px); } }
+  .lflow-foot{ margin-top:12px; border-radius:11px; color:#fff; font-size:12.5px; text-align:center; padding:11px 14px; background:linear-gradient(90deg,#000000,#000000,#000000); background-size:220% 100%; animation:lpfoot 7s linear infinite; }
+  .lflow-foot b{ color:#fff; }
+  @keyframes lpfoot{ to{ background-position:220% 0; } }
+  @media (max-width:760px){ .lflow-steps{ flex-direction:column; } .larr{ transform:rotate(90deg); } }
+  @media (prefers-reduced-motion:reduce){ .larr,.lflow-foot,.lstep{ animation:none; } }
+  /* Knowledge Studio variant — same responsive engine, "meaning" palette (indigo→purple→teal→emerald) */
+  .lstep.k1::before{ background:linear-gradient(90deg,#3a3a3a,#555555); }
+  .lstep.k2::before{ background:linear-gradient(90deg,#111111,#3a3a3a); }
+  .lstep.k3::before{ background:linear-gradient(90deg,#000000,#3a3a3a); }
+  .lstep.k4::before{ background:linear-gradient(90deg,#111111,#3a3a3a); }
+  .lstep.k5::before{ background:linear-gradient(90deg,#000000,#3a3a3a); }
+  .kflow .larr{ color:#111111; }
+  .kflow .lstep-coin{ font-size:16px; opacity:.85; }
+  .kflow-foot{ background:linear-gradient(90deg,#000000,#111111,#000000); background-size:220% 100%; }
+  /* persona cards — "built for every seat at the table" */
+  .role{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--purple);background:rgba(0, 0, 0,.08);border:1px solid rgba(0, 0, 0,.22);border-radius:999px;padding:3px 10px;margin-bottom:11px}
+  .card.cfo .role{color:#000000;background:rgba(0, 0, 0,.08);border-color:rgba(0, 0, 0,.22)}
+  .card.cdo .role{color:#3a3a3a;background:rgba(0, 0, 0,.08);border-color:rgba(0, 0, 0,.22)}
+  .card.vpd .role{color:#3a3a3a;background:rgba(0, 0, 0,.08);border-color:rgba(0, 0, 0,.22)}
+  /* Databricks co-sell banner (links to the partner one-pager) */
+  .cosell{margin-top:18px;border:1px solid rgba(0, 0, 0,.28);background:linear-gradient(100deg,rgba(0, 0, 0,.05),rgba(0, 0, 0,.06));border-radius:16px;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}
+  .cosell-l{flex:1;min-width:280px}
+  .cosell-eyebrow{font-size:11px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--dbx);margin-bottom:7px}
+  .cosell-h{font-weight:800;font-size:18px;letter-spacing:-.3px;max-width:42ch}
+  .cosell-p{font-size:13.5px;color:var(--muted);margin-top:6px;max-width:64ch}
+  /* ===== Intuitive theme — dark nav · cinematic hero · dark footer (content stays light) ===== */
+  nav{ background:rgba(8,10,18,.82); border-bottom-color:rgba(255,255,255,.10); }
+  .brand-name{ color:#fff; }
+  .brand-sep{ background:rgba(255,255,255,.18); }
+  .navlinks{ color:#c2c9d6; }
+  .navlinks a:hover{ color:#fff; }
+  .pill{ color:#e6e8ec; border-color:rgba(255,255,255,.28); background:rgba(0, 0, 0,.30); }
+  .hero{ background:radial-gradient(1100px 560px at 50% -14%, rgba(0, 0, 0,.32), transparent 62%), linear-gradient(180deg,#070a14,#0b1020); }
+  .hero h1{ color:#ffffff; }
+  .hero .lede{ color:#aeb6c7; }
+  .hero .eyebrow{ color:#aeb6c7; border-color:rgba(255,255,255,.18); background:rgba(255,255,255,.04); }
+  .hero .stat{ background:rgba(255,255,255,.05); border-color:rgba(255,255,255,.12); }
+  .hero .stat b{ color:#fff; }
+  .hero .stat span{ color:#aeb6c7; }
+  .hero .builton{ color:#aeb6c7; }
+  .hero .builton .lbl{ color:#8b93a6; }
+  .hero .bchip{ color:#cdd3df; border-color:rgba(255,255,255,.14); background:rgba(255,255,255,.05); }
+  .hero .bchip.dbx{ color:#3a3a3a; border-color:rgba(0, 0, 0,.5); background:rgba(0, 0, 0,.12); }
+  .hero .bchip.int{ color:#cbd0d8; border-color:rgba(0, 0, 0,.5); background:rgba(0, 0, 0,.18); }
+  .hero div[style*="--muted"]{ color:#aeb6c7 !important; }
+  .hero b[style*="--muted"]{ color:#dde2ec !important; }
+  .hero a[style*="--purple"]{ color:#cbd0d8 !important; }
+  footer{ background:#070a14; border-top-color:rgba(255,255,255,.10); color:#aeb6c7; }
+  footer .brand-name{ color:#fff; }
+  footer a:hover{ color:#fff; }
+  footer .navlinks{ color:#aeb6c7; }
+  /* ===== strict black & white (intuitive.ai is monochrome) ===== */
+  .kicker{ color:#6b7280; }
+  .hero{ background:radial-gradient(1100px 560px at 50% -16%, rgba(255,255,255,.06), transparent 60%), linear-gradient(180deg,#000000,#0a0a0a) !important; }
+  .hero .grad{ background:linear-gradient(100deg,#ffffff,#c2c7d0) !important; -webkit-background-clip:text !important; background-clip:text !important; color:transparent !important; }
+  nav .btn-primary, .hero .btn-primary, .hero .btn-blue{ background:#ffffff !important; color:#0a0a0a !important; box-shadow:none !important; }
+  nav .btn-primary:hover, .hero .btn-primary:hover, .hero .btn-blue:hover{ background:#e6e6e6 !important; }
+  .hero .btn-ghost{ border-color:rgba(255,255,255,.5) !important; color:#ffffff !important; }
+  /* ===================== INTUITIVE DARK THEME — authoritative ===================== */
+  body{ background:#000000 !important; color:#dddddd !important; }
+  section{ border-top-color:rgba(255,255,255,.09) !important; }
+  h1,h2,h3,h4,.quote,.mm-title,.ms-brand,.lstep b,.pdiag-step-eng,.amap-asset b,.amap-cap,.pdiag-cap,.lflow-srclbl{ color:#ffffff !important; }
+  .sub,.lede,.card p,.cap,.sc-note,.sc-from,.sc-to,.step .d,.step .l,.trigger span,.fitbox li,.pdiag-step-cap,.amap-asset span,.lstep small,.mm-card,.cbox{ color:#aeb6c7 !important; }
+  .kicker,.eyebrow,.ms-sec,.ms-item,.mm-flow,.pdiag-assets-h,.pdiag-step-verb,.cl,.mock-url{ color:#9aa3b5 !important; }
+  .card,.mock,.mock-main,.cbox,.lstep,.pdiag,.pdiag-step,.pdiag-sources,.pdiag-assets,.pdiag-assetnote,.amap,.amap-asset,.proof,.source-class,.fitbox,.lchip,.cosell,.genie{ background:#0b0c10 !important; border-color:rgba(255,255,255,.12) !important; box-shadow:none !important; }
+  .mock-bar{ background:#15161c !important; border-color:rgba(255,255,255,.10) !important; }
+  .mock-side{ background:#0f1014 !important; border-color:rgba(255,255,255,.10) !important; }
+  .mm-card,.pdiag-tier,.amap-head{ background:rgba(255,255,255,.05) !important; border-color:rgba(255,255,255,.12) !important; }
+  .ms-item.act{ background:rgba(0,58,227,.22) !important; color:#cdd9ff !important; }
+  .card:hover,.lstep:hover,.amap-asset:hover{ border-color:rgba(0,58,227,.7) !important; }
+  .chip,.bchip,.tag,.pdiag-asset{ color:#cfd4de !important; border-color:rgba(255,255,255,.16) !important; background:rgba(255,255,255,.05) !important; }
+  .impact,.proof div b,.lstep-eng,.role{ color:#9db4ff !important; }
+  /* ACCENT — blue #003ae3 only on CTAs + circular icons + flow marks */
+  .btn-primary,.btn-blue,nav .btn-primary,.hero .btn-primary,.hero .btn-blue{ background:#003ae3 !important; color:#ffffff !important; box-shadow:none !important; }
+  .btn-primary:hover,.btn-blue:hover,.hero .btn-primary:hover,.hero .btn-blue:hover{ background:#1f56ff !important; }
+  .btn-ghost,.hero .btn-ghost{ background:transparent !important; border:1px solid rgba(255,255,255,.45) !important; color:#ffffff !important; }
+  .ic,.ic.b,.ic.r,.pnum,.num,.dot{ background:#003ae3 !important; border-color:#003ae3 !important; color:#ffffff !important; }
+  .larr,.arrow,.sc-arrow,.fitbox li::before{ color:#3a78ff !important; }
+  .pdiag-conn i,.amap-conn i{ background:#003ae3 !important; box-shadow:0 0 7px rgba(0,58,227,.9) !important; }
+  .lstep::before{ background:#003ae3 !important; }
+  .lflow-foot,.kflow-foot,.pdiag-foot{ background:rgba(255,255,255,.05) !important; color:#dfe3ea !important; }
+  .grad{ -webkit-text-fill-color:#ffffff !important; background:none !important; color:#ffffff !important; }
+  .cbox.bad{ border-color:rgba(255,255,255,.14) !important; } .cbox.good{ border-color:rgba(0,58,227,.4) !important; }
+  .cbox.bad .h{ color:#aeb6c7 !important; } .cbox.good .h{ color:#7fa0ff !important; }
+  .amber{color:#9db4ff!important;}
+  /* fix product mockups (Lakehouse Studio console + Knowledge Studio graph) for dark */
+  .mock-main,.mock-main.cycle{ background:#0b0c10 !important; }
+  .scr{ color:#aeb6c7 !important; }
+  .mm-card{ background:rgba(255,255,255,.05) !important; border-color:rgba(255,255,255,.12) !important; color:#c2c9d6 !important; }
+  .mm-card.good{ background:rgba(0,58,227,.16) !important; border-color:rgba(0,58,227,.55) !important; color:#cdd9ff !important; }
+  .mm-card.warn{ background:rgba(255,255,255,.07) !important; border-color:rgba(255,255,255,.20) !important; color:#e6e9ef !important; }
+  .mm-title{ color:#ffffff !important; } .mm-flow{ color:#8b93a6 !important; }
+  .ms-brand{ color:#ffffff !important; } .ms-sec{ color:#8b93a6 !important; } .ms-item{ color:#aeb6c7 !important; }
+  .ms-item.act,.ms-item.cyc{ background:rgba(0,58,227,.22) !important; color:#cdd9ff !important; }
+  .genie{ background:rgba(0,58,227,.10) !important; border-color:rgba(0,58,227,.40) !important; color:#cdd9ff !important; }
+  .mock svg circle{ fill:#0b0c10 !important; stroke:#3a78ff !important; }
+  .mock svg circle[r="3"],.mock svg circle[r="3.5"]{ fill:#3a78ff !important; stroke:none !important; }
+  .mock svg text{ fill:#ffffff !important; }
+  .mock svg line{ stroke:rgba(255,255,255,.22) !important; }
+  .mock-main.cycle .scr{ background:#0b0c10 !important; }
+  /* clean conveyor icons -> monochrome white glyphs, drop noisy coins */
+  .lstep-coin{ display:none !important; }
+  .lstep-ic{ filter:none !important; display:inline-flex !important; align-items:center; }
+  .lstep-ic svg{ width:24px; height:24px; stroke:#e6e9ef; fill:none; }
+  .lstep-top{ justify-content:flex-start !important; }
+  /* conveyor mono extras */
+  .lflow-src .lchip{ filter:grayscale(1) !important; }
+  .lflow-foot, .kflow-foot{ filter:grayscale(1) !important; }
+  /* ===== reduce blue: keep blue only on primary buttons; accents -> mono grey ===== */
+  .ic,.ic.b,.ic.r,.pnum,.num,.dot{ background:rgba(255,255,255,.06) !important; border:1px solid rgba(255,255,255,.16) !important; color:#e6e9ef !important; }
+  .kicker{ color:#8b93a6 !important; }
+  .lstep-eng,.role,.impact,.proof div b,.pdiag-step-verb,.pdiag-asset{ color:#aeb6c7 !important; }
+  .larr,.arrow,.sc-arrow,.fitbox li::before{ color:#8b93a6 !important; }
+  .lstep::before{ background:rgba(255,255,255,.20) !important; }
+  .pdiag-conn i,.amap-conn i{ background:#9aa3b5 !important; box-shadow:none !important; }
+  .mock svg circle{ stroke:#9aa3b5 !important; } .mock svg circle[r="3"],.mock svg circle[r="3.5"]{ fill:#9aa3b5 !important; }
+  .lstep-ic svg{ stroke:#cfd5e0 !important; }
+  .cbox.good{ border-color:rgba(255,255,255,.18) !important; } .cbox.good .h{ color:#aeb6c7 !important; }
+  .amber{ color:#aeb6c7 !important; }
+</style>
+</head>
+<body>
+<nav><div class="wrap nav">
+  <div class="brand"><a href="https://intuitiveiq.ai" style="display:inline-flex;align-items:center;gap:9px;color:inherit;text-decoration:none"><span class="brand-name">IntuitiveIQ</span> <span class="pill">for Databricks</span></a> <span class="brand-sep"></span> <a href="https://intuitive.ai" target="_blank" rel="noopener" title="Intuitive — intuitive.ai" style="display:inline-flex;align-items:center"><img src="/intuitive-logo-white.png" alt="Intuitive" style="height:22px;width:auto;display:inline-block;vertical-align:middle" /></a></div>
+  <div class="navlinks">
+    <a href="#move">Migrate</a>
+    <a href="#connectors">Connectors</a>
+    <a href="#enhance">Enhance AI</a>
+    <a href="#personas">Who it's for</a>
+    <a href="https://intuitiveiq.ai/industries.html">Knowledge Studio ↗</a>
+    <a class="btn btn-primary" href="https://lakehouse.semantixiq.ai/app" style="padding:9px 16px;font-size:14px">Launch Studio</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="eyebrow">◆ Intuitive · Strategic Partner to Databricks</span>
+  <h1>Make your <span class="grad">Databricks</span> investment pay off.</h1>
+  <p class="lede">Intuitive moves enterprises onto the lakehouse — de-risked, governed, in weeks — then makes <b>Mosaic AI</b> trustworthy enough to act on. The payoff: <b>faster time-to-value</b>, <b>lower run-cost</b>, and AI your business actually trusts. We don't replace Databricks — we make it deliver.</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="https://lakehouse.semantixiq.ai/app">Launch Lakehouse Studio →</a>
+    <a class="btn btn-blue" href="https://intuitiveiq.ai/industries.html">Launch Knowledge Studio →</a>
+  </div>
+  <div style="margin-top:12px;font-size:13.5px;color:var(--muted)">Two ways to start: <b style="color:var(--muted)">move to Databricks</b> with Lakehouse Studio · or prove <b style="color:var(--muted)">Knowledge Studio</b> on your own questions. <a href="https://intuitiveiq.ai/#contact" style="color:var(--purple)">Book a 4-week proof-of-value →</a></div>
+  <div class="stats">
+    <div class="stat"><b>20+</b><span>enterprises live on Databricks</span></div>
+    <div class="stat"><b>3–4×</b><span>faster pilot → production</span></div>
+    <div class="stat"><b class="grad">67% → 100%</b><span>trustworthy AI on hard questions</span></div>
+    <div class="stat"><b>$16M+</b><span>legacy cost taken out</span></div>
+  </div>
+  <div class="builton">
+    <span class="lbl">Built on</span>
+    <span class="bchip dbx"><span class="lava"></span> Databricks</span>
+    <span class="bchip">Unity Catalog</span>
+    <span class="bchip">Mosaic AI</span>
+    <span style="color:var(--dim)">×</span>
+    <span class="bchip int">◆ Intuitive</span>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="kicker" style="text-align:center">See it in action</div>
+  <h2 style="margin:0 auto;text-align:center;max-width:26ch">Two products. One measurable outcome.</h2>
+  <div class="preview">
+    <div>
+      <div class="mock">
+        <div class="mock-bar"><span class="md"></span><span class="md"></span><span class="md"></span><span class="mock-url">dbx.intuitiveiq.ai/app</span></div>
+        <div class="mock-body">
+          <div class="mock-side">
+            <div class="ms-brand">IntuitiveIQ ·<br>Lakehouse Studio</div>
+            <div class="ms-sec">Build the pipeline</div>
+            <div class="ms-item cyc" style="animation-delay:0s">⬇ Ingesta · ingest</div>
+            <div class="ms-item cyc" style="animation-delay:4s">✔ Validra · validate</div>
+            <div class="ms-item cyc" style="animation-delay:8s">🛡 MaskIQ · mask</div>
+            <div class="ms-sec">Govern &amp; AI</div>
+            <div class="ms-item">⚖ Governance</div>
+            <div class="ms-item cyc" style="animation-delay:12s">🤖 Agents</div>
+          </div>
+          <div class="mock-main cycle">
+            <div class="scr" style="animation-delay:0s"><div class="mm-title">Ingesta — ingest</div><div class="mm-flow">sources → Bronze · push-down</div><div class="mm-card good">✓ S3 · 300 rows → Bronze</div><div class="mm-card good">✓ BigQuery · 20 rows → Bronze</div><div class="mm-card">Snowflake · Teradata · Oracle · Kafka · REST</div></div>
+            <div class="scr" style="animation-delay:4s"><div class="mm-title">Validra — data quality</div><div class="mm-flow">Raw → Silver gate</div><div class="mm-card good">✓ Defect rate 0.0% · 40 rows checked</div><div class="mm-card">0 quarantined · 4/4 rules pass</div><div class="mm-card">→ PROMOTE to Silver</div></div>
+            <div class="scr" style="animation-delay:8s"><div class="mm-title">MaskIQ — privacy</div><div class="mm-flow">discover → enforce (Unity Catalog)</div><div class="mm-card warn">⚠ PHI: patient_id, advance_directive_id</div><div class="mm-card good">✓ Column masks bound in Unity Catalog</div><div class="mm-card">data_classification = PHI</div></div>
+            <div class="scr" style="animation-delay:12s"><div class="mm-title">Agents — Mosaic AI</div><div class="mm-flow">propose → human gate → run</div><div class="mm-card good">✓ Reconciliation MATCH · 1,200,000 rows</div><div class="mm-card">Orchestrator → next: Govern (MaskIQ)</div><div class="mm-card">runs in your Databricks · governed</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="cap"><b>Lakehouse Studio</b> — value on Databricks in days: migrate, validate, mask &amp; govern, push-down in your own cloud.</div>
+    </div>
+    <div>
+      <div class="mock">
+        <div class="mock-bar"><span class="md"></span><span class="md"></span><span class="md"></span><span class="mock-url">intuitiveiq.ai/industries</span></div>
+        <div class="mock-body" style="display:block;padding:16px 18px">
+          <svg viewBox="0 0 440 210" style="width:100%;height:auto" role="img" aria-label="knowledge graph">
+            <line class="kgline" x1="130" y1="100" x2="298" y2="56" stroke="#3a3a3a" stroke-width="2"/>
+            <line class="kgline" x1="300" y1="56" x2="334" y2="142" stroke="#111111" stroke-width="2" style="animation-delay:.6s"/>
+            <line class="kgline" x1="130" y1="100" x2="135" y2="180" stroke="#3a3a3a" stroke-width="2" style="animation-delay:1.2s"/>
+            <line class="kgline" x1="130" y1="100" x2="62" y2="48" stroke="#3a3a3a" stroke-width="2" style="animation-delay:1.8s"/>
+            <circle r="3.5" fill="#111111"><animateMotion dur="3s" repeatCount="indefinite" path="M130,100 L298,56"/></circle>
+            <circle r="3.5" fill="#3a3a3a"><animateMotion dur="3.4s" repeatCount="indefinite" path="M130,100 L135,180"/></circle>
+            <circle r="3" fill="#000000"><animateMotion dur="2.8s" repeatCount="indefinite" path="M300,56 L334,142"/></circle>
+            <g font-family="Inter,sans-serif" font-size="10" fill="#8a93a6">
+              <text x="200" y="70">holds</text><text x="322" y="104">has</text><text x="118" y="146">in</text><text x="78" y="80">value</text>
+            </g>
+            <g font-family="Inter,sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+              <circle cx="130" cy="100" r="31" fill="#eef0f2" stroke="#111111" stroke-width="2"/><text x="130" y="104" fill="#111111">Customer</text>
+              <circle cx="300" cy="56" r="26" fill="#f2f3f5" stroke="#3a3a3a" stroke-width="2"/><text x="300" y="60" fill="#111111">Policy</text>
+              <circle cx="334" cy="142" r="24" fill="#f2f3f5" stroke="#3a3a3a" stroke-width="2"/><text x="334" y="146" fill="#111111">Claim</text>
+              <circle cx="135" cy="182" r="23" fill="#f2f3f5" stroke="#3a3a3a" stroke-width="2"/><text x="135" y="186" fill="#1a1a1a">Region</text>
+              <circle cx="60" cy="48" r="23" fill="#f3f4f6" stroke="#000000" stroke-width="2"/><text x="60" y="52" fill="#000000">LTV</text>
+            </g>
+          </svg>
+          <div class="genie gwrap">
+            <div class="gq">🧠 Genie: <i>"Q3 adjusted revenue by region?"</i> → ✓ correct joins · <b>100%</b></div>
+            <div class="gq2">🧠 Genie: <i>"Customers holding policies in EMEA?"</i> → ✓ multi-hop · <b>67% → 100%</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="cap"><b>Knowledge Studio</b> — the business meaning that makes Genie &amp; Agent Bricks reliable enough to act on.</div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker">The reality</div>
+  <h2>78% are using AI. Only <span class="amber">26%</span> see value.</h2>
+  <p class="sub">Pilots stall — and the meter keeps running. Four compounding gaps keep Databricks spend from turning into returns:</p>
+  <div class="grid g4">
+    <div class="card"><div class="ic r">1</div><h3>Data isn't ready</h3><p>70–80% of engineering effort goes to wrangling fragmented sources & legacy formats (FHIR, CDA, HL7).</p><div class="impact">DBU impact: clusters sit idle.</div></div>
+    <div class="card"><div class="ic r">2</div><h3>No governed foundation</h3><p>Ungoverned data is a liability — no lineage, cost attribution, or access control to audit or explain.</p><div class="impact">DBU impact: spend spirals, renewals stall.</div></div>
+    <div class="card"><div class="ic r">3</div><h3>Business context is missing</h3><p>Without a semantic layer, Genie & Agent Bricks fail on complex multi-hop questions and hallucinate.</p><div class="impact">DBU impact: trust dies, expansion blocked.</div></div>
+    <div class="card"><div class="ic r">4</div><h3>AI stays in the platform</h3><p>Insights stuck in dashboards never reach where the business runs — Salesforce, SAP, ServiceNow.</p><div class="impact">DBU impact: ROI never realized.</div></div>
+  </div>
+</div></section>
+
+<!-- PILLAR 1 -->
+<section id="move"><div class="wrap">
+  <div class="pillar"><span class="pnum">1</span><div class="kicker" style="margin:0">Get to Databricks faster</div></div>
+  <h2>Migrate and activate — de-risked, governed, live in days.</h2>
+  <p class="sub">Less risk, less cost, faster time-to-value. <b>Lakehouse Studio</b> compresses migration from quarters to days — config-driven ingestion, validation and masking, delivered as native <b>Databricks Asset Bundles</b>, operated from one place, with audit-grade evidence at every gate.</p>
+
+  <div class="lflow">
+    <div class="lflow-src">
+      <span class="lflow-srclbl">Any source — cloud · on-prem · streaming</span>
+      <span class="lchip">☁️ S3 · BigQuery · Snowflake</span>
+      <span class="lchip">🏢 Oracle · Teradata · Db2 · SAP HANA · Cloudera · SAS</span>
+      <span class="lchip">📡 Kafka · REST · MongoDB</span>
+    </div>
+    <div class="lflow-steps">
+      <div class="lstep tb"><div class="lstep-top"><span class="lstep-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/></svg></span><span class="lstep-coin">🥉</span></div><b>Ingest</b><span class="lstep-eng">Ingesta</span><small>Bronze · raw, as-is</small></div>
+      <div class="larr">→</div>
+      <div class="lstep ts"><div class="lstep-top"><span class="lstep-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.3 12.4l2.6 2.6 4.8-5.2"/></svg></span><span class="lstep-coin">🥈</span></div><b>Validate</b><span class="lstep-eng">Validra</span><small>Silver · trusted</small></div>
+      <div class="larr">→</div>
+      <div class="lstep ts"><div class="lstep-top"><span class="lstep-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.6-3 7.6-7 9-4-1.4-7-4.4-7-9V6z"/></svg></span><span class="lstep-coin">🥈</span></div><b>Govern</b><span class="lstep-eng">MaskIQ</span><small>masked · compliant</small></div>
+      <div class="larr">→</div>
+      <div class="lstep tg"><div class="lstep-top"><span class="lstep-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.2 5.2l2.1 2.1M16.7 16.7l2.1 2.1M18.8 5.2l-2.1 2.1M7.3 16.7l-2.1 2.1"/></svg></span><span class="lstep-coin">🥇</span></div><b>Optimize</b><span class="lstep-eng">FinOps</span><small>Gold · business-ready</small></div>
+      <div class="larr">→</div>
+      <div class="lstep ta"><div class="lstep-top"><span class="lstep-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13z"/></svg></span><span class="lstep-coin">✨</span></div><b>Activate</b><span class="lstep-eng">Agents · Genie</span><small>trusted AI &amp; insight</small></div>
+    </div>
+    <div class="lflow-foot">🧱 One <b>Databricks Lakehouse</b> · governed by <b>Unity Catalog</b> · runs inside <b>your</b> cloud — <b>zero data egress</b></div>
+  </div>
+
+  <div class="grid g3">
+    <div class="card"><div class="ic b">⬇️</div><h3>Connect any source — <span style="color:var(--purple)">Ingesta</span></h3><p>Multi-format, multi-pattern (batch · streaming · CDC) into Bronze, raw-as-is. <b>20 first-class connectors</b> across cloud, databases, Hadoop &amp; legacy; Auto Loader &amp; Spark Streaming out of the box.</p><span class="tag">SAS</span><span class="tag">Db2</span><span class="tag">Hive·Impala</span><span class="tag">Teradata·Oracle</span><span class="tag">S3·BigQuery·Snowflake</span><span class="tag">Kafka·REST</span></div>
+    <div class="card"><div class="ic b">✅</div><h3>Trust the data, automatically — <span style="color:var(--purple)">Validra</span></h3><p>Auto-generated quality rules, drift detection and quarantine per pipeline — an <b>enforced</b> Raw→Silver gate: a failing defect score <b>blocks</b> promotion, it doesn't just flag it.</p><div class="impact">Defects 15–25% → &lt;3% · enforced gate</div></div>
+    <div class="card"><div class="ic b">🛡️</div><h3>Compliant from day one — <span style="color:var(--purple)">MaskIQ</span></h3><p>PII / PHI / PCI discovery and Unity Catalog masking via RBAC — HIPAA, GDPR, PCI compliant from first deployment; semantic, role-aware de-identification.</p></div>
+    <div class="card"><div class="ic b">🔁</div><h3>Retire costly legacy</h3><p>Oracle ODS, SAS models, Cloudera, Teradata, mainframe → unified Delta Lakehouse, with real-time streaming and reconciliation to the cent.</p></div>
+    <div class="card"><div class="ic b">🧭</div><h3>Predictable delivery — gated method + agents</h3><p>Assess → Convert → Promote → Govern → Optimize → Enable — each verb leaves live evidence, accelerated by a Mosaic AI agent workforce.</p></div>
+    <div class="card"><div class="ic b">🔒</div><h3>Your data never leaves — zero egress</h3><p>Ingestion, validation, and masking execute inside your Databricks. The control plane sees metadata — never your records.</p></div>
+  </div>
+  <div class="proof">
+    <div><b>60–90TB</b><span>Epic healthcare data / day</span></div>
+    <div><b>&lt;3%</b><span>data-quality defects</span></div>
+    <div><b>80%</b><span>faster data availability</span></div>
+    <div><b>$16M+</b><span>SAS + Cloudera cost takeout</span></div>
+  </div>
+  <div class="cta" style="justify-content:flex-start;margin-top:26px"><a class="btn btn-primary" href="https://lakehouse.semantixiq.ai/app">Launch Lakehouse Studio →</a></div>
+</div></section>
+
+<!-- CONNECTOR LANDSCAPE -->
+<section id="connectors"><div class="wrap">
+  <div class="kicker">Connect anything</div>
+  <h2 style="max-width:22ch">One studio. The whole legacy estate.</h2>
+  <p class="sub">The faster you connect, the faster the move pays off. Lakehouse Studio ships <b>20 first-class source connectors</b> spanning every layer of the enterprise — cloud, relational, Hadoop, NoSQL and the legacy systems migrations actually move <i>off</i>. All config-driven and <b>push-down</b> (your data never leaves your cloud). No source left behind means no stalled program — adding a new one is one definition + one adapter.</p>
+  <div class="grid g4 conn-grid" style="margin-top:22px">
+    <div class="card"><div class="cl">☁️ Cloud &amp; storage</div><div class="chips"><span class="chip">Amazon S3</span><span class="chip">ADLS</span><span class="chip">GCS</span></div></div>
+    <div class="card"><div class="cl">🏢 Cloud warehouses</div><div class="chips"><span class="chip">BigQuery</span><span class="chip">Snowflake</span></div></div>
+    <div class="card"><div class="cl">🗄️ Databases</div><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">SQL Server</span><span class="chip">Oracle</span><span class="chip">Teradata</span><span class="chip new">IBM Db2</span><span class="chip new">SAP HANA</span><span class="chip new">Vertica</span><span class="chip new">Greenplum</span></div></div>
+    <div class="card"><div class="cl">🧬 Legacy &amp; analytics</div><div class="chips"><span class="chip new">SAS</span><span class="chip">.sas7bdat + Viya</span><span class="chip new">mainframe (Db2 z/OS)</span></div></div>
+    <div class="card"><div class="cl">🐘 Hadoop / Cloudera</div><div class="chips"><span class="chip new">Hive</span><span class="chip new">Impala</span><span class="chip new">HDFS</span></div></div>
+    <div class="card"><div class="cl">🍃 NoSQL</div><div class="chips"><span class="chip new">MongoDB</span></div></div>
+    <div class="card"><div class="cl">📡 Streaming &amp; APIs</div><div class="chips"><span class="chip">Kafka / Event Hub</span><span class="chip">REST</span></div></div>
+    <div class="card"><div class="cl">⚖️ Governance sync</div><div class="chips"><span class="chip">Collibra</span><span class="chip">Alation</span></div></div>
+  </div>
+  <div class="proof" style="margin-top:24px">
+    <div><b>20</b><span>first-class connectors</span></div>
+    <div><b>8</b><span>source families</span></div>
+    <div><b class="grad">0</b><span>data egress · push-down</span></div>
+    <div><b>$16M+</b><span>SAS + Cloudera takeout</span></div>
+  </div>
+  <div style="margin-top:14px;font-size:13px;color:var(--dim)"><span class="chip new" style="padding:3px 9px">new</span> &nbsp;Db2 · SAP HANA · Vertica · Greenplum · SAS · Hive · Impala · HDFS · MongoDB — added to accelerate on-prem &amp; legacy migrations.</div>
+</div></section>
+
+<!-- PILLAR 2 -->
+<section id="enhance"><div class="wrap">
+  <div class="pillar"><span class="pnum">2</span><div class="kicker" style="margin:0">Get more from Databricks</div></div>
+  <h2>Knowledge Studio — the knowledge layer that makes Mosaic AI trustworthy.</h2>
+  <p class="sub">Unity Catalog governs <i>access</i>. Knowledge Studio governs <i>meaning</i> — so Genie and Agent Bricks answer real business questions correctly, and your teams can act on the answer. Trust is what turns AI pilots into production, and DBUs into ROI.</p>
+  <div class="lflow kflow">
+    <div class="lflow-src">
+      <span class="lflow-srclbl">Your governed data — federated, where it lives</span>
+      <span class="lchip">🗂️ Unity Catalog · Snowflake · BigQuery · Mongo · SAP</span>
+      <span class="lchip">❓ cryptic columns · no shared meaning · NULL joins</span>
+    </div>
+    <div class="lflow-steps">
+      <div class="lstep k1"><div class="lstep-top"><span class="lstep-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="7" ry="2.6"/><path d="M5 5.5v13c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6v-13"/><path d="M5 12c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6"/></svg></span><span class="lstep-coin">🔓</span></div><b>Unity Catalog</b><span class="lstep-eng">governs access</span><small>federated tables · columns · grants</small></div>
+      <div class="larr">→</div>
+      <div class="lstep k2"><div class="lstep-top"><span class="lstep-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 14.5l5-5"/><path d="M11 6.5l1.4-1.4a3.8 3.8 0 0 1 5.5 5.5L16.5 12"/><path d="M13 17.5l-1.4 1.4a3.8 3.8 0 0 1-5.5-5.5L7.5 12"/></svg></span><span class="lstep-coin">◆</span></div><b>R2RML Mapping</b><span class="lstep-eng">source → ontology</span><small>columns → OWL 2 industry concepts</small></div>
+      <div class="larr">→</div>
+      <div class="lstep k3"><div class="lstep-top"><span class="lstep-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="7" r="2.2"/><circle cx="18" cy="7" r="2.2"/><circle cx="12" cy="18" r="2.2"/><path d="M7.7 8.7l3 7M16.3 8.7l-3 7M8.2 7h7.6"/></svg></span><span class="lstep-coin">◆</span></div><b>Virtual Knowledge Graph</b><span class="lstep-eng">Ontop · SPARQL→SQL</span><small>SHACL-validated · no data movement</small></div>
+      <div class="larr">→</div>
+      <div class="lstep k4"><div class="lstep-top"><span class="lstep-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13.2V21"/></svg></span><span class="lstep-coin">◆</span></div><b>Governed Data Products</b><span class="lstep-eng">Bronze→Gold→Canonical</span><small>every answer traced to source</small></div>
+      <div class="larr">→</div>
+      <div class="lstep k5"><div class="lstep-top"><span class="lstep-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.4L19.5 10l-5.6 1.6L12 17l-1.9-5.4L4.5 10l5.6-1.6z"/></svg></span><span class="lstep-coin">🤖</span></div><b>Trustworthy AI</b><span class="lstep-eng">Genie · Agent Bricks</span><small>NL2SPARQL · multi-hop answers</small></div>
+    </div>
+    <div class="lflow-foot kflow-foot">🧠 <b>Unity Catalog governs access · Knowledge Studio governs meaning</b> — queries run at the source: no materialization, no ETL, no data egress</div>
+  </div>
+  <div class="contrast">
+    <div class="cbox bad"><div class="h">What agents see today</div>Table: T_Sales_Global_01<br>Column: CUST_LTV_01 (String)<br>Column: RGN_CD_FX (Int)<br>Column: Q3_REV_ADJ (Float)<br>Relationship: NULL</div>
+    <div class="arrow">→</div>
+    <div class="cbox good"><div class="h">What Knowledge Studio gives them</div>Concept: Customer Lifetime Value<br>Concept: Regional FX Rate<br>Concept: Q3 Adjusted Revenue<br>Rule: currency validates vs ISO 4217<br>Relationship: Customer holds Policy</div>
+  </div>
+  <div class="grid g4">
+    <div class="card"><div class="ic">🧠</div><h3>Meaning, built from what you already have</h3><p>OWL ontology + SHACL rules + business glossary, built from your <b>existing Unity Catalog</b> — no re-architecture of the Lakehouse, no rip-and-replace.</p></div>
+    <div class="card"><div class="ic">✨</div><h3>AI that answers correctly</h3><p>Business context injected at query time, so agents reason correctly on complex multi-hop questions instead of guessing joins — fewer wrong answers, more decisions made.</p><div class="impact">Genie 67% → 100% on multi-hop</div></div>
+    <div class="card"><div class="ic">⚖️</div><h3>Auditable, compliant answers</h3><p>Explainable, auditable outputs — every query role-scoped, traceable to source, and compliance-ready from day one.</p></div>
+    <div class="card"><div class="ic">🔌</div><h3>Protects your Databricks bet</h3><p>Enriches Genie — never replaces it. Works alongside OntoBricks, Stardog, Graphwise. We keep Databricks front-and-centre.</p></div>
+  </div>
+  <div class="proof">
+    <div><b>67% → 100%</b><span>Genie multi-hop accuracy</span></div>
+    <div><b>40–60%</b><span>faster time-to-insight</span></div>
+    <div><b>25–35%</b><span>lower governance cost</span></div>
+  </div>
+  <div class="cta" style="justify-content:flex-start;margin-top:26px"><a class="btn btn-blue" href="https://intuitiveiq.ai/industries.html">Launch Knowledge Studio →</a><a class="btn btn-ghost" href="https://intuitiveiq.ai">Explore IntuitiveIQ</a></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker">One connected value chain</div>
+  <h2>From raw source to trustworthy Mosaic AI — one connected path.</h2>
+  <div class="flow">
+    <div class="step"><div class="l">Move to Databricks</div><div class="t">Ingesta · Validra · MaskIQ</div><div class="d">Ingest, validate, mask — data ready, governed, compliant, as DABs.</div></div>
+    <div class="step"><div class="l">Govern the foundation</div><div class="t">Unity Catalog</div><div class="d">Grants, masks, tags, lineage, cost attribution.</div></div>
+    <div class="step"><div class="l">Add meaning</div><div class="t">Knowledge Studio</div><div class="d">Ontology + rules enrich Genie & Agent Bricks.</div></div>
+  </div>
+  <p class="sub" style="margin-top:22px">From first pilot to enterprise scale: <b style="color:var(--txt)">Activate → Expand → Scale</b>. A governed foundation and shared business meaning turn early wins into trusted, production-grade AI across the business.</p>
+</div></section>
+
+<section id="personas"><div class="wrap">
+  <div class="kicker">Built for every seat at the table</div>
+  <h2>One platform. Value for every stakeholder.</h2>
+  <p class="sub">From the CFO's payback math to the Databricks account team's consumption number — IntuitiveIQ speaks to every leader who has to say yes.</p>
+  <div class="grid g3">
+    <div class="card cfo"><div class="ic">💰</div><div class="role">CFO &amp; Finance</div><h3>Predictable spend, faster payback</h3><p>Take cost out of legacy (SAS, Cloudera, Teradata), run AI in your own cloud with no egress surprises, and turn Databricks spend into measurable returns — proven in a 4-week PoV before you commit.</p><div class="impact">$16M+ legacy cost taken out · 3–4× faster pilot→production</div></div>
+    <div class="card cdo"><div class="ic">🛡️</div><div class="role">CDO &amp; Governance</div><h3>Governed &amp; compliant by design</h3><p>Unity Catalog-native grants, masking, lineage and <b>attribute-based access control</b> from day one; HIPAA / GDPR / PCI at ingestion; enforced promotion gates and an <b>audit ledger</b> of every approve / promote decision — defensible to your auditor and board.</p><div class="impact">Defects 15–25% → &lt;3% · every decision on the record</div></div>
+    <div class="card vpd"><div class="ic">🚀</div><div class="role">VP Data &amp; Engineering</div><h3>Ship faster, with less toil</h3><p>20 first-class connectors and config-driven pipelines delivered as native Databricks Asset Bundles, with a gated method that leaves evidence at every step — so your team stops hand-building plumbing and starts shipping outcomes.</p><div class="impact">80% faster data availability · 20 connectors, 8 families</div></div>
+  </div>
+  <div class="cosell">
+    <div class="cosell-l">
+      <div class="cosell-eyebrow">🤝 A strategic Databricks partner</div>
+      <div class="cosell-h">Working with Databricks? We deliver alongside your account team.</div>
+      <div class="cosell-p">Intuitive partners closely with Databricks to get customers live and successful — de-risked migration, governed foundations, and trustworthy Mosaic AI, all built on Databricks and kept front-and-centre. A dedicated brief is available for Databricks account teams.</div>
+    </div>
+    <a class="btn btn-primary" href="/partners" style="flex-shrink:0">For Databricks teams →</a>
+  </div>
+</div></section>
+
+<section id="proof"><div class="wrap">
+  <div class="kicker">Proven in production · 20+ joint Databricks customers</div>
+  <h2>Outcomes, not slideware.</h2>
+  <div class="grid g3">
+    <div class="card"><div class="ic b">🏥</div><h3>Healthcare — Epic + FinOps</h3><p>60–90TB Epic data ingested daily, full HIPAA via RBAC masking. Patient-readmission analytics live in <b>1 week</b> on Genie.</p><div class="impact">$3M saved in year one</div></div>
+    <div class="card"><div class="ic b">🏦</div><h3>Financial Services — SAS/Cloudera</h3><p>40+ SAS models + fragmented silos → unified Delta Lakehouse; 250+ sources/day, &gt;2TB consolidated; 80% less ingestion time.</p><div class="impact">$16M total cost takeout</div></div>
+    <div class="card"><div class="ic b">📡</div><h3>Telecom — Oracle ODS</h3><p>Oracle ODS → Databricks with Auto Loader + Spark Streaming; 20M+ records at peak; 80% faster availability, 70% faster reporting.</p><div class="impact">$10M annual savings</div></div>
+  </div>
+</div></section>
+
+<section id="security"><div class="wrap">
+  <div class="kicker">Enterprise-grade by design</div>
+  <h2>Built to survive your CISO, your auditor, and your board.</h2>
+  <p class="sub">Not a pilot dressed up for a demo. Lakehouse Studio enforces the controls a regulated enterprise actually runs on — so bad data can't reach production, every decision is on the record, and the platform keeps serving when something fails.</p>
+  <div class="grid g3">
+    <div class="card"><div class="ic">🔒</div><h3>Your data stays in your cloud</h3><p>Push-down execution inside Databricks; the control plane sees metadata, never your records — <b>zero egress</b>.</p></div>
+    <div class="card"><div class="ic">⛔</div><h3>Bad data can't be promoted</h3><p>Enforced promotion gates <b>block</b> a release unless data-quality defects are under threshold and an authorized approver has signed off — every HOLD / PROMOTE written to an audit ledger.</p></div>
+    <div class="card"><div class="ic">🥇</div><h3>Raw → trusted → business-ready</h3><p>The full medallion, <b>generated, not hand-built</b>: typed CDC / SCD-2 Silver and dimensional Gold — with a dead-letter quarantine, so nothing is dropped silently.</p></div>
+    <div class="card"><div class="ic">⚖️</div><h3>Unity Catalog-native governance</h3><p>Grants, column masks, row filters, tags and lineage — plus <b>attribute-based access control</b> bound to group membership. We drive UC, not replace it.</p></div>
+    <div class="card"><div class="ic">📈</div><h3>Observable, with an SLA</h3><p>Structured audit logs, health &amp; data-freshness signals, cost / anomaly metrics and proactive alerting — on a highly-available, <b>zero-downtime</b> deployment.</p></div>
+    <div class="card"><div class="ic">📦</div><h3>Trusted, tested supply chain</h3><p>Native Databricks Asset Bundles; every build is <b>test-gated</b> and signed with provenance + SBOM, and credentials are age-tracked and rotated.</p></div>
+  </div>
+  <div class="proof" style="margin-top:24px">
+    <div><b class="grad">0</b><span>data egress · push-down</span></div>
+    <div><b>100%</b><span>gate decisions audited</span></div>
+    <div><b>Bronze→Gold</b><span>full medallion, generated</span></div>
+    <div><b>0</b><span>rows dropped silently</span></div>
+  </div>
+  <div class="chips">
+    <span class="chip dbx">Databricks</span><span class="chip dbx">Unity Catalog</span><span class="chip dbx">Mosaic AI</span><span class="chip dbx">Genie</span><span class="chip dbx">Agent Bricks</span><span class="chip dbx">Lakeflow</span><span class="chip dbx">Auto Loader</span><span class="chip">S3 · ADLS · GCS</span><span class="chip">BigQuery · Snowflake</span><span class="chip">Postgres · MySQL · SQL Server</span><span class="chip">Teradata · Oracle · Db2</span><span class="chip">SAS · Hive · Impala · HDFS</span><span class="chip">SAP HANA · Vertica · MongoDB</span><span class="chip">Kafka · Splunk · Cribl</span><span class="chip">Collibra · Alation</span>
+  </div>
+</div></section>
+
+<section><div class="wrap" style="text-align:center">
+  <div class="kicker" style="text-align:center">An AI-first engineering company — a product of Intuitive</div>
+  <div class="about">
+    <div><b>130+</b><span>Fortune 1000 enterprises</span></div>
+    <div><b>400+</b><span>enterprise programs · 14 yrs</span></div>
+    <div><b>100+</b><span>Databricks-certified</span></div>
+    <div><b>500+</b><span>Data · AI · Cloud SMEs</span></div>
+    <div><b>ISO 27001/42001</b><span>SOC 2 Type 2 · GDPR</span></div>
+  </div>
+</div></section>
+
+<div class="band"><div class="bandinner"><div class="wrap">
+  <div class="quote grad" style="margin:0 auto">See the uplift on your own data — in 30 minutes.</div>
+  <p class="sub" style="margin:16px auto 0">Run your questions WITHOUT and WITH Knowledge Studio, side by side. Then scale across domains.</p>
+  <div class="cta"><a class="btn btn-primary" href="https://lakehouse.semantixiq.ai/app">Launch Lakehouse Studio →</a><a class="btn btn-blue" href="https://intuitiveiq.ai/industries.html">Launch Knowledge Studio →</a></div>
+</div></div></div>
+
+<footer><div class="wrap frow">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span class="brand-name" style="font-size:16px">IntuitiveIQ</span> <span class="brand-sep"></span> <a href="https://intuitive.ai" target="_blank" rel="noopener" title="Intuitive — intuitive.ai"><img src="/intuitive-logo-white.png" alt="Intuitive" style="height:16px;width:auto;display:inline-block;vertical-align:middle" /></a> <span style="color:var(--muted)">— a product of Intuitive · Built on Databricks</span></div>
+  <div class="navlinks"><a href="https://intuitiveiq.ai">IntuitiveIQ.ai</a><a href="#move">Move</a><a href="#enhance">Enhance</a><a href="/partners">Partners</a><a href="https://lakehouse.semantixiq.ai/app">Launch</a><span style="color:var(--dim)">© 2026 Intuitive</span></div>
+</div></footer>
+</body>
+</html>
