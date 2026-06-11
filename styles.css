@@ -800,3 +800,6 @@ html,body{ background:#000 !important; color:#dddddd; }
 .footer-hq p{font-size:14.5px;color:#9ba6b8;line-height:1.75;margin:0}
 @media (max-width:1080px){.footer-cols-grid{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:720px){.footer-cols-grid{grid-template-columns:repeat(2,1fr)}.footer-hq{grid-template-columns:1fr;gap:28px}.footer-certs{height:36px}}
+
+/* No caret arrows on nav items */
+.nav-item > a::after{content:none}
