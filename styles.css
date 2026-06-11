@@ -655,3 +655,9 @@ html,body{ background:#000 !important; color:#dddddd; }
 
 /* Boardroom headline — muted old question, bold new question */
 .q-old{display:block;font-size:16px;font-weight:600;color:var(--slate-2);letter-spacing:0;margin-bottom:12px;text-transform:none}
+
+/* Unified intuitiveIQ lockup (single mark, no duplicate wordmark) */
+.brand-lockup{height:34px;width:auto;display:block;color:#fff}
+.footer .brand-lockup{height:30px}
+.brand-mark:hover .brand-lockup{opacity:.88}
+@media (max-width:520px){.brand-lockup{height:28px}}
