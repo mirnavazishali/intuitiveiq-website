@@ -63,10 +63,10 @@ document.querySelectorAll('.vt-pill').forEach(btn => {
       const next = document.querySelector(`.vt-pill[data-vt="${tabs[i]}"]`);
       if (next) next.click();
     }
-    const dwell = (tabs[i] === 'action') ? 12000 : 9000;
+    const dwell = (tabs[i] === 'action') ? 24000 : 16000;
     setTimeout(tick, dwell);
   };
-  setTimeout(tick, 9000);
+  setTimeout(tick, 16000);
 })();
 
 // Smooth scroll for in-page nav links
