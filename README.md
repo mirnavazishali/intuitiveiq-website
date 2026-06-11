@@ -1,6 +1,6 @@
 # IntuitiveIQ™ — Website
 
-Marketing site for **IntuitiveIQ™ — Decision Intelligence Engine for Enterprise AI** (intuitiveiq.ai), the unified public-facing brand that brings together the semantic intelligence of SemantixIQ™ (Knowledge Fabric) and the agentic execution control of NeuroStack™ (Agentic Orchestration).
+Marketing site for **IntuitiveIQ™ — Decision Intelligence Engine for Enterprise AI** (intuitiveiq.ai).
 
 > Knowledge Fabric + Agentic Orchestration for governed, multi-model, multi-agent AI systems.
 > **Explainability. Traceability. Auditability. Accountability.**
@@ -27,7 +27,7 @@ python3 -m http.server 8765
 
 ## Deployment
 
-Served from the SemantixIQ EC2 (Caddy vhost → `intuitiveiq-web` nginx container).
+Served from the production EC2 (Caddy vhost → `intuitiveiq-web` nginx container).
 To update the deployed site:
 
 ```bash
@@ -46,4 +46,3 @@ Files are picked up immediately (the container bind-mounts the directory).
 | Category | Decision Intelligence Engine |
 | Theme | Knowledge Fabric + Agentic Orchestration |
 | Trust promise | Explainability · Traceability · Auditability · Accountability |
-| Internal mapping | SemantixIQ → Knowledge Fabric · NeuroStack → Agentic Orchestration |
