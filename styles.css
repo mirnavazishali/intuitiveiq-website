@@ -869,3 +869,14 @@ html,body{ background:#000 !important; color:#dddddd; }
   .footer-cols-grid h5{font-size:16px}
   .footer-cols-grid a{font-size:14px}
 }
+
+/* Responsive grid utilities (inline grid styles broke mobile collapse) */
+.grid-2{grid-template-columns:repeat(2,1fr) !important}
+.grid-4{grid-template-columns:repeat(4,1fr) !important}
+.grid-5{grid-template-columns:repeat(5,1fr) !important}
+.foot-cols{display:grid;grid-template-columns:repeat(4,minmax(130px,1fr));gap:36px}
+.foot-cols-3{display:grid;grid-template-columns:repeat(3,minmax(140px,1fr));gap:40px}
+@media (max-width:900px){
+  .grid-2,.grid-4,.grid-5{grid-template-columns:1fr !important}
+  .foot-cols,.foot-cols-3{grid-template-columns:repeat(2,1fr);gap:28px 20px}
+}
