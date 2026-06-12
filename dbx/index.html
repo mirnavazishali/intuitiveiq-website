@@ -161,7 +161,7 @@
       <div><b>Trusted</b><span>Genie answers on the questions that used to fail</span></div>
       <div><b>3–4×</b><span>faster pilot → production</span></div>
       <div><b>20+</b><span>enterprises live on Databricks</span></div>
-      <div><b>Zero</b><span>data movement · no ETL</span></div>
+      <div><b>Zero</b><span>data movement — no copies, ever</span></div>
       <div><b>Evidence</b><span>attached to every answer</span></div>
     </div>
   </div>
@@ -876,7 +876,7 @@
     <h2 class="section-title">78% are using AI. Only 26% see value.</h2>
     <p class="section-sub">Databricks gives you the platform. What stalls the return is everything the platform can&rsquo;t know on its own — and the meter keeps running while pilots stall.</p>
     <div class="trust-grid">
-      <div><h4>Genie demos well — then fails the real question.</h4><p>Cryptic columns, no shared meaning, NULL joins. Without business context, agents guess on complex multi-hop questions — and one wrong answer kills trust.</p></div>
+      <div><h4>Genie demos well — then fails the real question.</h4><p>Cryptic field names, no shared meaning, tables that don&rsquo;t connect. Without business context, agents guess on the questions that span systems — and one wrong answer kills trust.</p></div>
       <div><h4>Answers can&rsquo;t be explained or audited.</h4><p>Governance bolted on after the fact means nobody can defend an AI answer to a regulator or a board — so go-live never gets sign-off.</p></div>
       <div><h4>Many models, many agents, no operating model.</h4><p>Multi-model ecosystems multiply risk faster than value without one set of rules for what every model and agent may do.</p></div>
       <div><h4>AI stays in the platform.</h4><p>Insights stuck in dashboards never reach where the business runs — Salesforce, SAP, ServiceNow. The ROI is never realized.</p></div>
@@ -889,17 +889,17 @@
   <div class="container">
     <p class="eyebrow">The Knowledge Fabric</p>
     <h2 class="section-title">From cryptic columns to business meaning.</h2>
-    <p class="section-sub">IntuitiveIQ&rsquo;s Knowledge Fabric is built from the Unity Catalog you already govern — no re-architecture, no rip-and-replace. Business context is injected at query time, so agents reason instead of guessing.</p>
+    <p class="section-sub">IntuitiveIQ&rsquo;s Knowledge Fabric is built from the Unity Catalog you already govern — no re-architecture, no rip-and-replace. Agents get your business context the moment a question is asked — so they reason instead of guessing.</p>
     <div class="cases" style="grid-template-columns:repeat(2,1fr)">
       <div class="case-card">
         <div class="case-tag">What agents see today</div>
-        <h3>A schema, not a business.</h3>
+        <h3>Codes and tables, not a business.</h3>
         <p style="font-family:var(--font-mono);font-size:13px;line-height:2">Table: T_Sales_Global_01<br/>Column: CUST_LTV_01 (String)<br/>Column: RGN_CD_FX (Int)<br/>Column: Q3_REV_ADJ (Float)<br/>Relationship: NULL</p>
       </div>
       <div class="case-card">
         <div class="case-tag">What IntuitiveIQ gives them</div>
         <h3>Concepts, rules, relationships.</h3>
-        <p style="font-family:var(--font-mono);font-size:13px;line-height:2">Concept: Customer Lifetime Value<br/>Concept: Regional FX Rate<br/>Concept: Q3 Adjusted Revenue<br/>Rule: currency validates vs ISO 4217<br/>Relationship: Customer holds Policy</p>
+        <p style="font-family:var(--font-mono);font-size:13px;line-height:2">Concept: Customer Lifetime Value<br/>Concept: Regional FX Rate<br/>Concept: Q3 Adjusted Revenue<br/>Rule: currency codes checked against the global standard<br/>Relationship: Customer holds Policy</p>
       </div>
     </div>
   </div>
@@ -914,7 +914,7 @@
       <div class="pillar">
         <div class="pillar-icon">⌬</div>
         <h3>Knowledge Fabric</h3>
-        <p>Trusted business understanding, built from the Unity Catalog you already govern. Without it, Genie sees a schema. With IntuitiveIQ, it understands your business.</p>
+        <p>Trusted business understanding, built from the Unity Catalog you already govern. Without it, Genie sees cryptic tables and codes. With IntuitiveIQ, it understands your business.</p>
         <ul class="pillar-list">
           <li>One shared definition for every business term</li>
           <li>Rules, policies &amp; relationships — captured once</li>
@@ -964,9 +964,9 @@
     <p class="eyebrow">How it fits your Databricks</p>
     <h2 class="section-title">Four steps. Zero data movement.</h2>
     <div class="flow six" style="grid-template-columns:repeat(4,1fr)">
-      <div class="flow-step"><div class="flow-num">01 · FEDERATE</div><h3>Your data stays put.</h3><p>Unity Catalog tables, columns and grants — queried where they live. No materialization, no ETL, no egress.</p></div>
+      <div class="flow-step"><div class="flow-num">01 · CONNECT</div><h3>Your data stays put.</h3><p>We work with your Unity Catalog data exactly where it lives — nothing copied, nothing moved, nothing leaving your cloud.</p></div>
       <div class="flow-step"><div class="flow-num">02 · UNDERSTAND</div><h3>Meaning on top.</h3><p>The Knowledge Fabric maps your tables to business concepts, rules and relationships — built from the catalog you already have.</p></div>
-      <div class="flow-step"><div class="flow-num">03 · ANSWER</div><h3>Genie, grounded.</h3><p>Genie and Agent Bricks answer multi-hop business questions correctly — every answer traced to source, with evidence attached.</p></div>
+      <div class="flow-step"><div class="flow-num">03 · ANSWER</div><h3>Genie, grounded.</h3><p>Genie and Agent Bricks correctly answer the hard questions that cut across many systems — every answer traced to source, with evidence attached.</p></div>
       <div class="flow-step"><div class="flow-num">04 · ACT</div><h3>Governed action.</h3><p>Agents carry the answer into the systems where the business runs — under your policies, with human approval where it matters.</p></div>
     </div>
     <p style="margin:26px 0 0;font-size:14px;color:#8b93a6">Not on Databricks yet — or still moving workloads off legacy? <a href="/lakehouse/" style="color:#5b8cff;font-weight:600">We de-risk the migration too →</a></p>
@@ -979,8 +979,8 @@
     <p class="eyebrow">Protects your Databricks bet</p>
     <h2 class="section-title">We amplify Databricks — we never replace it.</h2>
     <div class="cases">
-      <div class="case-card"><div class="case-tag">Genie &amp; Agent Bricks</div><h3>Enriched, never replaced.</h3><p>IntuitiveIQ injects business meaning into the Mosaic AI tools you already use — no competing assistant, no parallel stack. Works alongside OntoBricks, Stardog and Graphwise.</p></div>
-      <div class="case-card"><div class="case-tag">Unity Catalog</div><h3>Still the governor.</h3><p>Grants, masks, lineage and tags stay in Unity Catalog — IntuitiveIQ drives it, adding the layer of meaning and decision evidence on top.</p></div>
+      <div class="case-card"><div class="case-tag">Genie &amp; Agent Bricks</div><h3>Enriched, never replaced.</h3><p>IntuitiveIQ injects business meaning into the Mosaic AI tools you already use — no competing assistant, no second platform to run. Works alongside knowledge-graph tools you may already have — OntoBricks, Stardog, Graphwise.</p></div>
+      <div class="case-card"><div class="case-tag">Unity Catalog</div><h3>Still the governor.</h3><p>Your access rules, data masking and audit trail stay in Unity Catalog — IntuitiveIQ adds the layer of meaning and decision evidence on top.</p></div>
       <div class="case-card"><div class="case-tag">Any model, your rules</div><h3>Multi-model, one operating model.</h3><p>Databricks Foundation Models, Claude, GPT, Gemini — route each job to the best model with one set of policies, usage visibility and cost control.</p></div>
     </div>
   </div>
@@ -992,8 +992,8 @@
     <p class="eyebrow">In production today</p>
     <h2 class="section-title">Outcomes, not slideware.</h2>
     <div class="cases">
-      <div class="case-card"><img class="case-img" src="https://intuitiveiq.ai/assets/img/code.jpg" alt="Grounded AI" loading="lazy" /><div class="case-tag">Mosaic AI accuracy</div><h3>From guessing to grounded.</h3><p>On the complex multi-hop questions where ungrounded assistants lose the room, Genie grounded in the Knowledge Fabric answers consistently and correctly — with reasoning and sources attached.</p></div>
-      <div class="case-card"><img class="case-img" src="https://intuitiveiq.ai/assets/img/datacenter.jpg" alt="Cross-cloud" loading="lazy" /><div class="case-tag">Cross-cloud, zero ETL</div><h3>One question, two clouds.</h3><p>In production today: a single business question answered across Databricks Unity Catalog and Google BigQuery at once — no copying, no pipelines, no waiting.</p></div>
+      <div class="case-card"><img class="case-img" src="https://intuitiveiq.ai/assets/img/code.jpg" alt="Grounded AI" loading="lazy" /><div class="case-tag">Mosaic AI accuracy</div><h3>From guessing to grounded.</h3><p>On the complex, cross-system questions where generic AI assistants lose the room, Genie backed by the Knowledge Fabric answers consistently and correctly — with reasoning and sources attached.</p></div>
+      <div class="case-card"><img class="case-img" src="https://intuitiveiq.ai/assets/img/datacenter.jpg" alt="Cross-cloud" loading="lazy" /><div class="case-tag">Cross-cloud, zero copying</div><h3>One question, two clouds.</h3><p>In production today: a single business question answered across Databricks Unity Catalog and Google BigQuery at once — no copying, no pipelines, no waiting.</p></div>
       <div class="case-card"><img class="case-img" src="https://intuitiveiq.ai/assets/img/nurse.jpg" alt="Healthcare" loading="lazy" /><div class="case-tag">Healthcare, live</div><h3>Care gaps and denials, in seconds.</h3><p>Live with Epic, Cerner and major claims data on Databricks — which patients are overdue, which denials are winnable, with clinical evidence attached.</p></div>
     </div>
   </div>
@@ -1022,7 +1022,7 @@
         <img class="case-img" src="https://intuitiveiq.ai/assets/img/city-night.jpg" alt="Telecom" loading="lazy" />
         <div class="case-tag">Telecom</div>
         <h3>$10M annual savings.</h3>
-        <p>Real-time operational intelligence replacing overnight batch — 20M+ records at peak, 70% faster reporting, and $10M saved every year on Databricks.</p>
+        <p>Answers in real time instead of a day late — 20M+ records at peak, 70% faster reporting, and $10M saved every year on Databricks.</p>
       </div>
       <div class="case-card" id="ind-cpg">
         <img class="case-img" src="https://intuitiveiq.ai/assets/img/ind-cpg.jpg" alt="Consumer packaged goods" loading="lazy" />
