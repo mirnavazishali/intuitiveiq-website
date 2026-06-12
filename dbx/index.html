@@ -18,6 +18,8 @@
 .dbxnav a{font-size:17px;font-weight:500;color:var(--ink-2);transition:color .15s}
 .dbxnav a:hover{color:#fff}
 @media (max-width:900px){.dbxnav{display:none}.dbxnav.open{display:flex}}
+.nav .brand-iq{transform:translateY(2px)}
+.footer .brand-iq{transform:translateY(1.75px)}
 </style>
 </head>
 <body>
@@ -151,7 +153,7 @@
       <b>Unity Catalog governs access; IntuitiveIQ governs meaning</b> — so Genie and
       Agent Bricks answer real business questions correctly, agents act under your
       policies, and every answer carries its evidence — all delivered through Intuitive&rsquo;s
-      <b>aiE™ Framework</b>, from <a href="/lakehouse/" style="color:#5b8cff;font-weight:600">lakehouse migration</a> to governed AI in production.
+      <b>aiE™ Framework</b>, from <a href="/lakehouse/" style="color:#fff;font-weight:700">lakehouse migration</a> to governed AI in production.
       We don&rsquo;t replace Databricks — we make it deliver.
     </p>
     <div class="hero-actions">
@@ -683,7 +685,7 @@
                 <span class="act-sparql-title">⌬ The check we built for you</span>
                 <span class="act-sparql-badge">uses your Knowledge Fabric</span>
               </div>
-              <pre class="act-sparql-code"><span class="act-line line-1">PREFIX bhsf: &lt;https://data.bhsf.org/ont/&gt;</span><span class="act-line line-2">SELECT ?patient ?hba1c ?dx_date WHERE {</span><span class="act-line line-3">  ?patient a bhsf:Patient ;</span><span class="act-line line-4">           bhsf:hasCondition [</span><span class="act-line line-5">             bhsf:hasICDCode icd10cm:E11* ] .</span><span class="act-line line-6">  ?obs a bhsf:LabResult ;</span><span class="act-line line-7">       bhsf:forPatient ?patient ;</span><span class="act-line line-8">       bhsf:hasLOINCCode loinc:4548-4 ;</span><span class="act-line line-9">       bhsf:value ?hba1c .</span><span class="act-line line-10">  FILTER (?hba1c &gt; 9.0)</span><span class="act-line line-11">  FILTER NOT EXISTS {</span><span class="act-line line-12">    ?ref a bhsf:Referral ;</span><span class="act-line line-13">         bhsf:forPatient ?patient ;</span><span class="act-line line-14">         bhsf:specialty "Nephrology" }</span><span class="act-line line-15">} LIMIT 500</span></pre>
+              <pre class="act-sparql-code"><span class="act-line line-1">PREFIX care: &lt;https://your-health-system.org/ont/&gt;</span><span class="act-line line-2">SELECT ?patient ?hba1c ?dx_date WHERE {</span><span class="act-line line-3">  ?patient a care:Patient ;</span><span class="act-line line-4">           care:hasCondition [</span><span class="act-line line-5">             care:hasICDCode icd10cm:E11* ] .</span><span class="act-line line-6">  ?obs a care:LabResult ;</span><span class="act-line line-7">       care:forPatient ?patient ;</span><span class="act-line line-8">       care:hasLOINCCode loinc:4548-4 ;</span><span class="act-line line-9">       care:value ?hba1c .</span><span class="act-line line-10">  FILTER (?hba1c &gt; 9.0)</span><span class="act-line line-11">  FILTER NOT EXISTS {</span><span class="act-line line-12">    ?ref a care:Referral ;</span><span class="act-line line-13">         care:forPatient ?patient ;</span><span class="act-line line-14">         care:specialty "Nephrology" }</span><span class="act-line line-15">} LIMIT 500</span></pre>
             </div>
 
             <!-- Action card materializing -->
@@ -978,7 +980,7 @@
       <div class="flow-step"><div class="flow-num">03 · ANSWER</div><h3>Genie, grounded.</h3><p>Genie and Agent Bricks correctly answer the hard questions that cut across many systems — every answer traced to source, with evidence attached.</p></div>
       <div class="flow-step"><div class="flow-num">04 · ACT</div><h3>Governed action.</h3><p>Agents carry the answer into the systems where the business runs — under your policies, with human approval where it matters.</p></div>
     </div>
-    <p style="margin:26px 0 0;font-size:14px;color:#8b93a6">Not on Databricks yet — or still moving workloads off legacy? <a href="/lakehouse/" style="color:#5b8cff;font-weight:600">We de-risk the migration too →</a></p>
+    <p style="margin:26px 0 0;font-size:14px;color:#8b93a6">Not on Databricks yet — or still moving workloads off legacy? <a href="/lakehouse/" style="color:#fff;font-weight:700">We de-risk the migration too →</a></p>
   </div>
 </section>
 
@@ -1089,7 +1091,7 @@
       <a href="mailto:hello@intuitive.ai?subject=IntuitiveIQ%20for%20Databricks%20—%20side-by-side" class="btn btn-primary lg">Request an AI Strategy Session →</a>
       <a href="/partners" class="btn btn-ghost lg">For Databricks account teams →</a>
     </div>
-    <p style="margin:20px 0 0;font-size:14px;color:#8b93a6">Starting from legacy? <a href="/lakehouse/" style="color:#5b8cff;font-weight:600">Begin with the lakehouse migration →</a></p>
+    <p style="margin:20px 0 0;font-size:14px;color:#8b93a6">Starting from legacy? <a href="/lakehouse/" style="color:#fff;font-weight:700">Begin with the lakehouse migration →</a></p>
   </div>
 </section>
 
