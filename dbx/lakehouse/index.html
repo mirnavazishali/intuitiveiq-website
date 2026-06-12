@@ -14,6 +14,67 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://intuitiveiq.ai/styles.css?v=20260612a" />
+<style>
+.lkdemo{--dim:#6b7280;--line:rgba(15,23,42,.10);--muted:#4b5568;--teal:#000000;}
+.cbox.good{background:rgba(0, 0, 0,.06);border-color:rgba(0, 0, 0,.25);color:#000000}
+.cbox.good .h{color:var(--teal)}
+.preview{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:32px}
+.mock{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 14px 38px rgba(15,23,42,.12)}
+.mock-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#f3f5f9;border-bottom:1px solid var(--line)}
+.md{width:9px;height:9px;border-radius:50%;background:#cfd6e2}
+.mock-url{margin-left:10px;font-size:11px;color:var(--dim);font-family:'JetBrains Mono',monospace}
+.mock-body{display:flex;min-height:236px}
+.mock-side{width:152px;border-right:1px solid var(--line);padding:12px 10px;background:#fafbfd}
+.ms-brand{font-weight:800;font-size:11px;color:#000000;margin-bottom:10px;line-height:1.3}
+.ms-sec{font-size:9px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#9aa3b2;margin:10px 0 4px}
+.ms-item{padding:5px 7px;border-radius:6px;color:var(--muted);font-size:11.5px}
+.ms-item.act{background:rgba(0, 0, 0,.1);color:#000000;font-weight:700}
+.mock-main{flex:1;padding:14px 16px}
+.mm-title{font-weight:800;color:#000000;font-size:14px}
+.mm-flow{display:block;font-size:11px;color:var(--muted);margin:8px 0 12px;font-family:'JetBrains Mono',monospace}
+.mm-card{border:1px solid var(--line);border-radius:9px;padding:9px 11px;font-size:12px;margin-bottom:8px;color:var(--muted)}
+.mm-card.good{border-color:rgba(0, 0, 0,.3);background:rgba(0, 0, 0,.06);color:#000000;font-weight:600}
+.mm-card.warn{border-color:rgba(0, 0, 0,.35);background:rgba(0, 0, 0,.06);color:#000000;font-weight:600}
+.cap{font-size:12.5px;color:var(--muted);margin-top:11px;text-align:center}
+.mock-main.cycle{position:relative;min-height:208px;padding:0}
+.scr{position:absolute;inset:14px 16px;opacity:0;animation:scr 16s infinite}
+.ms-item.cyc{animation:navhi 16s infinite}
+h1,h2,h3,h4,.quote,.mm-title,.ms-brand,.lstep b,.pdiag-step-eng,.amap-asset b,.amap-cap,.pdiag-cap,.lflow-srclbl{color:#ffffff !important;}
+.sub,.lede,.card p,.cap,.sc-note,.sc-from,.sc-to,.step .d,.step .l,.trigger span,.fitbox li,.pdiag-step-cap,.amap-asset span,.lstep small,.mm-card,.cbox{color:#aeb6c7 !important;}
+.kicker,.eyebrow,.ms-sec,.ms-item,.mm-flow,.pdiag-assets-h,.pdiag-step-verb,.cl,.mock-url{color:#9aa3b5 !important;}
+.card,.mock,.mock-main,.cbox,.lstep,.pdiag,.pdiag-step,.pdiag-sources,.pdiag-assets,.pdiag-assetnote,.amap,.amap-asset,.proof,.source-class,.fitbox,.lchip,.cosell,.genie{background:#0b0c10 !important; border-color:rgba(255,255,255,.12) !important; box-shadow:none !important;}
+.mock-bar{background:#15161c !important; border-color:rgba(255,255,255,.10) !important;}
+.mock-side{background:#0f1014 !important; border-color:rgba(255,255,255,.10) !important;}
+.mm-card,.pdiag-tier,.amap-head{background:rgba(255,255,255,.05) !important; border-color:rgba(255,255,255,.12) !important;}
+.ms-item.act{background:rgba(0,58,227,.22) !important; color:#cdd9ff !important;}
+.cbox.good{border-color:rgba(0,58,227,.4) !important;}
+.cbox.good .h{color:#7fa0ff !important;}
+/* fix product mockups (Lakehouse Studio console + Knowledge Studio graph) for dark */
+  .mock-main,.mock-main.cycle{background:#0b0c10 !important;}
+.scr{color:#aeb6c7 !important;}
+.mm-card{background:rgba(255,255,255,.05) !important; border-color:rgba(255,255,255,.12) !important; color:#c2c9d6 !important;}
+.mm-card.good{background:rgba(0,58,227,.16) !important; border-color:rgba(0,58,227,.55) !important; color:#cdd9ff !important;}
+.mm-card.warn{background:rgba(255,255,255,.07) !important; border-color:rgba(255,255,255,.20) !important; color:#e6e9ef !important;}
+.mm-title{color:#ffffff !important;}
+.mm-flow{color:#8b93a6 !important;}
+.ms-brand{color:#ffffff !important;}
+.ms-sec{color:#8b93a6 !important;}
+.ms-item{color:#aeb6c7 !important;}
+.ms-item.act,.ms-item.cyc{background:rgba(0,58,227,.22) !important; color:#cdd9ff !important;}
+.mock svg circle{fill:#0b0c10 !important; stroke:#3a78ff !important;}
+.mock svg circle[r="3"],.mock svg circle[r="3.5"]{fill:#3a78ff !important; stroke:none !important;}
+.mock svg text{fill:#ffffff !important;}
+.mock svg line{stroke:rgba(255,255,255,.22) !important;}
+.mock-main.cycle .scr{background:#0b0c10 !important;}
+.mock svg circle{stroke:#9aa3b5 !important;}
+.mock svg circle[r="3"],.mock svg circle[r="3.5"]{fill:#9aa3b5 !important;}
+.cbox.good{border-color:rgba(255,255,255,.18) !important;}
+.cbox.good .h{color:#aeb6c7 !important;}
+@keyframes scr {0%{opacity:0;transform:translateY(8px)}3%{opacity:1;transform:translateY(0)}22%{opacity:1;transform:translateY(0)}25%,100%{opacity:0;transform:translateY(-8px)}}
+@keyframes navhi {0%{background:transparent;color:var(--muted)}4%,22%{background:rgba(0, 0, 0,.12);color:#000000}25%,100%{background:transparent;color:var(--muted)}}
+@media(max-width:900px){.preview{grid-template-columns:1fr}}
+@media (prefers-reduced-motion: reduce){.scr,.ms-item.cyc,.kgline,.gq,.gq2{animation:none}.scr:first-child{opacity:1}}
+</style>
 </head>
 <body>
 
@@ -115,6 +176,40 @@
       <div><b>80%</b><span>faster data availability</span></div>
       <div><b>$16M+</b><span>legacy cost taken out</span></div>
       <div><b>0</b><span>data egress · push-down</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── See it in action ─────────────────────────────────────────────── -->
+<section class="section" style="padding:78px 0 30px">
+  <div class="container" style="max-width:900px">
+    <p class="eyebrow" style="text-align:center">See it in action</p>
+    <h2 class="section-title" style="text-align:center;margin-left:auto;margin-right:auto">The pipeline, building itself.</h2>
+    <div class="lkdemo" style="margin-top:34px">
+<div>
+      <div class="mock">
+        <div class="mock-bar"><span class="md"></span><span class="md"></span><span class="md"></span><span class="mock-url">Lakehouse Studio</span></div>
+        <div class="mock-body">
+          <div class="mock-side">
+            <div class="ms-brand">IntuitiveIQ ·<br>Lakehouse Studio</div>
+            <div class="ms-sec">Build the pipeline</div>
+            <div class="ms-item cyc" style="animation-delay:0s">⬇ Ingesta · ingest</div>
+            <div class="ms-item cyc" style="animation-delay:4s">✔ Validra · validate</div>
+            <div class="ms-item cyc" style="animation-delay:8s">🛡 MaskIQ · mask</div>
+            <div class="ms-sec">Govern &amp; AI</div>
+            <div class="ms-item">⚖ Governance</div>
+            <div class="ms-item cyc" style="animation-delay:12s">🤖 Agents</div>
+          </div>
+          <div class="mock-main cycle">
+            <div class="scr" style="animation-delay:0s"><div class="mm-title">Ingesta — ingest</div><div class="mm-flow">sources → Bronze · push-down</div><div class="mm-card good">✓ S3 · 300 rows → Bronze</div><div class="mm-card good">✓ BigQuery · 20 rows → Bronze</div><div class="mm-card">Snowflake · Teradata · Oracle · Kafka · REST</div></div>
+            <div class="scr" style="animation-delay:4s"><div class="mm-title">Validra — data quality</div><div class="mm-flow">Raw → Silver gate</div><div class="mm-card good">✓ Defect rate 0.0% · 40 rows checked</div><div class="mm-card">0 quarantined · 4/4 rules pass</div><div class="mm-card">→ PROMOTE to Silver</div></div>
+            <div class="scr" style="animation-delay:8s"><div class="mm-title">MaskIQ — privacy</div><div class="mm-flow">discover → enforce (Unity Catalog)</div><div class="mm-card warn">⚠ PHI: patient_id, advance_directive_id</div><div class="mm-card good">✓ Column masks bound in Unity Catalog</div><div class="mm-card">data_classification = PHI</div></div>
+            <div class="scr" style="animation-delay:12s"><div class="mm-title">Agents — Mosaic AI</div><div class="mm-flow">propose → human gate → run</div><div class="mm-card good">✓ Reconciliation MATCH · 1,200,000 rows</div><div class="mm-card">Orchestrator → next: Govern (MaskIQ)</div><div class="mm-card">runs in your Databricks · governed</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="cap"><b>Lakehouse Studio</b> — value on Databricks in days: migrate, validate, mask &amp; govern, push-down in your own cloud.</div>
+    </div>
     </div>
   </div>
 </section>
