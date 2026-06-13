@@ -85,7 +85,10 @@ h1,h2,h3,h4,.quote,.mm-title,.ms-brand,.lstep b,.pdiag-step-eng,.amap-asset b,.a
 @media (prefers-reduced-motion: reduce){.scr,.ms-item.cyc,.kgline,.gq,.gq2{animation:none}.scr:first-child{opacity:1}}
 
 /* ── "See it in action" animated showcase (white app-stage, parity with the DIE showcase) ── */
-.lk-tabs{flex-wrap:wrap;max-width:760px}
+.lk-tabwrap{margin:24px 0 8px}
+.lk-tabs{flex-wrap:nowrap;max-width:100%;overflow-x:auto}
+.lk-tabs .vt-pill{padding:8px 15px;white-space:nowrap}
+@media(max-width:900px){.lk-tabs{flex-wrap:wrap;overflow:visible}}
 .lk-pane{min-height:300px;display:flex;flex-direction:column;justify-content:center}
 .lk-head{display:flex;align-items:center;gap:10px;margin:2px 0}
 .lk-head .lk-ic{font-size:20px;line-height:1}
@@ -114,7 +117,7 @@ h1,h2,h3,h4,.quote,.mm-title,.ms-brand,.lstep b,.pdiag-step-eng,.amap-asset b,.a
 .lk-big{font-size:30px;font-weight:900;color:#003ae3 !important;letter-spacing:-1px;line-height:1}
 .lk-eq{font-size:26px;font-weight:900;color:#5b8cff !important;opacity:0}
 .visual-pane.active .lk-eq{animation:lkReveal .5s ease .2s forwards}
-.lk-cap{color:#aeb6c7 !important}
+.lk-cap{color:#aeb6c7 !important;text-align:left;margin-top:16px}
 .lk-cap b{color:#fff !important}
 /* sequential reveal — "features spread across animatedly" */
 .visual-pane.active .lk-stagger>*{opacity:0;animation:lkReveal .5s ease forwards}
@@ -297,10 +300,10 @@ h1,h2,h3,h4,.quote,.mm-title,.ms-brand,.lstep b,.pdiag-step-eng,.amap-asset b,.a
 <!-- ── See it in action ─────────────────────────────────────────────── -->
 <section class="visual-section" id="see" style="padding:78px 0 40px">
   <div class="container">
-    <p class="eyebrow" style="text-align:center">See it in action</p>
-    <h2 class="section-title" style="text-align:center;margin-left:auto;margin-right:auto">Your whole migration — building itself.</h2>
-    <p class="section-sub" style="text-align:center;margin:14px auto 0;max-width:60ch">Connect any source, prove the data, stay compliant, and land business-ready tables in your own Databricks — wave by wave, with the evidence to back every step. Click any stage.</p>
-    <div style="text-align:center">
+    <p class="eyebrow">See it in action</p>
+    <h2 class="section-title">Your whole migration — building itself.</h2>
+    <p class="section-sub" style="margin:14px 0 0;max-width:66ch">Connect any source, prove the data, stay compliant, and land business-ready tables in your own Databricks — wave by wave, with the evidence to back every step. Click any stage.</p>
+    <div class="lk-tabwrap">
       <div class="visual-tabs lk-tabs" role="tablist" aria-label="Migration in motion">
       <button class="vt-pill active" data-vt="connect" role="tab" id="lk-tab-connect" aria-controls="lk-panel-connect" aria-selected="true">🔌 Connect anything</button>
       <button class="vt-pill" data-vt="trust" role="tab" id="lk-tab-trust" aria-controls="lk-panel-trust" aria-selected="false" tabindex=-1>✓ Trust every record</button>
