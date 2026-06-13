@@ -1,0 +1,5 @@
+# https://dbx.intuitiveiq.ai
+User-agent: *
+Allow: /
+
+Sitemap: https://dbx.intuitiveiq.ai/sitemap.xml

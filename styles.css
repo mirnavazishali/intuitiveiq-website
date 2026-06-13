@@ -880,3 +880,15 @@ html,body{ background:#000 !important; color:#dddddd; }
   .grid-2,.grid-4,.grid-5{grid-template-columns:1fr !important}
   .foot-cols,.foot-cols-3{grid-template-columns:repeat(2,1fr);gap:28px 20px}
 }
+
+/* ===== Accessibility & professional polish (added 2026-06-12) ===== */
+html{color-scheme:dark}
+.skip-link{position:absolute;left:-9999px;top:0;z-index:2000;background:#003ae3;color:#fff;
+  padding:10px 18px;border-radius:0 0 10px 0;font-weight:600;font-size:14px;text-decoration:none}
+.skip-link:focus{left:0}
+:where(a,button,[tabindex],input,select,textarea,[role="tab"]):focus-visible{
+  outline:2px solid #5b8cff;outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important;scroll-behavior:auto!important}
+}

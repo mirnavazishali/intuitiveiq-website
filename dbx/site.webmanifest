@@ -1,0 +1,13 @@
+{
+  "name": "IntuitiveIQ for Databricks",
+  "short_name": "IntuitiveIQ",
+  "description": "Decision Intelligence Engine + Lakehouse Migration for Databricks.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0e1a",
+  "theme_color": "#0a0e1a",
+  "icons": [
+    { "src": "https://intuitiveiq.ai/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "https://intuitiveiq.ai/assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

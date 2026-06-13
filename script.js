@@ -17,6 +17,11 @@ document.querySelectorAll('.vt-pill').forEach(btn => {
   btn.addEventListener('click', () => {
     const target = btn.dataset.vt;
     document.querySelectorAll('.vt-pill').forEach(b => b.classList.toggle('active', b === btn));
+    document.querySelectorAll('.vt-pill').forEach(b => {
+      const on = b === btn;
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+      if (on) b.removeAttribute('tabindex'); else b.setAttribute('tabindex', '-1');
+    });
     document.querySelectorAll('.visual-pane').forEach(p => p.classList.remove('active'));
     document.querySelector('.vp-' + target)?.classList.add('active');
     // Reset typing animation for the query pane on re-entry
@@ -57,6 +62,7 @@ document.querySelectorAll('.vt-pill').forEach(btn => {
   let paused = false;
   stage.addEventListener('mouseenter', () => paused = true);
   stage.addEventListener('mouseleave', () => paused = false);
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const tick = () => {
     if (!paused) {
       i = (i + 1) % tabs.length;
@@ -127,4 +133,19 @@ document.querySelector('.nav-burger')?.addEventListener('click', (e) => {
   // close after clicking a panel link (same-page anchors don't reload)
   document.querySelectorAll('.nav-drop a').forEach(a =>
     a.addEventListener('click', () => items.forEach(o => o.classList.remove('open'))));
+})();
+
+// Arrow-key navigation across the showcase tablist (WAI-ARIA pattern)
+(() => {
+  const tabs = [...document.querySelectorAll('[role=\"tab\"].vt-pill')];
+  if (!tabs.length) return;
+  tabs.forEach((t, idx) => t.addEventListener('keydown', e => {
+    let n = null;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') n = (idx + 1) % tabs.length;
+    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') n = (idx - 1 + tabs.length) % tabs.length;
+    else if (e.key === 'Home') n = 0;
+    else if (e.key === 'End') n = tabs.length - 1;
+    if (n === null) return;
+    e.preventDefault(); tabs[n].click(); tabs[n].focus();
+  }));
 })();

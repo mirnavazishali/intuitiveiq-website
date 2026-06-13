@@ -4,21 +4,62 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IntuitiveIQ™ | Decision Intelligence Engine for Enterprise AI</title>
-  <meta name="description" content="IntuitiveIQ combines Knowledge Fabric and Agentic Orchestration within Intuitive.ai’s aiE™ Framework to help enterprises build, govern, and scale multi-model, multi-agent AI systems with explainability, traceability, auditability, and accountability." />
+  <meta name="description" content="IntuitiveIQ is the Decision Intelligence Engine for enterprise AI — Knowledge Fabric and Agentic Orchestration that make multi-model, multi-agent AI explainable, traceable, auditable, and accountable, within Intuitive’s aiE™ Framework." />
   <meta name="keywords" content="Decision Intelligence Engine, Enterprise AI Platform, Knowledge Fabric, Agentic Orchestration, Multi-Agent AI, Multi-Model AI Governance, AI Governance Platform, Explainable AI, AI Traceability, Enterprise AI Orchestration, Semantic AI Platform, Agentic AI Platform" />
-  <meta property="og:title" content="IntuitiveIQ™ — Decision Intelligence Engine | by Intuitive" />
-  <meta property="og:description" content="Knowledge Fabric + Agentic Orchestration for governed, multi-model, multi-agent AI systems. Explainability. Traceability. Auditability. Accountability." />
+  <meta property="og:title" content="IntuitiveIQ — Decision Intelligence Engine for Enterprise AI" />
+  <meta property="og:description" content="IntuitiveIQ is the Decision Intelligence Engine for enterprise AI — Knowledge Fabric and Agentic Orchestration that make multi-model, multi-agent AI explainable, traceable, auditable, and accountable, within Intuitive’s aiE™ Framework." />
   <meta property="og:url" content="https://intuitiveiq.ai/" />
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://intuitiveiq.ai/" />
-  <link rel="icon" type="image/png" href="assets/intuitive-favicon.ico" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0a0e1a" />
+  <meta name="color-scheme" content="dark" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260612b" />
+  <link rel="stylesheet" href="styles.css?v=20260612c" />
+  <meta property="og:image" content="https://intuitiveiq.ai/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="IntuitiveIQ" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="IntuitiveIQ — Decision Intelligence Engine for Enterprise AI" />
+  <meta name="twitter:description" content="IntuitiveIQ is the Decision Intelligence Engine for enterprise AI — Knowledge Fabric and Agentic Orchestration that make multi-model, multi-agent AI explainable, traceable, auditable, and accountable, within Intuitive’s aiE™ Framework." />
+  <meta name="twitter:image" content="https://intuitiveiq.ai/assets/og-image.png" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "IntuitiveIQ",
+  "url": "https://intuitiveiq.ai/",
+  "logo": "https://intuitiveiq.ai/assets/icon-512.png",
+  "description": "The Decision Intelligence Engine for Enterprise AI, a product of Intuitive.",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Intuitive",
+    "url": "https://intuitive.ai"
+  },
+  "sameAs": [
+    "https://intuitive.ai"
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "IntuitiveIQ",
+  "url": "https://intuitiveiq.ai/"
+}
+</script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- ── Top nav ──────────────────────────────────────────────────────── -->
 <header class="nav">
@@ -124,6 +165,7 @@
     </div>
   </div>
 </header>
+<main id="main">
 
 <!-- ── Hero ─────────────────────────────────────────────────────────── -->
 <section class="hero">
@@ -191,14 +233,14 @@
     <h2 class="section-title">Decision intelligence you can watch working.</h2>
     <p class="section-sub">The Knowledge Fabric that grounds every term · the data trail that traces every number · live trust scores on every match · explainable answers with their evidence · agents that act under governance. Click any tab.</p>
 
-    <div class="visual-tabs">
-      <button class="vt-pill active" data-vt="kg">⌬ Knowledge Fabric</button>
-      <button class="vt-pill" data-vt="lineage">⇆ Traceability</button>
-      <button class="vt-pill" data-vt="confidence">📊 Mapping confidence</button>
-      <button class="vt-pill" data-vt="ask">💬 Explainability</button>
-      <button class="vt-pill" data-vt="action">⚡ Agentic orchestration</button>
-      <button class="vt-pill" data-vt="console">🗂 Actions console</button>
-      <button class="vt-pill" data-vt="dash">📈 Insights</button>
+    <div class="visual-tabs" role="tablist" aria-label="Decision intelligence in motion">
+      <button class="vt-pill active" data-vt="kg" role="tab" id="tab-kg" aria-controls="panel-kg" aria-selected="true">⌬ Knowledge Fabric</button>
+      <button class="vt-pill" data-vt="lineage" role="tab" id="tab-lineage" aria-controls="panel-lineage" aria-selected="false" tabindex="-1">⇆ Traceability</button>
+      <button class="vt-pill" data-vt="confidence" role="tab" id="tab-confidence" aria-controls="panel-confidence" aria-selected="false" tabindex="-1">📊 Mapping confidence</button>
+      <button class="vt-pill" data-vt="ask" role="tab" id="tab-ask" aria-controls="panel-ask" aria-selected="false" tabindex="-1">💬 Explainability</button>
+      <button class="vt-pill" data-vt="action" role="tab" id="tab-action" aria-controls="panel-action" aria-selected="false" tabindex="-1">⚡ Agentic orchestration</button>
+      <button class="vt-pill" data-vt="console" role="tab" id="tab-console" aria-controls="panel-console" aria-selected="false" tabindex="-1">🗂 Actions console</button>
+      <button class="vt-pill" data-vt="dash" role="tab" id="tab-dash" aria-controls="panel-dash" aria-selected="false" tabindex="-1">📈 Insights</button>
     </div>
 
     <!-- Browser-chrome wrapper — gives the visuals an "in-app" feel -->
@@ -209,7 +251,7 @@
       </div>
 
       <!-- ── PANE 1 · Animated Knowledge Graph ──────────────────────── -->
-      <div class="visual-pane vp-kg active">
+      <div class="visual-pane vp-kg active" role="tabpanel" id="panel-kg" aria-labelledby="tab-kg">
         <svg class="anim-kg" viewBox="0 0 900 460" preserveAspectRatio="xMidYMid meet">
           <!-- Background grid -->
           <defs>
@@ -308,7 +350,7 @@
       </div>
 
       <!-- ── PANE 2 · Animated Lineage Flow ─────────────────────────── -->
-      <div class="visual-pane vp-lineage">
+      <div class="visual-pane vp-lineage" role="tabpanel" id="panel-lineage" aria-labelledby="tab-lineage">
         <svg class="anim-lineage" viewBox="0 0 900 460" preserveAspectRatio="xMidYMid meet">
           <defs>
             <linearGradient id="flowGradient" x1="0" x2="1" y1="0" y2="0">
@@ -426,7 +468,7 @@
       </div>
 
       <!-- ── PANE 3 · Trust Score ─────────────────────────────────────── -->
-      <div class="visual-pane vp-confidence">
+      <div class="visual-pane vp-confidence" role="tabpanel" id="panel-confidence" aria-labelledby="tab-confidence">
         <div class="anim-confidence">
           <div class="conf-header">
             <div class="conf-title-block">
@@ -536,7 +578,7 @@
       </div>
 
       <!-- ── PANE 4 · Ask & Reason — chat with visual reasoning ──────── -->
-      <div class="visual-pane vp-ask">
+      <div class="visual-pane vp-ask" role="tabpanel" id="panel-ask" aria-labelledby="tab-ask">
         <div class="anim-ask">
 
           <!-- Suggestion chips at top -->
@@ -641,7 +683,7 @@
       </div>
 
       <!-- ── PANE 5 · Natural Language → Governed Agentic Action ─────── -->
-      <div class="visual-pane vp-action">
+      <div class="visual-pane vp-action" role="tabpanel" id="panel-action" aria-labelledby="tab-action">
         <div class="anim-action">
 
           <!-- Top: persona + NL textarea -->
@@ -729,7 +771,7 @@
       </div>
 
       <!-- ── PANE 6 · Actions Console — governed writebacks ──────────── -->
-      <div class="visual-pane vp-console">
+      <div class="visual-pane vp-console" role="tabpanel" id="panel-console" aria-labelledby="tab-console">
         <div class="anim-console">
           <div class="conf-header">
             <div class="conf-title-block">
@@ -809,7 +851,7 @@
       </div>
 
       <!-- ── PANE 7 · Insights dashboard — KPIs that drill to evidence ── -->
-      <div class="visual-pane vp-dash">
+      <div class="visual-pane vp-dash" role="tabpanel" id="panel-dash" aria-labelledby="tab-dash">
         <div class="anim-dash">
           <div class="conf-header">
             <div class="conf-title-block">
@@ -945,6 +987,7 @@
 </section>
 
 <!-- ── Footer ────────────────────────────────────────────────────────── -->
+</main>
 <footer class="footer">
   <div class="container footer-top">
     <div class="footer-top-brand">
@@ -1030,6 +1073,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=20260612b" defer></script>
+<script src="script.js?v=20260612c" defer></script>
 </body>
 </html>
