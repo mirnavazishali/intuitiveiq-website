@@ -882,7 +882,7 @@ html,body{ background:#000 !important; color:#dddddd; }
 }
 
 /* ===== Accessibility & professional polish (added 2026-06-12) ===== */
-html{color-scheme:dark}
+html{color-scheme:dark;scroll-padding-top:84px}
 .skip-link{position:absolute;left:-9999px;top:0;z-index:2000;background:#003ae3;color:#fff;
   padding:10px 18px;border-radius:0 0 10px 0;font-weight:600;font-size:14px;text-decoration:none}
 .skip-link:focus{left:0}
